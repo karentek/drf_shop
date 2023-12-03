@@ -27,7 +27,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 # settings.py
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -36,12 +35,15 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-
-    'myauth.apps.MyauthConfig',
     'frontend',
+
     'rest_framework',
+    'django_filters',
+    'myauth.apps.MyauthConfig',
+    'mycatalog.apps.MycatalogConfig',
 
 ]
+
 # Application definition
 
 
@@ -108,9 +110,13 @@ AUTH_PASSWORD_VALIDATORS = [
 REST_FRAMEWORK = {
                 'DEFAULT_AUTHENTICATION_CLASSES': ['rest_framework.authentication.SessionAuthentication',],
                 # 'DEFAULT_PERMISSION_CLASSES': ['rest_framework.permissions.IsAuthenticated',],
+                'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+                'PAGE_SIZE': 100,
+                # 'DEFAULT_FILTER_BACKENDS': [
+                #     "django_filters.rest_framework.DjangoFilterBackend",
+                # ]
                 }
-                # 'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
-                # 'PAGE_SIZE': 10,
+
 
                 # 'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
 

@@ -17,7 +17,7 @@ def profile_avatar_directory_path(instance: "Avatar", filename: str) -> str:
 
 class Avatar(models.Model):
     """
-    модель для аватара пользователя
+    Модель для аватара пользователя
     """
     image = models.ImageField(null=True, blank=True, upload_to=profile_avatar_directory_path)
     profile_rel = models.ForeignKey('Profile', on_delete=models.CASCADE, null=True, blank=True)
@@ -32,6 +32,9 @@ class Profile(models.Model):
     phone = models.CharField(max_length=11, null=True, blank=True)
     email = models.EmailField(null=True, blank=True)
     avatar_image = models.OneToOneField(Avatar, on_delete=models.CASCADE, null=True, blank=True)
+
+    def __str__(self):
+        return f"{self.user.username!r}"
 
 
 @receiver(post_save, sender=User)

@@ -1,15 +1,15 @@
 import json
-from django.contrib.auth import authenticate, login, logout
-from django.contrib.auth.hashers import check_password
-from django.shortcuts import render, get_object_or_404
 from rest_framework import status
-from rest_framework.permissions import AllowAny
+from rest_framework import generics
 from rest_framework.views import APIView
 from rest_framework.request import Request
-from rest_framework.response import Response
-from .serializers import SignUpSerializer, ProfileGetPostSerializer
 from django.contrib.auth.models import User
-from rest_framework import generics
+from rest_framework.response import Response
+from django.shortcuts import get_object_or_404
+from rest_framework.permissions import AllowAny
+from django.contrib.auth.hashers import check_password
+from django.contrib.auth import authenticate, login, logout
+from .serializers import SignUpSerializer, ProfileGetPostSerializer
 from .models import Profile, Avatar
 
 
