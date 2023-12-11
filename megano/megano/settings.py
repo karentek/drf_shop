@@ -25,6 +25,7 @@ SECRET_KEY = 'django-insecure-x6epn-d6=1e=3#d!x$2sc-_*mom@kjt77pq4qz@ur*juzo*p)5
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+
 ALLOWED_HOSTS = []
 # settings.py
 INSTALLED_APPS = [
@@ -41,6 +42,7 @@ INSTALLED_APPS = [
     'django_filters',
     'myauth.apps.MyauthConfig',
     'mycatalog.apps.MycatalogConfig',
+    'myorders.apps.MyordersConfig',
 
 ]
 

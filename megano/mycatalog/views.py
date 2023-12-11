@@ -114,7 +114,6 @@ class ReviewView(APIView):
     Только авторизованный пользователь может оставить отзыв,
     также проверяется правильность ввода почты и имени пользователя"""
 
-
     permission_classes = [IsAuthenticated]
 
     def post(self, request, *args, **kwargs):
