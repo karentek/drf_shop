@@ -23,9 +23,7 @@ class OrderSerializer(serializers.ModelSerializer):
         кастомное создание инстанса заказа в котором сохраняются необходимые поля
         привязывается к товарам, к пользователю, подсчитывается сумма, и присваивается статус
         """
-        print()
-        print("start OrdersView POST serializer")
-        print()
+
         request = self.context.get("request")
         user = request.user
         product_data = request.data
@@ -103,15 +101,15 @@ class OrderAcceptedSerializer(serializers.ModelSerializer):
         )
 
     def update(self, instance, validated_data):
-        print("IT IS validated_data" * 3, validated_data)
         order_items_data = self.context.get("products")
-        print("IT IS order_items_data" * 3, order_items_data)
         instance.deliveryType = validated_data.get('deliveryType', instance.deliveryType)
         instance.paymentType = validated_data.get('paymentType', instance.paymentType)
         instance.status = "accepted"  # You may override the status here if needed
         instance.city = validated_data.get('city', instance.city)
         instance.address = validated_data.get('address', instance.address)
         order_items_list = []
+        if type(order_items_data) != list:              #нужно только для тестирования
+            order_items_data = [order_items_data]
         for item_data in order_items_data:
             product_id = int(item_data["id"])
             count = int(item_data["count"])

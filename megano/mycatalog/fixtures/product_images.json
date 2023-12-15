@@ -1,0 +1,82 @@
+[
+  {
+    "model": "mycatalog.productimage",
+    "pk": 1,
+    "fields": {
+      "image": "products_images/product_computer/480x496_0xac120003_4430520541578509619.jpg",
+      "images_product": 1
+    }
+  },
+  {
+    "model": "mycatalog.productimage",
+    "pk": 2,
+    "fields": {
+      "image": "products_images/product_Phone/480x496_0xac120003_4430520541578509619.jpg",
+      "images_product": 3
+    }
+  },
+  {
+    "model": "mycatalog.productimage",
+    "pk": 4,
+    "fields": {
+      "image": "products_images/product_stuff_product/icon-256x256.png",
+      "images_product": 5
+    }
+  },
+  {
+    "model": "mycatalog.productimage",
+    "pk": 5,
+    "fields": {
+      "image": "products_images/product_stuff_product/2.png",
+      "images_product": 5
+    }
+  },
+  {
+    "model": "mycatalog.productimage",
+    "pk": 6,
+    "fields": {
+      "image": "products_images/product_car/icon-256x256_2.png",
+      "images_product": 7
+    }
+  },
+  {
+    "model": "mycatalog.productimage",
+    "pk": 7,
+    "fields": {
+      "image": "products_images/product_car/480x496_0xac120003_4430520541578509619_Fhn9pva.jpg",
+      "images_product": 6
+    }
+  },
+  {
+    "model": "mycatalog.productimage",
+    "pk": 8,
+    "fields": {
+      "image": "products_images/product_chem 4 cat/icon-256x256_2.png",
+      "images_product": 2
+    }
+  },
+  {
+    "model": "mycatalog.productimage",
+    "pk": 9,
+    "fields": {
+      "image": "products_images/product_ijij/480x496_0xac120003_4430520541578509619.jpg",
+      "images_product": 8
+    }
+  },
+  {
+    "model": "mycatalog.productimage",
+    "pk": 10,
+    "fields": {
+      "image": "products_images/product_Phone 4cat/icon-256x256_2.png",
+      "images_product": 3
+    }
+  },
+  {
+    "model": "mycatalog.productimage",
+    "pk": 11,
+    "fields": {
+      "image": "products_images/product_computer 4 cat/icon-256x256_2.png",
+      "images_product": 1
+    }
+  }
+]

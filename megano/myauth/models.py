@@ -33,8 +33,8 @@ class Profile(models.Model):
     email = models.EmailField(null=True, blank=True)
     avatar_image = models.OneToOneField(Avatar, on_delete=models.CASCADE, null=True, blank=True)
 
-    def __str__(self):
-        return f"{self.user.username!r}"
+    # def __str__(self):
+    #     return f"{self.user.username!r}"
 
 
 @receiver(post_save, sender=User)

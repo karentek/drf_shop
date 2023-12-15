@@ -22,7 +22,7 @@ urlpatterns = [
     path("sales", SalesView.as_view(), name='sales'),
     path("banners", BannersView.as_view(), name='banners'),
     path("product/<int:id>", ProductView.as_view(), name='product'),
-    path("product/<int:id>/reviews", ReviewView.as_view(), name='product'),
+    path("product/<int:id>/reviews", ReviewView.as_view(), name='reviews'),
     path("tags", TagsView.as_view(), name='tags')
 
 ]

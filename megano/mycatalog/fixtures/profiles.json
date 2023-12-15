@@ -1,0 +1,24 @@
+[
+  {
+    "model": "myauth.profile",
+    "pk": 2,
+    "fields": {
+      "user": 2,
+      "fullName": "jdjdjdjd",
+      "phone": "89030203958",
+      "email": "ddkdkdk",
+      "avatar_image": 1
+    }
+  },
+  {
+    "model": "myauth.profile",
+    "pk": 6,
+    "fields": {
+      "user": 6,
+      "fullName": "Карен Текнеджян",
+      "phone": "89030203959",
+      "email": "karen.g.tek@gmail.com",
+      "avatar_image": 4
+    }
+  }
+]

@@ -17,8 +17,7 @@ urlpatterns = [
     path("sign-in", SignInView.as_view(), name='sign-in'),
     path("sign-up", SignUpView.as_view(), name='sign-up'),
     path("sign-out", LogoutView.as_view(), name='sign-out'),
-
-    path("profile", ProfileUpdateView.as_view()),
+    path("profile", ProfileUpdateView.as_view(), name='profile'),
     path("profile/avatar", PostAvatarView.as_view(), name='post-avatar'),
     path("profile/password", PostPasswordView.as_view(), name='post-password'),
 

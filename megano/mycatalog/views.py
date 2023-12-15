@@ -80,7 +80,6 @@ class SalesView(APIView):
         current_page = {
             "currentPage": int(self.request.query_params.get("currentPage"))
         }
-        print(current_page)
         result_page = paginator.paginate_queryset(product, request, current_page)
         serializer = SaleProductSerializer(instance=result_page, many=True)
         return paginator.get_paginated_response(serializer.data)
@@ -104,6 +103,7 @@ class ProductView(APIView):
 
     def get(self, request, **kwargs):
         product = Product.objects.get(id=self.kwargs.get("id"))
+        print(self.request.data)
         serializer = ProductIDSerializer(instance=product)
         return Response(data=serializer.data, status=status.HTTP_200_OK)
 

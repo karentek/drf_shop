@@ -8,7 +8,7 @@ class Order(models.Model):
     Модель для заказов
     """
     createdAt = models.DateTimeField(auto_now_add=True)
-    user = models.ForeignKey(User, on_delete=models.PROTECT)
+    user = models.ForeignKey(User, on_delete=models.PROTECT, related_name='orders')
     paymentType = models.CharField(max_length=10, null=True, blank=True)
     deliveryType = models.CharField(max_length=10, null=True, blank=True)
     totalCost = models.DecimalField(decimal_places=2, default=0, max_digits=10, null=True, blank=True)
