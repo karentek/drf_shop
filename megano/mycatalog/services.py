@@ -69,6 +69,7 @@ class DataFilter:
         sort = filter_criteria.get('sort')
         sort_type = filter_criteria.get('sortType')
         tags = filter_criteria.get('tags[]')
+        print(name)
         if category:
             filtered_products = filtered_products.filter(category=category)
         if tags and type(tags) == list:
@@ -76,7 +77,7 @@ class DataFilter:
         elif type(tags) == int:
             filtered_products = filtered_products.filter(tags=tags)
         if name:
-            filtered_products = filtered_products.filter(name__icontains=name)
+            filtered_products = filtered_products.filter(title__icontains=name)
         if min_price and max_price:
             filtered_products = filtered_products.filter(price__gte=min_price, price__lte=max_price)
         if free_delivery in ['true', 'false']:

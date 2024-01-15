@@ -103,7 +103,6 @@ class ProductView(APIView):
 
     def get(self, request, **kwargs):
         product = Product.objects.get(id=self.kwargs.get("id"))
-        print(self.request.data)
         serializer = ProductIDSerializer(instance=product)
         return Response(data=serializer.data, status=status.HTTP_200_OK)
 

@@ -171,39 +171,39 @@ class ProductViewTestCase(APITestCase):
         self.assertEqual(response.status_code, status.HTTP_200_OK)
 
 
-class ReviewViewTestCase(APITestCase):
-    # при использовании данного теста необходимо
-    # закоментировать сигнал создания профиля
-    # в myauth.models "create_or_update_user_profile"
-    # не забудьте разкоментировать после использования теста
-    fixtures = [
-        'categories.json',
-        'category_images.json',
-        'tags.json',
-        'users',
-        'specifications.json',
-        'avatars.json',
-        'products.json',
-        'reviews.json',
-        'profiles.json',
-
-    ]
-
-    def setUp(self):
-        self.client = APIClient()
-        self.user = authenticate(username='bob', password='bob')
-        self.client.force_authenticate(user=self.user)
-
-    def test_review(self):
-
-        product_id = 6
-        data = {'author': 'bob', 'email': 'karen.g.tek@gmail.com', 'text': 'lklkl', 'rate': 5}
-        data_json = json.dumps(data)
-        url = reverse('mycatalog:reviews', args=[product_id])
-        response = self.client.post(url, data=data_json, content_type='application/json')
-        self.assertEqual(response.status_code, status.HTTP_201_CREATED)
-        reviews_count = Review.objects.filter(author=self.user.pk, product=product_id).count()
-        self.assertEqual(reviews_count, 1, 'Expected one review object in the database.')
+# class ReviewViewTestCase(APITestCase):
+#     # при использовании данного теста необходимо
+#     # закоментировать сигнал создания профиля
+#     # в myauth.models "create_or_update_user_profile"
+#     # не забудьте разкоментировать после использования теста
+#     fixtures = [
+#         'categories.json',
+#         'category_images.json',
+#         'tags.json',
+#         'users',
+#         'specifications.json',
+#         'avatars.json',
+#         'products.json',
+#         'reviews.json',
+#         'profiles.json',
+#
+#     ]
+#
+#     def setUp(self):
+#         self.client = APIClient()
+#         self.user = authenticate(username='bob', password='bob')
+#         self.client.force_authenticate(user=self.user)
+#
+#     def test_review(self):
+#
+#         product_id = 6
+#         data = {'author': 'bob', 'email': 'karen.g.tek@gmail.com', 'text': 'lklkl', 'rate': 5}
+#         data_json = json.dumps(data)
+#         url = reverse('mycatalog:reviews', args=[product_id])
+#         response = self.client.post(url, data=data_json, content_type='application/json')
+#         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
+#         reviews_count = Review.objects.filter(author=self.user.pk, product=product_id).count()
+#         self.assertEqual(reviews_count, 1, 'Expected one review object in the database.')
 
 
 

@@ -1,0 +1,725 @@
+[
+  {
+    "model": "myauth.avatar",
+    "pk": 1,
+    "fields": {
+      "image": "profiles/avatar_karen/480x496_0xac120003_4430520541578509619.jpg",
+      "profile_rel": 2
+    }
+  },
+  {
+    "model": "myauth.avatar",
+    "pk": 2,
+    "fields": {
+      "image": "profiles/avatar_bob/480x496_0xac120003_4430520541578509619.jpg",
+      "profile_rel": 6
+    }
+  },
+  {
+    "model": "myauth.avatar",
+    "pk": 3,
+    "fields": {
+      "image": "profiles/avatar_bob/480x496_0xac120003_4430520541578509619_5hj4Ft5.jpg",
+      "profile_rel": 6
+    }
+  },
+  {
+    "model": "myauth.avatar",
+    "pk": 4,
+    "fields": {
+      "image": "profiles/avatar_bob/480x496_0xac120003_4430520541578509619.jpg",
+      "profile_rel": 6
+    }
+  },
+    {
+    "model": "mycatalog.categories",
+    "pk": 1,
+    "fields": {
+      "title": "category1",
+      "parent_category": null
+    }
+  },
+  {
+    "model": "mycatalog.categories",
+    "pk": 2,
+    "fields": {
+      "title": "category2",
+      "parent_category": null
+    }
+  },
+  {
+    "model": "mycatalog.categories",
+    "pk": 3,
+    "fields": {
+      "title": "category3",
+      "parent_category": null
+    }
+  },
+  {
+    "model": "mycatalog.categories",
+    "pk": 4,
+    "fields": {
+      "title": "category4",
+      "parent_category": 1
+    }
+  },
+  {
+    "model": "mycatalog.categories",
+    "pk": 6,
+    "fields": {
+      "title": "category6",
+      "parent_category": 2
+    }
+  },
+  {
+    "model": "mycatalog.categories",
+    "pk": 8,
+    "fields": {
+      "title": "category6",
+      "parent_category": 2
+    }
+  },
+  {
+    "model": "mycatalog.categoryimage",
+    "pk": 1,
+    "fields": {
+      "image": "category_images/category_category1/icon-256x256.png",
+      "category": 1
+    }
+  },
+  {
+    "model": "mycatalog.categoryimage",
+    "pk": 2,
+    "fields": {
+      "image": "category_images/category_category2/icon-256x256_2.png",
+      "category": 2
+    }
+  },
+  {
+    "model": "mycatalog.categoryimage",
+    "pk": 3,
+    "fields": {
+      "image": "category_images/category_category3/icon-256x256.png",
+      "category": 3
+    }
+  },
+  {
+    "model": "mycatalog.categoryimage",
+    "pk": 4,
+    "fields": {
+      "image": "category_images/category_category4/icon-256x256.png",
+      "category": 4
+    }
+  },
+  {
+    "model": "mycatalog.categoryimage",
+    "pk": 6,
+    "fields": {
+      "image": "category_images/category_category6/icon-256x256_1.png",
+      "category": 6
+    }
+  },
+  {
+    "model": "mycatalog.categoryimage",
+    "pk": 8,
+    "fields": {
+      "image": "category_images/category_category6/480x496_0xac120003_4430520541578509619.jpg",
+      "category": 8
+    }
+  },
+  {
+    "model": "mycatalog.productimage",
+    "pk": 1,
+    "fields": {
+      "image": "products_images/product_computer/480x496_0xac120003_4430520541578509619.jpg",
+      "images_product": 1
+    }
+  },
+  {
+    "model": "mycatalog.productimage",
+    "pk": 2,
+    "fields": {
+      "image": "products_images/product_Phone/480x496_0xac120003_4430520541578509619.jpg",
+      "images_product": 3
+    }
+  },
+  {
+    "model": "mycatalog.productimage",
+    "pk": 4,
+    "fields": {
+      "image": "products_images/product_stuff_product/icon-256x256.png",
+      "images_product": 5
+    }
+  },
+  {
+    "model": "mycatalog.productimage",
+    "pk": 5,
+    "fields": {
+      "image": "products_images/product_stuff_product/2.png",
+      "images_product": 5
+    }
+  },
+  {
+    "model": "mycatalog.productimage",
+    "pk": 6,
+    "fields": {
+      "image": "products_images/product_car/icon-256x256_2.png",
+      "images_product": 7
+    }
+  },
+  {
+    "model": "mycatalog.productimage",
+    "pk": 7,
+    "fields": {
+      "image": "products_images/product_car/480x496_0xac120003_4430520541578509619_Fhn9pva.jpg",
+      "images_product": 6
+    }
+  },
+  {
+    "model": "mycatalog.productimage",
+    "pk": 8,
+    "fields": {
+      "image": "products_images/product_chem 4 cat/icon-256x256_2.png",
+      "images_product": 2
+    }
+  },
+  {
+    "model": "mycatalog.productimage",
+    "pk": 9,
+    "fields": {
+      "image": "products_images/product_ijij/480x496_0xac120003_4430520541578509619.jpg",
+      "images_product": 8
+    }
+  },
+  {
+    "model": "mycatalog.productimage",
+    "pk": 10,
+    "fields": {
+      "image": "products_images/product_Phone 4cat/icon-256x256_2.png",
+      "images_product": 3
+    }
+  },
+  {
+    "model": "mycatalog.productimage",
+    "pk": 11,
+    "fields": {
+      "image": "products_images/product_computer 4 cat/icon-256x256_2.png",
+      "images_product": 1
+    }
+  },
+  {
+    "model": "mycatalog.product",
+    "pk": 1,
+    "fields": {
+      "price": "1000.00",
+      "count": 2,
+      "date": "2023-11-21T02:43:34.950Z",
+      "title": "computer 4 cat",
+      "fullDescription": "With the lived promise of “Best selection. Best Service “since 1999, computeruniverse has developed from a computer dispatch to an online specialist for technology and electronics. The computeruniverse online shop offers a wide range of items from the fields of electronics and technology ready for you.",
+      "description": "With the lived promise of “Best selection. Best Service “since 1999, computeruniverse has developed from a computer dispatch to an online specialist for technology and electronics. The computeruniverse online shop offers a wide range of items from the fields of electronics and technology ready for y",
+      "freeDelivery": false,
+      "category": 4,
+      "rating": 4.0,
+      "tags": [
+        1,
+        2
+      ],
+      "specifications": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "mycatalog.product",
+    "pk": 2,
+    "fields": {
+      "price": "1000.00",
+      "count": 5,
+      "date": "2023-11-21T10:55:51.184Z",
+      "title": "chem 4 cat",
+      "fullDescription": "jfjdjdjdj",
+      "description": "dkdkdk",
+      "freeDelivery": false,
+      "category": 4,
+      "rating": 8.0,
+      "tags": [
+        1,
+        2,
+        3
+      ],
+      "specifications": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "mycatalog.product",
+    "pk": 3,
+    "fields": {
+      "price": "150.00",
+      "count": 0,
+      "date": "2023-11-22T01:40:53.814Z",
+      "title": "Phone 4cat",
+      "fullDescription": "Phone PhonePhonevvvvPhonePhonePhonePhonePhonePhonePhonePhonePhonePhonePhonePhonePhonePhone PhonePhonePhone PhonePhone PhonePhone PhonePhonePhone PhonePhonePhonePhone",
+      "description": "Phone PhonePhonevvvvPhonePhonePhonePhonePhonePhonePhonePhonePhonePhonePhonePhonePhonePhone PhonePhonePhone PhonePhone PhonePhone PhonePhonePhone PhonePhonePhonePhone",
+      "freeDelivery": false,
+      "category": 4,
+      "rating": 4.5,
+      "tags": [
+        1
+      ],
+      "specifications": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "mycatalog.product",
+    "pk": 5,
+    "fields": {
+      "price": "1500.00",
+      "count": 5,
+      "date": "2023-11-22T04:36:29.660Z",
+      "title": "stuff_product 4 cat",
+      "fullDescription": "dkdkkd",
+      "description": "asdflak",
+      "freeDelivery": false,
+      "category": 4,
+      "rating": 5.5,
+      "tags": [
+        2,
+        3
+      ],
+      "specifications": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "mycatalog.product",
+    "pk": 6,
+    "fields": {
+      "price": "40001.00",
+      "count": 0,
+      "date": "2023-11-25T15:06:15.920Z",
+      "title": "car",
+      "fullDescription": "",
+      "description": "mega car",
+      "freeDelivery": false,
+      "category": 1,
+      "rating": 8.0,
+      "tags": [
+        1
+      ],
+      "specifications": [
+        1
+      ]
+    }
+  },
+  {
+    "model": "mycatalog.product",
+    "pk": 7,
+    "fields": {
+      "price": "40000.00",
+      "count": 5,
+      "date": "2023-11-25T15:13:44.622Z",
+      "title": "car",
+      "fullDescription": "",
+      "description": "mega car",
+      "freeDelivery": false,
+      "category": 1,
+      "rating": 1.33,
+      "tags": [
+        1
+      ],
+      "specifications": [
+        1
+      ]
+    }
+  },
+  {
+    "model": "mycatalog.product",
+    "pk": 8,
+    "fields": {
+      "price": "2000.00",
+      "count": 5,
+      "date": "2023-12-01T02:39:42.494Z",
+      "title": "ijij",
+      "fullDescription": "mnnm",
+      "description": ",m,m,m,m",
+      "freeDelivery": false,
+      "category": 4,
+      "rating": 4.67,
+      "tags": [
+        2,
+        3
+      ],
+      "specifications": [
+        2
+      ]
+    }
+  },
+  {
+    "model": "myauth.profile",
+    "pk": 2,
+    "fields": {
+      "user": 2,
+      "fullName": "jdjdjdjd",
+      "phone": "89030203958",
+      "email": "ddkdkdk",
+      "avatar_image": 1
+    }
+  },
+  {
+    "model": "myauth.profile",
+    "pk": 6,
+    "fields": {
+      "user": 6,
+      "fullName": "Карен Текнеджян",
+      "phone": "89030203959",
+      "email": "karen.g.tek@gmail.com",
+      "avatar_image": 4
+    }
+  },
+  {
+    "model": "mycatalog.review",
+    "pk": 3,
+    "fields": {
+      "author": 2,
+      "product": 1,
+      "text": "good better the best",
+      "rate": 5,
+      "date": "2023-11-30T13:20:46.543Z"
+    }
+  },
+  {
+    "model": "mycatalog.review",
+    "pk": 4,
+    "fields": {
+      "author": 2,
+      "product": 3,
+      "text": "mdmdmdmdmd",
+      "rate": 4,
+      "date": "2023-11-30T13:21:19.374Z"
+    }
+  },
+  {
+    "model": "mycatalog.review",
+    "pk": 5,
+    "fields": {
+      "author": 2,
+      "product": 5,
+      "text": "kkkk",
+      "rate": 6,
+      "date": "2023-11-30T13:55:45.473Z"
+    }
+  },
+  {
+    "model": "mycatalog.review",
+    "pk": 6,
+    "fields": {
+      "author": 2,
+      "product": 6,
+      "text": "review for car",
+      "rate": 10,
+      "date": "2023-11-30T14:08:52.478Z"
+    }
+  },
+  {
+    "model": "mycatalog.review",
+    "pk": 7,
+    "fields": {
+      "author": 2,
+      "product": 6,
+      "text": "review 2 for car",
+      "rate": 9,
+      "date": "2023-11-30T14:09:13.842Z"
+    }
+  },
+  {
+    "model": "mycatalog.review",
+    "pk": 8,
+    "fields": {
+      "author": 2,
+      "product": 2,
+      "text": "kdkdkdk",
+      "rate": 8,
+      "date": "2023-11-30T16:33:30.922Z"
+    }
+  },
+  {
+    "model": "mycatalog.review",
+    "pk": 9,
+    "fields": {
+      "author": 2,
+      "product": 8,
+      "text": "mlmlml",
+      "rate": 4,
+      "date": "2023-12-01T02:39:42.499Z"
+    }
+  },
+  {
+    "model": "mycatalog.review",
+    "pk": 10,
+    "fields": {
+      "author": 2,
+      "product": 8,
+      "text": ",m,m,,,,m,m",
+      "rate": 3,
+      "date": "2023-12-01T02:57:48.663Z"
+    }
+  },
+  {
+    "model": "mycatalog.review",
+    "pk": 11,
+    "fields": {
+      "author": 2,
+      "product": 8,
+      "text": "ll,lll",
+      "rate": 7,
+      "date": "2023-12-01T02:58:05.919Z"
+    }
+  },
+  {
+    "model": "mycatalog.review",
+    "pk": 12,
+    "fields": {
+      "author": 2,
+      "product": 7,
+      "text": "p",
+      "rate": 1,
+      "date": "2023-12-01T03:17:15.904Z"
+    }
+  },
+  {
+    "model": "mycatalog.review",
+    "pk": 15,
+    "fields": {
+      "author": 2,
+      "product": 1,
+      "text": ",,,",
+      "rate": 5,
+      "date": "2023-12-01T03:19:35.942Z"
+    }
+  },
+  {
+    "model": "mycatalog.review",
+    "pk": 16,
+    "fields": {
+      "author": 2,
+      "product": 1,
+      "text": "lkokok",
+      "rate": 4,
+      "date": "2023-12-01T03:19:35.943Z"
+    }
+  },
+  {
+    "model": "mycatalog.review",
+    "pk": 18,
+    "fields": {
+      "author": 2,
+      "product": 1,
+      "text": "kh;jlkjlkj",
+      "rate": 3,
+      "date": "2023-12-01T16:56:25.609Z"
+    }
+  },
+  {
+    "model": "mycatalog.review",
+    "pk": 19,
+    "fields": {
+      "author": 2,
+      "product": 3,
+      "text": "lklk",
+      "rate": 5,
+      "date": "2023-12-02T09:52:21.287Z"
+    }
+  },
+  {
+    "model": "mycatalog.review",
+    "pk": 20,
+    "fields": {
+      "author": 2,
+      "product": 3,
+      "text": "opa opa opa opa",
+      "rate": 3,
+      "date": "2023-12-02T09:53:24.192Z"
+    }
+  },
+  {
+    "model": "mycatalog.review",
+    "pk": 21,
+    "fields": {
+      "author": 2,
+      "product": 3,
+      "text": "dkkdkdkd",
+      "rate": 5,
+      "date": "2023-12-02T12:56:17.684Z"
+    }
+  },
+  {
+    "model": "mycatalog.review",
+    "pk": 22,
+    "fields": {
+      "author": 2,
+      "product": 3,
+      "text": "hi jack",
+      "rate": 5,
+      "date": "2023-12-02T12:56:50.826Z"
+    }
+  },
+  {
+    "model": "mycatalog.review",
+    "pk": 23,
+    "fields": {
+      "author": 2,
+      "product": 3,
+      "text": "kdkddkkdkdkd",
+      "rate": 5,
+      "date": "2023-12-02T12:57:46.650Z"
+    }
+  },
+  {
+    "model": "mycatalog.review",
+    "pk": 24,
+    "fields": {
+      "author": 2,
+      "product": 6,
+      "text": "hikdkdkdk",
+      "rate": 5,
+      "date": "2023-12-02T13:01:06.583Z"
+    }
+  },
+  {
+    "model": "mycatalog.review",
+    "pk": 25,
+    "fields": {
+      "author": 2,
+      "product": 5,
+      "text": "dfdfdf",
+      "rate": 5,
+      "date": "2023-12-11T15:02:11.078Z"
+    }
+  },
+  {
+    "model": "mycatalog.review",
+    "pk": 26,
+    "fields": {
+      "author": 6,
+      "product": 2,
+      "text": "lklkl",
+      "rate": 5,
+      "date": "2023-12-13T16:25:06.908Z"
+    }
+  },
+  {
+    "model": "mycatalog.review",
+    "pk": 27,
+    "fields": {
+      "author": 6,
+      "product": 2,
+      "text": "dfdfd",
+      "rate": 5,
+      "date": "2023-12-13T19:42:42.857Z"
+    }
+  },
+  {
+    "model": "mycatalog.review",
+    "pk": 28,
+    "fields": {
+      "author": 6,
+      "product": 2,
+      "text": "iiiiiiiiiiiiiiiiiiiiiiiiiiiii",
+      "rate": 5,
+      "date": "2023-12-14T09:55:58.839Z"
+    }
+  },
+  {
+    "model": "mycatalog.review",
+    "pk": 29,
+    "fields": {
+      "author": 6,
+      "product": 2,
+      "text": "kkk",
+      "rate": 5,
+      "date": "2023-12-14T09:58:11.473Z"
+    }
+  },
+  {
+    "model": "mycatalog.specification",
+    "pk": 1,
+    "fields": {
+      "name": "size",
+      "value": "1"
+    }
+  },
+  {
+    "model": "mycatalog.specification",
+    "pk": 2,
+    "fields": {
+      "name": "size",
+      "value": "2"
+    }
+  },
+  {
+    "model": "mycatalog.tag",
+    "pk": 1,
+    "fields": {
+      "name": "big"
+    }
+  },
+  {
+    "model": "mycatalog.tag",
+    "pk": 2,
+    "fields": {
+      "name": "small"
+    }
+  },
+  {
+    "model": "mycatalog.tag",
+    "pk": 3,
+    "fields": {
+      "name": "blue"
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$LQN9vPL2hq8tgdiykwvxP7$8NHUmm3B8x2jnxf5OtheazCeCwSfG0KMbv4f115y/P0=",
+      "last_login": "2023-12-11T16:44:12.810Z",
+      "is_superuser": true,
+      "username": "karen",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2023-11-22T02:11:43.933Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 6,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$uVBDAHlotCivezCbdst8Du$rxYz6OnjQnjwIm304wMXt7lD9u1I8uOV6oVVCqEmXXc=",
+      "last_login": "2023-12-14T09:54:36.237Z",
+      "is_superuser": false,
+      "username": "bob",
+      "first_name": "bob",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2023-12-12T11:27:57.999Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  }
+]

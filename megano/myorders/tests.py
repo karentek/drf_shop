@@ -104,7 +104,8 @@ class BayProductTestCase(APITestCase):
         url = reverse('myorders:payment', args=[order_id])
 
         data = {
-            "number": "9999999999999999",
+            # 2147483647
+            "number": "2147483647",
             "name": "Annoying Orange",
             "month": "02",
             "year": "2025",
