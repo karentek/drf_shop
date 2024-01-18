@@ -1,9 +1,12 @@
+from typing import NoReturn
+from rest_framework.request import Request
+
 
 class Basket(object):
 
     """Кастомный класс для работы корзины"""
 
-    def __init__(self, request):
+    def __init__(self, request: Request) -> NoReturn:
         """
         :param request: запрос с данными заказа прходит с вью функции BasketView
         создается словарь в котором будут хранится данние о заказе в течении сессии
@@ -16,7 +19,7 @@ class Basket(object):
             basket = self.session['basket'] = {}
         self.basket = basket
 
-    def dell_value_equals_zero(self):
+    def dell_value_equals_zero(self) -> 'Basket':
 
         """Метот удаляет из корзины товары колличество которых равно нулю"""
 
@@ -28,16 +31,16 @@ class Basket(object):
         self.save()
         return self.basket
 
-    def add_item(self, product_id, products_count, quantity=1):
+    def add_item(self, product_id: int, products_count: int, quantity=1) -> NoReturn:
 
         """
-
         :param product_id: продукт
         :param products_count: колличество продукта на складе
         :param quantity: заказанное колличество
         сохраняет колличество товара добавленного в корзину
         не дает заказать товар в колличестве большем чем его есть на складе
         """
+
         product_id = str(product_id)
         quantity = int(quantity)
         if product_id in self.basket and self.basket[product_id] + quantity < products_count:
@@ -53,42 +56,41 @@ class Basket(object):
                 self.basket[product_id] = products_count
         self.save()
 
-    def remove_item(self, product_id, quantity=1):
+    def remove_item(self, product_id: int, quantity=1) -> NoReturn:
         """
-
         :param product_id: продукт
         :param quantity: удаляемое колличество
         """
+
         product_id = str(product_id)
         quantity = int(quantity)
         if product_id in self.basket and self.basket[product_id] != 0:
             self.basket[product_id] -= quantity
         self.save()
 
-    def get_basket_items(self):
+    def get_basket_items(self) -> 'Basket':
         """
         :return: возвращает корозину
         """
         return self.basket
 
-    def clear_basket(self):
+    def clear_basket(self) -> NoReturn:
+
         """
         Метод удаляет данные корзины
-        :return:
         """
+
         self.session['basket'] = {}
         self.save()
 
-    def save(self):
+    def save(self) -> NoReturn:
         """
         Сохранение корзины
-        :return:
         """
         self.session.modified = True
 
-    def get_ids(self):
+    def get_ids(self) -> list[int]:
         """
-
         :return:  возвращает список из ID товаров в корзине  для удобства
         """
         items = self.basket

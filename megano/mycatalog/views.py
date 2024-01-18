@@ -1,6 +1,9 @@
 import random
+from typing import Any
+
 from rest_framework import status
 from rest_framework.views import APIView
+from rest_framework.request import Request
 from rest_framework.response import Response
 from django.db.models.functions import Coalesce
 from django.db.models import DecimalField, IntegerField
@@ -31,7 +34,7 @@ class CatalogView(APIView):
 
     """Вью для отображения каталога и фильтрации продуктов"""
 
-    def get(self, request):
+    def get(self, request: Request) -> Response:
         queryset = Product.objects.all()
         data_filter_object = DataFilter(self.request.query_params)
         filtered_products = data_filter_object.apply_filters_to_products(queryset)
@@ -60,7 +63,7 @@ class ProductsLimitedView(APIView):
 
     """Вью для отображения лимитированных продуктов"""
 
-    def get(self, request):
+    def get(self, request) -> Response:
         product = Product.objects.exclude(count__isnull=True).exclude(count=0)
         product = product.annotate(
             product_count_coalesced=Coalesce('count', -1, output_field=IntegerField())
@@ -74,7 +77,7 @@ class SalesView(APIView):
 
     """Вью для отображения скидок на продукты"""
 
-    def get(self, request):
+    def get(self, request: Request) -> Response:
         product = Product.objects.exclude(sale__isnull=True)
         paginator = CatalogPaginator()
         current_page = {
@@ -89,7 +92,7 @@ class BannersView(APIView):
 
     """Вью для отображения банеров продуктов"""
 
-    def get(self, request):
+    def get(self, request: Request) -> Response:
         all_ids = Product.objects.filter(count__gt=0).values_list('pk', flat=True)
         random_ids = random.sample(list(all_ids), 4)
         random_instances = Product.objects.filter(pk__in=random_ids)
@@ -101,7 +104,7 @@ class ProductView(APIView):
 
     """Вью для отображения детальной информации о продуктах"""
 
-    def get(self, request, **kwargs):
+    def get(self, request: Request, **kwargs: Any) -> Response:
         product = Product.objects.get(id=self.kwargs.get("id"))
         serializer = ProductIDSerializer(instance=product)
         return Response(data=serializer.data, status=status.HTTP_200_OK)
@@ -115,7 +118,7 @@ class ReviewView(APIView):
 
     permission_classes = [IsAuthenticated]
 
-    def post(self, request, *args, **kwargs):
+    def post(self, request: Request, *args: Any, **kwargs: Any) -> Response:
         data = request.data
         user = request.user
         author = data.get('author')
@@ -138,7 +141,7 @@ class TagsView(APIView):
 
     """Вью для отображения тэгов"""
 
-    def get(self, request, **kwargs):
+    def get(self, request: Request, **kwargs: Any) -> Response:
         tags = Tag.objects.all()
         serializer = TagsSerializer(instance=tags, many=True)
         return Response(data=serializer.data, status=status.HTTP_200_OK)

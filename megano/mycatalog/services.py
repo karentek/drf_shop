@@ -1,5 +1,8 @@
 import math
-from django.db.models import DecimalField, Count
+from typing import List, Dict, Any, Union
+from rest_framework.request import Request
+from .models import Product
+from django.db.models import DecimalField, Count, QuerySet
 from django.db.models.functions import Coalesce
 from django.http import QueryDict
 from rest_framework.pagination import PageNumberPagination
@@ -14,7 +17,7 @@ class CatalogPaginator(PageNumberPagination):
         self.current_page = None
         self.summ_pages = None
 
-    def get_paginated_response(self, data):
+    def get_paginated_response(self, data: List[Dict[str, Any]]) -> Response:
         return Response(
             {
                 "items": data,
@@ -23,7 +26,7 @@ class CatalogPaginator(PageNumberPagination):
             }
         )
 
-    def paginate_queryset(self, queryset, request, query, view=None):
+    def paginate_queryset(self, queryset: List[Any], request: Request, query, view=None) -> Union[List[Any], Response, None]:
         self.current_page = query.get('currentPage', 1)
         self.summ_pages = math.ceil(queryset.count() / self.page_size)
         start_index = (self.current_page - 1) * self.page_size
@@ -40,7 +43,7 @@ class DataFilter:
         self.limit = self.filtered_dict.get('limit', None)
         self.current_page = self.filtered_dict.get('currentPage', None)
 
-    def query_filter(self, query_dict: QueryDict) -> dict:
+    def query_filter(self, query_dict: QueryDict) -> Dict[str, Any]:
 
         """"метод предназначен для очистки словаря параметров запроса
         для удобства последующей обработки этого словаря"""
@@ -55,7 +58,7 @@ class DataFilter:
                 filtered_dict[key] = converted_values[0]
         return filtered_dict
 
-    def apply_filters_to_products(self, filtered_products):
+    def apply_filters_to_products(self, filtered_products: QuerySet[Product]) -> QuerySet[Product]:
 
         """метод для фильтрации и создания набора продуктов по заданным параметрам"""
 

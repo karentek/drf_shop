@@ -1,4 +1,4 @@
-from typing import Any
+from typing import Any, Dict, List
 from rest_framework import serializers
 from .models import Categories, Product, Tag, Review
 
@@ -14,12 +14,12 @@ class CategoriesSerializer(serializers.ModelSerializer):
         model = Categories
         fields = ('id', 'title', 'image', 'subcategories')
 
-    def get_subcategories(self, instance):
+    def get_subcategories(self, instance: Categories) -> Dict[str, Any]:
         subcategories = Categories.objects.filter(parent_category=instance)
         serializer = CategoriesSerializer(subcategories, many=True)
         return serializer.data
 
-    def get_image(self, instance: Categories):
+    def get_image(self, instance: Categories) -> Dict[str, Any]:
         image_instance = instance.category_image.first()
         src = image_instance.image.url
         alt = image_instance.image.name
@@ -40,11 +40,11 @@ class ProductSerializer(serializers.ModelSerializer):
                   "description", "freeDelivery", "images", "tags", "reviews", "rating")
 
     @staticmethod
-    def get_reviews(instance):
+    def get_reviews(instance: Product) -> int:
         return instance.review.all().count()
 
     @staticmethod
-    def get_rating(instance):
+    def get_rating(instance: Product) -> float:
         reviews_instances = instance.review.all()
         count = reviews_instances.count()
         rate_summ = 0
@@ -61,7 +61,7 @@ class ProductSerializer(serializers.ModelSerializer):
             return rate_summ
 
     @staticmethod
-    def get_images(instance: Product) -> list[dict[str, Any]]:
+    def get_images(instance: Product) -> List[Dict[str, Any]]:
         image_instance = instance.images.all()
         images = []
         for inst in image_instance:
@@ -70,7 +70,7 @@ class ProductSerializer(serializers.ModelSerializer):
             images.append({"src": src, "alt": alt})
         return images
 
-    def to_representation(self, instance):
+    def to_representation(self, instance: Product) -> Dict[str, List[dict]]:
         data = super().to_representation(instance)
         tag_ids = data["tags"]
         data["tags"] = []
@@ -89,7 +89,7 @@ class SaleProductSerializer(serializers.ModelSerializer):
     class Meta(ProductSerializer.Meta):
         fields = ("id", "price", "title", "images",)
 
-    def get_images(self, instance: Product) -> list[dict[str, Any]]:
+    def get_images(self, instance: Product) -> List[Dict[str, Any]]:
         image_instance = instance.images.all()
         images = []
         for inst in image_instance:
@@ -98,7 +98,7 @@ class SaleProductSerializer(serializers.ModelSerializer):
             images.append({"src": src, "alt": alt})
         return images
 
-    def to_representation(self, instance):
+    def to_representation(self, instance: Product) -> Dict[str, Any]:
         data = super().to_representation(instance)
         sale_info = instance.sale
         price = float(data["price"])
@@ -120,7 +120,7 @@ class ProductIDSerializer(serializers.ModelSerializer):
         fields = ("specifications", "reviews", "fullDescription",)
 
     @staticmethod
-    def get_specifications(instance: Product) -> list[dict[str, Any]]:
+    def get_specifications(instance: Product) -> List[Dict[str, Any]]:
         specifications_inst = instance.specifications.all()
         specifications = []
         for sp in specifications_inst:
@@ -130,7 +130,7 @@ class ProductIDSerializer(serializers.ModelSerializer):
         return specifications
 
     @staticmethod
-    def get_reviews(instance: Product) -> list[dict[str, Any]]:
+    def get_reviews(instance: Product) -> List[Dict[str, Any]]:
         reviews_inst = instance.review.all()
         reviews = []
         for review in reviews_inst:
@@ -148,7 +148,7 @@ class ProductIDSerializer(serializers.ModelSerializer):
             })
         return reviews
 
-    def to_representation(self, instance):
+    def to_representation(self, instance: Product) -> Dict[str, Any]:
         data = super().to_representation(instance)
         serializer = ProductSerializer(instance)
         product_data = serializer.data
@@ -168,7 +168,7 @@ class ReviewSerializer(serializers.ModelSerializer):
 
 class TagsSerializer(serializers.ModelSerializer):
 
-    """Сериалайзер обрабатывающий данные о тегах """
+    """Сериалайзер обрабатывающий данные о тегах"""
 
     class Meta:
         model = Tag

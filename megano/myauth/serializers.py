@@ -1,3 +1,5 @@
+from typing import Any
+
 from django.contrib.auth.models import User
 import json
 from rest_framework import serializers
@@ -15,7 +17,7 @@ class SignInSerializer(serializers.ModelSerializer):
         model = User
         fields = ('username', 'password')
 
-    def to_internal_value(self, data):
+    def to_internal_value(self, data: Any) -> dict:
         cleaned_data = json.loads(list(data)[0])
         return cleaned_data
 
@@ -32,7 +34,7 @@ class SignUpSerializer(serializers.ModelSerializer):
         model = User
         fields = ('first_name', 'username', 'password')
 
-    def to_internal_value(self, data):
+    def to_internal_value(self, data: Any) -> dict:
         cleaned_data = json.loads(list(data)[0])
         cleaned_data['first_name'] = cleaned_data['name']
         del cleaned_data['name']
@@ -77,7 +79,7 @@ class ProfileGetPostSerializer(serializers.ModelSerializer):
     email = serializers.EmailField(allow_blank=True)
     phone = serializers.CharField(allow_blank=True)
 
-    def update(self, instance: Profile, validated_data):
+    def update(self, instance: Profile, validated_data: dict):
         instance.email = validated_data.get('email', instance.email)
         instance.fullName = validated_data.get('fullName', instance.fullName)
         instance.phone = validated_data.get('phone', instance.phone)

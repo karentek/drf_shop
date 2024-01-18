@@ -5,6 +5,7 @@ from rest_framework.response import Response
 from mycatalog.serializers import ProductSerializer
 from .services import Basket, aply_count_for_product
 from mycatalog.models import Product
+from typing import Any, Tuple, Dict
 from .models import Order
 from .serializers import (
     OrderSerializer,
@@ -19,7 +20,7 @@ class BasketView(APIView):
 
     """Представление корзины"""
 
-    def post(self, request) -> Response:
+    def post(self, request: Request) -> Response:
 
         """Метод для добавления товара в корзину"""
 
@@ -37,7 +38,7 @@ class BasketView(APIView):
         result = aply_count_for_product(serializer.data, items)
         return Response(data=result, status=status.HTTP_200_OK)
 
-    def get(self, request):
+    def get(self, request: Request) -> Response:
 
         """Метод для отображиния товара в корзине"""
 
@@ -50,7 +51,7 @@ class BasketView(APIView):
 
         return Response(data=result, status=status.HTTP_200_OK)
 
-    def delete(self, request):
+    def delete(self, request: Request) -> Response:
 
         """Метод для удаления товара из корзины"""
 
@@ -86,7 +87,7 @@ class OrdersView(APIView):
         else:
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-    def get(self, request, *args, **kwargs):
+    def get(self, request: Request) -> Response:
 
         """Метод для отображения заказа"""
 
@@ -101,7 +102,7 @@ class OrdersDetailView(APIView):
 
     """Представление для ввода и вывода детальных данных заказов"""
 
-    def post(self, request, *args, **kwargs):
+    def post(self, request: Request, **kwargs: Any) -> Response:
 
         """Метод для ввода детальных данных заказов"""
 
@@ -125,7 +126,7 @@ class OrdersDetailView(APIView):
         else:
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-    def get(self, request, *args, **kwargs):
+    def get(self, request: Request, **kwargs: Any) -> Response:
 
         """Метод для вывода детальных данных заказов"""
 
@@ -141,7 +142,7 @@ class PaymentView(APIView):
     """Метод для ввода данных карты
     также меняет статус заказа на оплаченный, и удаляет корзину из сессии"""
 
-    def post(self, request: Request, *args, **kwargs) -> Response:
+    def post(self, request: Request, **kwargs: Any) -> Response:
         data = request.data
         data["order_rel"] = kwargs["pk"]
         serializer = PaymentSerializer(data=data)

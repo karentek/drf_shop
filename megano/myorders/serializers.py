@@ -1,3 +1,5 @@
+from typing import Dict, Any, List, Optional
+
 from rest_framework import serializers
 from mycatalog.models import Categories, Product, Tag, Review
 from mycatalog.serializers import ProductSerializer
@@ -17,7 +19,7 @@ class OrderSerializer(serializers.ModelSerializer):
         model = Order
         fields = ("orderId",)
 
-    def create(self, validated_data):
+    def create(self, validated_data: Dict[str, Any]) -> Order:
 
         """
         кастомное создание инстанса заказа в котором сохраняются необходимые поля
@@ -46,6 +48,7 @@ class OrderDetailSerializer(serializers.ModelSerializer):
     email = serializers.SerializerMethodField()
     phone = serializers.SerializerMethodField()
     products = serializers.SerializerMethodField()
+
     class Meta:
         model = Order
         fields = (
@@ -63,16 +66,16 @@ class OrderDetailSerializer(serializers.ModelSerializer):
             "products",
         )
 
-    def get_fullName(self, instance):
+    def get_fullName(self, instance: Order):
         return instance.user.profile.fullName
 
-    def get_email(self, instance):
+    def get_email(self, instance: Order):
         return instance.user.profile.email
 
-    def get_phone(self, instance):
+    def get_phone(self, instance: Order):
         return instance.user.profile.phone
 
-    def get_products(self, instance):
+    def get_products(self, instance: Order) -> List[Dict[str, Any]]:
         items = self.context.get("basket")
         items = {k: int(v) for k, v in items.items() if v != 0}
         products = instance.products.all()
@@ -100,11 +103,11 @@ class OrderAcceptedSerializer(serializers.ModelSerializer):
             "order_items",
         )
 
-    def update(self, instance, validated_data):
+    def update(self, instance: Order, validated_data: Dict[str, Any]) -> Order:
         order_items_data = self.context.get("products")
         instance.deliveryType = validated_data.get('deliveryType', instance.deliveryType)
         instance.paymentType = validated_data.get('paymentType', instance.paymentType)
-        instance.status = "accepted"  # You may override the status here if needed
+        instance.status = "accepted"
         instance.city = validated_data.get('city', instance.city)
         instance.address = validated_data.get('address', instance.address)
         order_items_list = []
@@ -141,6 +144,7 @@ class OrdersGetSerializer(serializers.ModelSerializer):
     email = serializers.SerializerMethodField()
     phone = serializers.SerializerMethodField()
     products = ProductSerializer(many=True)
+
     class Meta:
         model = Order
         fields = (
