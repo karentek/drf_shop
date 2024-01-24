@@ -1,3 +1,5 @@
+from drf_spectacular.types import OpenApiTypes
+from drf_spectacular.utils import extend_schema, extend_schema_view, OpenApiParameter
 from rest_framework import status
 from rest_framework.views import APIView
 from rest_framework.request import Request
@@ -16,6 +18,33 @@ from .serializers import (
 )
 
 
+@extend_schema(tags=["myorders APP"], )
+@extend_schema_view(
+    get=extend_schema(
+        summary="Метод для отображиния товара в корзине",
+        description="""Метод для отображиния товара в корзине""",
+        responses={
+            status.HTTP_200_OK: ProductSerializer(many=True),
+        },
+
+
+    ),
+    post=extend_schema(
+        summary="Метод для добавления товара в корзину",
+        description="""Метод для добавления товара в корзину""",
+        responses={
+            status.HTTP_200_OK: ProductSerializer(many=True),
+            },
+    ),
+    delete=extend_schema(
+        summary="Метод для удаления товара из корзины",
+        description="""Метод для удаления товара из корзины""",
+
+        responses={
+            status.HTTP_200_OK: ProductSerializer(many=True),
+        },
+    ),
+)
 class BasketView(APIView):
 
     """Представление корзины"""
@@ -68,6 +97,24 @@ class BasketView(APIView):
         return Response(data=result, status=status.HTTP_200_OK)
 
 
+@extend_schema(tags=["myorders APP"])
+@extend_schema_view(
+    get=extend_schema(
+        summary="Метод для отображения заказа",
+        description="""Метод для отображиния pfrfpf""",
+        responses={
+            status.HTTP_200_OK: OrdersGetSerializer,
+        },
+    ),
+    post=extend_schema(
+        summary="Метод для создания заказа",
+        description="""Метод для добавления товара в корзину""",
+        responses={
+            status.HTTP_200_OK: OrderSerializer,
+            "orderId": "order.id"
+        },
+    ),
+)
 class OrdersView(APIView):
 
     """Представление для заказов"""
@@ -98,6 +145,24 @@ class OrdersView(APIView):
         return Response(data=serializer.data, status=status.HTTP_200_OK)
 
 
+@extend_schema(tags=["myorders APP"])
+@extend_schema_view(
+    get=extend_schema(
+        summary="Метод для вывода детальных данных заказов",
+        description="""Метод для вывода детальных данных заказов""",
+        responses={
+            status.HTTP_200_OK: OrderDetailSerializer,
+        },
+    ),
+    post=extend_schema(
+        summary="Метод для ввода детальных данных заказов",
+        description="""Метод для ввода детальных данных заказов""",
+        responses={
+            status.HTTP_200_OK: OrderAcceptedSerializer,
+
+        },
+    ),
+)
 class OrdersDetailView(APIView):
 
     """Представление для ввода и вывода детальных данных заказов"""
@@ -137,6 +202,28 @@ class OrdersDetailView(APIView):
         return Response(data=serializer.data, status=status.HTTP_200_OK)
 
 
+@extend_schema(tags=["myorders APP"])
+@extend_schema_view(
+    post=extend_schema(
+        summary="Метод для ввода данных карты",
+        description="""Метод для ввода данных карты
+                       также меняет статус заказа на оплаченный,
+                       и удаляет корзину из сессии""",
+        responses={
+            status.HTTP_200_OK: PaymentSerializer,
+        },
+        parameters=[
+            OpenApiParameter(
+                "id",
+                OpenApiTypes.STR,
+                location=OpenApiParameter.QUERY,
+                required=True,
+                description="order ID"
+
+            )
+        ],
+    ),
+)
 class PaymentView(APIView):
 
     """Метод для ввода данных карты

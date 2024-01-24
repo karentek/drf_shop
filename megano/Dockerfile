@@ -1,5 +1,5 @@
 # pull official base image
-FROM python:3.11.4-slim-buster
+FROM python:3.11.4-alpine
 # set work directory
 WORKDIR /usr/src/diploma
 
@@ -13,12 +13,16 @@ ENV PYTHONUNBUFFERED 1
 #RUN /bin/bash -c "source venv/bin/activate"
 
 # install system dependencies
-RUN apt-get update && apt-get install -y netcat
+#RUN apt-get update && apt-get install -y netcat
 
 # install dependencies
 RUN pip install --upgrade pip
 COPY ./megano/requirements.txt .
+
 RUN pip install -r requirements.txt
+RUN pip install eventlet
+#RUN pip install django-celery-beat
+
 
 
 # copy entrypoint.sh

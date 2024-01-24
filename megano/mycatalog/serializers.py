@@ -45,20 +45,7 @@ class ProductSerializer(serializers.ModelSerializer):
 
     @staticmethod
     def get_rating(instance: Product) -> float:
-        reviews_instances = instance.review.all()
-        count = reviews_instances.count()
-        rate_summ = 0
-        if count > 0:
-            for review in reviews_instances:
-                rate_summ += review.rate
-            result = round(rate_summ / count, 2)
-            instance.rating = result
-            instance.save()
-            return result
-        elif count == 0:
-            instance.rating = rate_summ
-            instance.save()
-            return rate_summ
+        return instance.rating
 
     @staticmethod
     def get_images(instance: Product) -> List[Dict[str, Any]]:

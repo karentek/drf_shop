@@ -1,4 +1,6 @@
 import json
+
+from drf_spectacular.utils import extend_schema, extend_schema_view
 from rest_framework import status
 from rest_framework import generics
 from rest_framework.views import APIView
@@ -13,6 +15,14 @@ from .serializers import SignUpSerializer, ProfileGetPostSerializer
 from .models import Profile, Avatar
 
 
+@extend_schema(tags=["myauth APP"])
+@extend_schema_view(
+    post=extend_schema(
+    summary="Метод для создания, авторизации и регистрации пользователя",
+    description="""Метод для создания, авторизации и регистрации пользователя""",
+
+    ),
+)
 class SignUpView(generics.CreateAPIView):
     """
     Класс представления для создания, авторизации и регистрации пользователя
@@ -40,6 +50,15 @@ class SignUpView(generics.CreateAPIView):
                 return Response({'message': 'Not serialized or not valid'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
+@extend_schema(tags=["myauth APP"])
+@extend_schema_view(
+    post=extend_schema(
+    summary="Метод для аутентикации  пользователя и входа на сайт",
+    description="""Метод для аутентикации  пользователя и входа на сайт""",
+
+
+    ),
+)
 class SignInView(APIView):
     """
     Класс представления для аутентикации  пользователя и входа на сайт
@@ -63,6 +82,14 @@ class SignInView(APIView):
                             status=status.HTTP_404_NOT_FOUND)
 
 
+@extend_schema(tags=["myauth APP"])
+@extend_schema_view(
+    post=extend_schema(
+    summary="Метод для выхода с сайта",
+    description="""Метод для выхода с сайта""",
+
+    ),
+)
 class LogoutView(APIView):
     """
     Класс представления для выхода с сайта
@@ -74,6 +101,24 @@ class LogoutView(APIView):
         return Response({'message': 'Logout successful'}, status=status.HTTP_200_OK)
 
 
+@extend_schema(tags=["myauth APP"])
+@extend_schema_view(
+    post=extend_schema(
+    summary="Метод для обновления или создания дополнительной информации о пользователе",
+    description="""Метод для обновления или создания дополнительной информации о пользователе""",
+    responses={
+            status.HTTP_200_OK: ProfileGetPostSerializer,
+        },
+    ),
+    get=extend_schema(
+    summary="Метод для обновления или создания дополнительной информации о пользователе",
+    description="""Метод для обновления или создания дополнительной информации о пользователе""",
+    responses={
+            status.HTTP_200_OK: ProfileGetPostSerializer,
+        },
+    ),
+
+)
 class ProfileUpdateView(APIView):
     """
     Класс представления для обновления или создания дополнительной информации о пользователе
@@ -97,6 +142,19 @@ class ProfileUpdateView(APIView):
         return Response(data=serializer.data, status=status.HTTP_200_OK)
 
 
+@extend_schema(tags=["myauth APP"])
+@extend_schema_view(
+    post=extend_schema(
+    summary="Метод для смены пароля пользователя",
+    description="""Метод для смены пароля пользователя""",
+    responses={
+
+                 "currentPassword": "oldPass123",
+                  "newPassword": "newPass321"
+
+              },
+    ),
+)
 class PostPasswordView(APIView):
     """
     Класс представления для смены пароля пользователя
@@ -116,6 +174,14 @@ class PostPasswordView(APIView):
             return Response({'Old password is incorrect.'}, status=status.HTTP_200_OK)
 
 
+@extend_schema(tags=["myauth APP"])
+@extend_schema_view(
+    post=extend_schema(
+        summary="Метод для сохранения и отображения  аватара пользователя.",
+        description="""Метод для сохранения и отображения  аватара пользователя.""",
+
+    ),
+)
 class PostAvatarView(APIView):
     """
     Класс представления для сохранения и отображения  аватара пользователя.

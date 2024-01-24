@@ -54,6 +54,8 @@ COPY --from=builder /usr/src/diploma/wheels /wheels
 COPY --from=builder /usr/src/diploma/requirements.txt .
 RUN pip install --upgrade pip
 RUN pip install --no-cache /wheels/*
+RUN pip install eventlet
+
 
 # copy entrypoint.prod.sh
 COPY ./megano/entrypoint.prod.sh .

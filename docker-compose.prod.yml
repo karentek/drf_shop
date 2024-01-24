@@ -35,6 +35,66 @@ services:
     depends_on:
       - web
 
+
+  redis:
+    image: redis:7.0.5-alpine
+    hostname: worker
+  worker:
+    build:
+      context: .
+      dockerfile: ./megano/Dockerfile.prod
+    hostname: worker
+    entrypoint: celery
+    command: -A celery_app worker --loglevel=info -P eventlet
+    volumes:
+      - static_volume:/home/megano_app/web/megano/staticfiles
+      - media_volume:/home/megano_app/web/megano/uploads
+    links:
+      - redis
+    depends_on:
+      - redis
+      - db
+    env_file:
+      - .env.prod
+  beat:
+    build:
+      context: .
+      dockerfile: ./megano/Dockerfile.prod
+    entrypoint: celery
+    command: -A celery_app beat --loglevel=info
+    volumes:
+      - static_volume:/home/megano_app/web/megano/staticfiles
+      - media_volume:/home/megano_app/web/megano/uploads
+    links:
+      - redis
+      - worker
+    depends_on:
+      - redis
+      - db
+    env_file:
+      - .env.prod
+
+  flower:
+    build:
+      context: .
+      dockerfile: ./megano/Dockerfile.prod
+    hostname: flower
+    entrypoint: celery
+    command: -A celery_app flower
+    volumes:
+      - static_volume:/home/megano_app/web/megano/staticfiles
+      - media_volume:/home/megano_app/web/megano/uploads
+    links:
+      - redis
+    depends_on:
+      - redis
+    ports:
+      - "5555:5555"
+
+
+
+
+
 volumes:
   postgres_data:
   static_volume:

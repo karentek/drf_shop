@@ -6,7 +6,6 @@ services:
       context: .
       dockerfile: ./megano/Dockerfile
     command: python manage.py runserver 0.0.0.0:8000
-#    command: /usr/src/megano/entrypoint.sh
     volumes:
       - ./megano/:/usr/src/diploma/megano
     ports:
@@ -23,6 +22,60 @@ services:
       - POSTGRES_USER=megano_app
       - POSTGRES_PASSWORD=megano_app
       - POSTGRES_DB=megano_app_dev
+
+
+  redis:
+    image: redis:7.0.5-alpine
+    hostname: worker
+  worker:
+    build:
+      context: .
+      dockerfile: ./megano/Dockerfile
+    hostname: worker
+    entrypoint: celery
+    command: -A celery_app worker --loglevel=info -P eventlet
+    volumes:
+      - ./megano/:/usr/src/diploma/megano
+    links:
+      - redis
+    depends_on:
+      - redis
+      - db
+    env_file:
+      - .env.dev
+  beat:
+    build:
+      context: .
+      dockerfile: ./megano/Dockerfile
+    entrypoint: celery
+    command: -A celery_app beat --loglevel=info
+    volumes:
+      - ./megano/:/usr/src/diploma/megano
+    links:
+      - redis
+      - worker
+    depends_on:
+      - redis
+      - db
+    env_file:
+      - .env.dev
+
+  flower:
+    build:
+      context: .
+      dockerfile: ./megano/Dockerfile
+    hostname: flower
+    entrypoint: celery
+    command: -A celery_app flower
+    volumes:
+      - ./megano/:/usr/src/diploma/megano
+    links:
+      - redis
+    depends_on:
+      - redis
+    ports:
+      - "5555:5555"
+
 
 volumes:
   postgres_data:
