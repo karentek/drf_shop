@@ -66,13 +66,13 @@ class OrderDetailSerializer(serializers.ModelSerializer):
             "products",
         )
 
-    def get_fullName(self, instance: Order):
+    def get_fullName(self, instance: Order) -> str:
         return instance.user.profile.fullName
 
-    def get_email(self, instance: Order):
+    def get_email(self, instance: Order) -> str:
         return instance.user.profile.email
 
-    def get_phone(self, instance: Order):
+    def get_phone(self, instance: Order) -> str:
         return instance.user.profile.phone
 
     def get_products(self, instance: Order) -> List[Dict[str, Any]]:
@@ -162,13 +162,13 @@ class OrdersGetSerializer(serializers.ModelSerializer):
             "products",
         )
 
-    def get_fullName(self, instance: Order):
+    def get_fullName(self, instance: Order) -> str:
         print(instance,  type(instance))
         return instance.user.profile.fullName
 
-    def get_email(self, instance):
+    def get_email(self, instance) -> str:
         return instance.user.profile.email
 
-    def get_phone(self, instance):
+    def get_phone(self, instance) -> str:
         return instance.user.profile.phone
 

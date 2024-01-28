@@ -1,7 +1,7 @@
 import random
-from typing import Any
+from typing import Any, List, Dict
 import time
-
+from drf_spectacular.openapi import OpenApiTypes, OpenApiParameter
 from django.db import connection, transaction
 from drf_spectacular.utils import extend_schema_view, extend_schema, OpenApiParameter
 
@@ -15,25 +15,28 @@ from django.db.models import DecimalField, IntegerField
 from rest_framework.permissions import IsAuthenticated
 from .models import Categories, Product, Tag, Review
 from .services import CatalogPaginator, DataFilter
+from .for_swagger import Product_ID_sw, CatalogSerializerSwagger, CatalogSw, QuerySerializerFilter, ProductSw, Sales_Sw
 from .serializers import (
     CategoriesSerializer,
     ProductSerializer,
     SaleProductSerializer,
     ProductIDSerializer,
     ReviewSerializer,
-    TagsSerializer
+    TagsSerializer,
+
+
 )
 
 
 @extend_schema(tags=["mycatalog APP"])
 @extend_schema_view(
     get=extend_schema(
-    summary="Метод для отображения категорий",
-    description="""Метод для отображения тэгов""",
-    responses={
-            status.HTTP_200_OK: CategoriesSerializer,
-        },
-    ),
+        summary="Метод для отображения категорий",
+        description="""Метод для отображения тэгов""",
+        responses={
+                status.HTTP_200_OK: CategoriesSerializer,
+            },
+        ),
 )
 class CategoriesView(APIView):
 
@@ -48,11 +51,22 @@ class CategoriesView(APIView):
 @extend_schema(tags=["mycatalog APP"])
 @extend_schema_view(
     get=extend_schema(
-    summary="Метод для отображения каталога и фильтрации продуктов",
-    description="""Метод для отображения каталога и фильтрации продуктов""",
-    responses={
-            status.HTTP_200_OK: ProductSerializer,
-        },
+        summary="Метод для отображения каталога и фильтрации продуктов",
+        description="""Метод для отображения каталога и фильтрации продуктов""",
+        responses={
+                status.HTTP_200_OK: CatalogSw,
+            },
+        parameters=[
+            OpenApiParameter("filter", QuerySerializerFilter),
+            OpenApiParameter("currentPage", OpenApiTypes.UUID, OpenApiParameter.QUERY),
+            OpenApiParameter("category", OpenApiTypes.UUID, OpenApiParameter.QUERY),
+            OpenApiParameter("sort", OpenApiTypes.UUID, OpenApiParameter.QUERY),
+            OpenApiParameter("sortType", OpenApiTypes.UUID, OpenApiParameter.QUERY),
+            OpenApiParameter("tags", OpenApiTypes.UUID, OpenApiParameter.QUERY),
+            OpenApiParameter("limit", OpenApiTypes.UUID, OpenApiParameter.QUERY),
+
+        ],
+
     ),
 )
 class CatalogView(APIView):
@@ -73,13 +87,13 @@ class CatalogView(APIView):
 @extend_schema(tags=["mycatalog APP"])
 @extend_schema_view(
     get=extend_schema(
-    summary="Метод для отображения популярных продуктов",
-    description="""Метод для отображения популярных продуктов, 
-                   выводятся 4 самых рейтинговых продукта""",
-    responses={
-            status.HTTP_200_OK: ProductSerializer,
-        },
-    ),
+        summary="Метод для отображения популярных продуктов",
+        description="""Метод для отображения популярных продуктов, 
+                       выводятся 4 самых рейтинговых продукта""",
+        responses={
+                status.HTTP_200_OK: ProductSw(many=True),
+            },
+        ),
 )
 class ProductsPopularView(APIView):
 
@@ -98,13 +112,13 @@ class ProductsPopularView(APIView):
 @extend_schema(tags=["mycatalog APP"])
 @extend_schema_view(
     get=extend_schema(
-    summary="Метод для отображения лимитированных продуктов",
-    description="""Метод для отображения лимитированныхх продуктов, 
-                   выводится продукты с наименьшим колличеством в остатках""",
-    responses={
-            status.HTTP_200_OK: ProductSerializer,
-        },
-    ),
+        summary="Метод для отображения лимитированных продуктов",
+        description="""Метод для отображения лимитированныхх продуктов, 
+                       выводится продукты с наименьшим колличеством в остатках""",
+        responses={
+                status.HTTP_200_OK: ProductSw(many=True),
+            },
+        ),
 )
 class ProductsLimitedView(APIView):
 
@@ -123,13 +137,13 @@ class ProductsLimitedView(APIView):
 @extend_schema(tags=["mycatalog APP"])
 @extend_schema_view(
     get=extend_schema(
-    summary="Метод для отображения скидок на продукты",
-    description="""Метод для отображения скидок на продукты, скидка указывается в админке
-                    в нижней части продукта""",
-    responses={
-            status.HTTP_200_OK: SaleProductSerializer,
-        },
-    ),
+        summary="Метод для отображения скидок на продукты",
+        description="""Метод для отображения скидок на продукты, скидка указывается в админке
+                        в нижней части продукта""",
+        responses={
+                status.HTTP_200_OK: Sales_Sw,
+            },
+        ),
 )
 class SalesView(APIView):
 
@@ -149,15 +163,15 @@ class SalesView(APIView):
 @extend_schema(tags=["mycatalog APP"])
 @extend_schema_view(
     get=extend_schema(
-    summary="Метод для отображения банеров продуктов",
-    description="""Метод для отображения банеров продуктов, выводит список
-                    из тех продуктов которые есть в наличии и присутствуют в остатках, выводится
-                    результат из 4-х таких случайных продуктов"""
-    ,
-    responses={
-            status.HTTP_200_OK: ProductSerializer,
-        },
-    ),
+        summary="Метод для отображения банеров продуктов",
+        description="""Метод для отображения банеров продуктов, выводит список
+                        из тех продуктов которые есть в наличии и присутствуют в остатках, выводится
+                        результат из 4-х таких случайных продуктов"""
+        ,
+        responses={
+                status.HTTP_200_OK: ProductSw(many=True),
+            },
+        ),
 )
 class BannersView(APIView):
 
@@ -168,19 +182,20 @@ class BannersView(APIView):
         random_ids = random.sample(list(all_ids), 4)
         random_instances = Product.objects.filter(pk__in=random_ids)
         serializer = ProductSerializer(instance=random_instances, many=True)
-        return Response(data=serializer.data, status=status.HTTP_200_OK)
+        serialized_data: List[Dict[str, Any]] = serializer.data
+        return Response(data=serialized_data, status=status.HTTP_200_OK)
 
 
 @extend_schema(tags=["mycatalog APP"])
 @extend_schema_view(
     get=extend_schema(
-    summary="Метод для отображения детальной информации о продуктах",
-    description="""Метод для отображения детальной информации о продуктах"""
-    ,
-    responses={
-            status.HTTP_200_OK: ProductIDSerializer,
-        },
-    ),
+        summary="Метод для отображения детальной информации о продуктах",
+        description="""Метод для отображения детальной информации о продуктах"""
+        ,
+        responses={
+                status.HTTP_200_OK: Product_ID_sw,
+            },
+        ),
 )
 class ProductView(APIView):
 
@@ -195,14 +210,15 @@ class ProductView(APIView):
 @extend_schema(tags=["mycatalog APP"])
 @extend_schema_view(
     post=extend_schema(
-    summary="Метод для написания отзыва",
-    description="""Метод для написания отзыва.
-                   Только авторизованный пользователь может оставить отзыв,
-                   также проверяется правильность ввода почты и имени пользователя""",
-    responses={
-            status.HTTP_201_CREATED: ReviewSerializer,
-        },
-    ),
+        summary="Метод для написания отзыва",
+        description="""Метод для написания отзыва.
+                       Только авторизованный пользователь может оставить отзыв,
+                       также проверяется правильность ввода почты и имени пользователя""",
+        request=ReviewSerializer,
+        responses={
+                status.HTTP_201_CREATED: ReviewSerializer,
+            },
+        ),
 )
 class ReviewView(APIView):
 
@@ -236,12 +252,12 @@ class ReviewView(APIView):
 @extend_schema(tags=["mycatalog APP"])
 @extend_schema_view(
     get=extend_schema(
-    summary="Метод для отображения тэгов",
-    description="""Метод для отображения тэгов""",
-    responses={
-            status.HTTP_200_OK: TagsSerializer,
-        },
-    ),
+        summary="Метод для отображения тэгов",
+        description="""Метод для отображения тэгов""",
+        responses={
+                status.HTTP_200_OK: TagsSerializer,
+            },
+        ),
 )
 class TagsView(APIView):
 

@@ -1,5 +1,5 @@
 from drf_spectacular.types import OpenApiTypes
-from drf_spectacular.utils import extend_schema, extend_schema_view, OpenApiParameter
+from drf_spectacular.utils import extend_schema, extend_schema_view, OpenApiParameter, inline_serializer
 from rest_framework import status
 from rest_framework.views import APIView
 from rest_framework.request import Request
@@ -9,6 +9,8 @@ from .services import Basket, aply_count_for_product
 from mycatalog.models import Product
 from typing import Any, Tuple, Dict
 from .models import Order
+from mycatalog.for_swagger import Order_sw, BusketSw, Product_ID_sw, CatalogSerializerSwagger, CatalogSw, QuerySerializerFilter, ProductSw, Sales_Sw
+
 from .serializers import (
     OrderSerializer,
     OrderDetailSerializer,
@@ -24,8 +26,9 @@ from .serializers import (
         summary="Метод для отображиния товара в корзине",
         description="""Метод для отображиния товара в корзине""",
         responses={
-            status.HTTP_200_OK: ProductSerializer(many=True),
+            status.HTTP_200_OK: ProductSw(),
         },
+
 
 
     ),
@@ -33,16 +36,18 @@ from .serializers import (
         summary="Метод для добавления товара в корзину",
         description="""Метод для добавления товара в корзину""",
         responses={
-            status.HTTP_200_OK: ProductSerializer(many=True),
+            status.HTTP_200_OK: ProductSw(many=True),
             },
+        request=BusketSw,
     ),
     delete=extend_schema(
         summary="Метод для удаления товара из корзины",
         description="""Метод для удаления товара из корзины""",
-
+        request=BusketSw,
         responses={
-            status.HTTP_200_OK: ProductSerializer(many=True),
+            status.HTTP_200_OK: ProductSw(many=True),
         },
+
     ),
 )
 class BasketView(APIView):
@@ -151,16 +156,18 @@ class OrdersView(APIView):
         summary="Метод для вывода детальных данных заказов",
         description="""Метод для вывода детальных данных заказов""",
         responses={
-            status.HTTP_200_OK: OrderDetailSerializer,
+            status.HTTP_200_OK: Order_sw(many=True),
         },
     ),
     post=extend_schema(
         summary="Метод для ввода детальных данных заказов",
         description="""Метод для ввода детальных данных заказов""",
-        responses={
-            status.HTTP_200_OK: OrderAcceptedSerializer,
+        # responses={
+        #     status.HTTP_200_OK: Order_sw(many=True),
+        #
+        # },
+        request=Order_sw
 
-        },
     ),
 )
 class OrdersDetailView(APIView):

@@ -1,8 +1,7 @@
 import json
-
-from drf_spectacular.utils import extend_schema, extend_schema_view
 from rest_framework import status
 from rest_framework import generics
+from .models import Profile, Avatar
 from rest_framework.views import APIView
 from rest_framework.request import Request
 from django.contrib.auth.models import User
@@ -11,16 +10,23 @@ from django.shortcuts import get_object_or_404
 from rest_framework.permissions import AllowAny
 from django.contrib.auth.hashers import check_password
 from django.contrib.auth import authenticate, login, logout
-from .serializers import SignUpSerializer, ProfileGetPostSerializer
-from .models import Profile, Avatar
+from drf_spectacular.openapi import OpenApiTypes, OpenApiParameter
+from drf_spectacular.utils import extend_schema, extend_schema_view
+from .serializers import SignUpSerializer, ProfileGetPostSerializer, SignInSerializer, PasswordSerializer
 
 
 @extend_schema(tags=["myauth APP"])
 @extend_schema_view(
     post=extend_schema(
-    summary="Метод для создания, авторизации и регистрации пользователя",
-    description="""Метод для создания, авторизации и регистрации пользователя""",
-
+        summary="Метод для создания, авторизации и регистрации пользователя",
+        description="Метод для создания, авторизации и регистрации пользователя",
+        request=None,
+        responses=None,
+        parameters=[
+            OpenApiParameter("name", OpenApiTypes.UUID, OpenApiParameter.QUERY),
+            OpenApiParameter("username", OpenApiTypes.UUID, OpenApiParameter.QUERY),
+            OpenApiParameter("password", OpenApiTypes.UUID, OpenApiParameter.QUERY),
+        ],
     ),
 )
 class SignUpView(generics.CreateAPIView):
@@ -53,16 +59,21 @@ class SignUpView(generics.CreateAPIView):
 @extend_schema(tags=["myauth APP"])
 @extend_schema_view(
     post=extend_schema(
-    summary="Метод для аутентикации  пользователя и входа на сайт",
-    description="""Метод для аутентикации  пользователя и входа на сайт""",
-
-
+        summary="Метод для аутентикации  пользователя и входа на сайт",
+        description="""Метод для аутентикации  пользователя и входа на сайт""",
+        request=None,
+        responses=None,
+        parameters=[
+            OpenApiParameter("username", OpenApiTypes.UUID, OpenApiParameter.QUERY),
+            OpenApiParameter("password", OpenApiTypes.UUID, OpenApiParameter.QUERY),
+        ],
     ),
 )
 class SignInView(APIView):
     """
     Класс представления для аутентикации  пользователя и входа на сайт
     """
+
     def post(self, request: Request) -> Response:
         cleaned_data = json.loads(list(request.POST.keys())[0])
         password = cleaned_data['password']
@@ -104,18 +115,15 @@ class LogoutView(APIView):
 @extend_schema(tags=["myauth APP"])
 @extend_schema_view(
     post=extend_schema(
-    summary="Метод для обновления или создания дополнительной информации о пользователе",
-    description="""Метод для обновления или создания дополнительной информации о пользователе""",
-    responses={
-            status.HTTP_200_OK: ProfileGetPostSerializer,
-        },
+        summary="Метод для обновления или создания дополнительной информации о пользователе",
+        description="""Метод для обновления или создания дополнительной информации о пользователе""",
+        responses=None
     ),
     get=extend_schema(
-    summary="Метод для обновления или создания дополнительной информации о пользователе",
-    description="""Метод для обновления или создания дополнительной информации о пользователе""",
-    responses={
-            status.HTTP_200_OK: ProfileGetPostSerializer,
-        },
+        summary="Метод для обновления или создания дополнительной информации о пользователе",
+        description="""Метод для обновления или создания дополнительной информации о пользователе""",
+        responses=None
+
     ),
 
 )
@@ -143,22 +151,17 @@ class ProfileUpdateView(APIView):
 
 
 @extend_schema(tags=["myauth APP"])
-@extend_schema_view(
-    post=extend_schema(
-    summary="Метод для смены пароля пользователя",
-    description="""Метод для смены пароля пользователя""",
-    responses={
-
-                 "currentPassword": "oldPass123",
-                  "newPassword": "newPass321"
-
-              },
-    ),
-)
 class PostPasswordView(APIView):
     """
     Класс представления для смены пароля пользователя
     """
+
+    @extend_schema(
+            summary="Метод для смены пароля пользователя",
+            description="""Метод для смены пароля пользователя""",
+            responses=None,
+            request=PasswordSerializer,
+    )
     def post(self, request: Request) -> Response:
         user = self.request.user
         data = self.request.data
@@ -179,7 +182,8 @@ class PostPasswordView(APIView):
     post=extend_schema(
         summary="Метод для сохранения и отображения  аватара пользователя.",
         description="""Метод для сохранения и отображения  аватара пользователя.""",
-
+        responses=None,
+        request=None,
     ),
 )
 class PostAvatarView(APIView):

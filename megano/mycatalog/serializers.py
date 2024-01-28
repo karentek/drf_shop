@@ -1,6 +1,7 @@
 from typing import Any, Dict, List
 from rest_framework import serializers
 from .models import Categories, Product, Tag, Review
+from drf_spectacular.utils import OpenApiTypes, extend_schema_field, OpenApiExample, extend_schema_serializer
 
 
 class CategoriesSerializer(serializers.ModelSerializer):
@@ -14,11 +15,33 @@ class CategoriesSerializer(serializers.ModelSerializer):
         model = Categories
         fields = ('id', 'title', 'image', 'subcategories')
 
+    @extend_schema_field(
+        {
+            'type': "string",
+            'example':
+                {
+                    "id": "int",
+                    "title": "string",
+                    "image": {
+                                     "src": "url",
+                                     "alt": "string"
+                                },
+                }
+        })
     def get_subcategories(self, instance: Categories) -> Dict[str, Any]:
         subcategories = Categories.objects.filter(parent_category=instance)
         serializer = CategoriesSerializer(subcategories, many=True)
         return serializer.data
 
+    @extend_schema_field(
+                        {
+                            'type': "string",
+                            'example':
+                                {
+                                     "src": "string",
+                                     "alt": "string"
+                                }
+                        })
     def get_image(self, instance: Categories) -> Dict[str, Any]:
         image_instance = instance.category_image.first()
         src = image_instance.image.url
@@ -48,7 +71,7 @@ class ProductSerializer(serializers.ModelSerializer):
         return instance.rating
 
     @staticmethod
-    def get_images(instance: Product) -> List[Dict[str, Any]]:
+    def get_images(instance: Product) -> List[Dict[str, str]]:
         image_instance = instance.images.all()
         images = []
         for inst in image_instance:
@@ -76,7 +99,7 @@ class SaleProductSerializer(serializers.ModelSerializer):
     class Meta(ProductSerializer.Meta):
         fields = ("id", "price", "title", "images",)
 
-    def get_images(self, instance: Product) -> List[Dict[str, Any]]:
+    def get_images(self, instance: Product) -> List[Dict[str, str]]:
         image_instance = instance.images.all()
         images = []
         for inst in image_instance:

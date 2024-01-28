@@ -1,10 +1,12 @@
-from typing import Any
-
+from typing import Any, Dict
 from django.contrib.auth.models import User
 import json
 from rest_framework import serializers
 from .models import Profile, Avatar
-
+from drf_spectacular.utils import extend_schema, extend_schema_view, extend_schema_field
+from drf_spectacular.openapi import OpenApiTypes, OpenApiParameter
+from rest_framework.request import Request
+from django.http.request import QueryDict
 
 class SignInSerializer(serializers.ModelSerializer):
     """
@@ -34,10 +36,16 @@ class SignUpSerializer(serializers.ModelSerializer):
         model = User
         fields = ('first_name', 'username', 'password')
 
-    def to_internal_value(self, data: Any) -> dict:
+    def to_internal_value(self, data: QueryDict) -> Dict[str, str]:
+        print()
+        print(data)
+        print(type(data))
         cleaned_data = json.loads(list(data)[0])
         cleaned_data['first_name'] = cleaned_data['name']
         del cleaned_data['name']
+        print()
+        print(cleaned_data)
+        print()
         return cleaned_data
 
 
@@ -52,13 +60,13 @@ class AvatarSerializer(serializers.ModelSerializer):
     alt = serializers.SerializerMethodField()
 
     @staticmethod
-    def get_src(obj):
+    def get_src(obj) -> str:
         if obj.image:
             return obj.image.url
         return None
 
     @staticmethod
-    def get_alt(obj):
+    def get_alt(obj) -> str:
         if obj.image:
             return obj.image.name
         return None
@@ -79,9 +87,14 @@ class ProfileGetPostSerializer(serializers.ModelSerializer):
     email = serializers.EmailField(allow_blank=True)
     phone = serializers.CharField(allow_blank=True)
 
-    def update(self, instance: Profile, validated_data: dict):
+    def update(self, instance: Profile, validated_data: dict) -> Dict[str, str]:
         instance.email = validated_data.get('email', instance.email)
         instance.fullName = validated_data.get('fullName', instance.fullName)
         instance.phone = validated_data.get('phone', instance.phone)
         instance.save()
         return instance
+
+
+class PasswordSerializer(serializers.Serializer):
+    currentPassword = serializers.CharField(max_length=10)
+    newPassword = serializers.CharField(max_length=10)
