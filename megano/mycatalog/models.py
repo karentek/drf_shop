@@ -94,7 +94,7 @@ class Product(models.Model):
     tags = models.ManyToManyField(Tag, blank=True, related_name="product")
     category = models.ForeignKey(Categories, on_delete=models.SET_NULL, null=True)
     specifications = models.ManyToManyField(Specification, related_name="product")
-    rating = models.FloatField(null=True, blank=True)
+    rating = models.FloatField(default=0, null=True, blank=True)
 
     def __str__(self):
         return f"{self.title!r}"

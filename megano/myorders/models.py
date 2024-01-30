@@ -35,7 +35,7 @@ class Payment(models.Model):
     """
     order_rel = models.OneToOneField(Order, on_delete=models.CASCADE, related_name="payment")
     name = models.CharField(max_length=30)
-    number = models.IntegerField()
+    number = models.CharField(max_length=16)
     year = models.IntegerField()
     code = models.IntegerField()
 

@@ -92,9 +92,7 @@ class DataFilter:
             filtered_products = filtered_products.order_by(sort_order)
         elif sort == 'rating':
             sort_order = '-rating' if sort_type == 'dec' else 'rating'
-            filtered_products = filtered_products.annotate(
-                rating_coalesced=Coalesce('rating', -1, output_field=DecimalField())
-            ).order_by(sort_order)
+            filtered_products = filtered_products.order_by(sort_order)
         elif sort == 'reviews':
             sort_order = '-total_reviews' if sort_type == 'dec' else 'total_reviews'
             filtered_products = filtered_products.annotate(
