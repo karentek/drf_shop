@@ -37,16 +37,26 @@ class SignUpSerializer(serializers.ModelSerializer):
         fields = ('first_name', 'username', 'password')
 
     def to_internal_value(self, data: QueryDict) -> Dict[str, str]:
-        print()
-        print(data)
-        print(type(data))
         cleaned_data = json.loads(list(data)[0])
         cleaned_data['first_name'] = cleaned_data['name']
         del cleaned_data['name']
-        print()
-        print(cleaned_data)
-        print()
         return cleaned_data
+
+    def validate(self, data):
+        """
+        Validate both password and username.
+        """
+        password = data.get('password')
+        username = data.get('username')
+
+        if len(password) < 8:
+            raise serializers.ValidationError("Password must be at least 8 characters long.")
+
+        existing_username = User.objects.filter(username=username).exists()
+        if existing_username:
+            raise serializers.ValidationError("Username must be unique.")
+
+        return data
 
 
 class AvatarSerializer(serializers.ModelSerializer):

@@ -2,8 +2,6 @@ from celery import shared_task
 from celery_singleton import Singleton
 from django.db.models import F
 import celery
-
-
 from .models import Product, Review
 from django.db.models import DecimalField, Count, QuerySet
 from django.db.models.functions import Coalesce

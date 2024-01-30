@@ -1,7 +1,7 @@
 from typing import Any, Dict, List
 from rest_framework import serializers
-from .models import Categories, Product, Tag, Review
 from drf_spectacular.utils import OpenApiTypes, extend_schema_field, OpenApiExample, extend_schema_serializer
+from .models import Categories, Product, Tag, Review
 
 
 class CategoriesSerializer(serializers.ModelSerializer):

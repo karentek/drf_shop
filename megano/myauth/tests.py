@@ -14,7 +14,6 @@ class SignUpViewTestCase(TestCase):
         self.client = APIClient()
 
     def tearDown(self):
-        # Clean up after each test by deleting the user created during testing
         User.objects.filter(username='john_doe').delete()
 
     def test_successful_signup(self):

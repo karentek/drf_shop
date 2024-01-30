@@ -1,10 +1,7 @@
 import random
 from typing import Any, List, Dict
-import time
 from drf_spectacular.openapi import OpenApiTypes, OpenApiParameter
-from django.db import connection, transaction
 from drf_spectacular.utils import extend_schema_view, extend_schema, OpenApiParameter
-
 from .tasks import count_rating
 from rest_framework import status
 from rest_framework.views import APIView
@@ -13,9 +10,9 @@ from rest_framework.response import Response
 from django.db.models.functions import Coalesce
 from django.db.models import DecimalField, IntegerField
 from rest_framework.permissions import IsAuthenticated
-from .models import Categories, Product, Tag, Review
+from .models import Categories, Product, Tag
 from .services import CatalogPaginator, DataFilter
-from .for_swagger import Product_ID_sw, CatalogSerializerSwagger, CatalogSw, QuerySerializerFilter, ProductSw, Sales_Sw
+from .for_swagger import Product_ID_sw, CatalogSw, QuerySerializerFilter, ProductSw, Sales_Sw
 from .serializers import (
     CategoriesSerializer,
     ProductSerializer,
@@ -23,8 +20,6 @@ from .serializers import (
     ProductIDSerializer,
     ReviewSerializer,
     TagsSerializer,
-
-
 )
 
 

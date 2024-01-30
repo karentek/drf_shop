@@ -83,7 +83,7 @@ class DataFilter:
             filtered_products = filtered_products.filter(title__icontains=name)
         if min_price and max_price:
             filtered_products = filtered_products.filter(price__gte=min_price, price__lte=max_price)
-        if free_delivery in ['true', 'false']:
+        if free_delivery in ['true']:
             filtered_products = filtered_products.filter(freeDelivery=(free_delivery == 'true'))
         if available == 'true':
             filtered_products = filtered_products.filter(count__gt=0)

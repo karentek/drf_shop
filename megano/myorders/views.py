@@ -162,10 +162,10 @@ class OrdersView(APIView):
     post=extend_schema(
         summary="Метод для ввода детальных данных заказов",
         description="""Метод для ввода детальных данных заказов""",
-        # responses={
-        #     status.HTTP_200_OK: Order_sw(many=True),
-        #
-        # },
+        responses={
+            status.HTTP_200_OK: Order_sw(many=True),
+
+        },
         request=Order_sw
 
     ),

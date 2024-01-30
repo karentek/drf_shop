@@ -53,7 +53,7 @@ class SignUpView(generics.CreateAPIView):
                 else:
                     return Response({'message': 'Invalid credentials'}, status=status.HTTP_401_UNAUTHORIZED)
             else:
-                return Response({'message': 'Not serialized or not valid'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+                return Response({'message': serializer.errors}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
 @extend_schema(tags=["myauth APP"])

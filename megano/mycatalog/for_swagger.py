@@ -7,13 +7,16 @@ class ImageSw(serializers.Serializer):
     src = serializers.CharField()
     alt = serializers.CharField()
 
+
 class TagSw(serializers.Serializer):
     id = serializers.IntegerField()
     name = serializers.CharField()
 
+
 class BusketSw(serializers.Serializer):
     id = serializers.IntegerField()
     count = serializers.IntegerField()
+
 
 class CatalogSerializerSwagger2(serializers.Serializer):
     id = serializers.IntegerField()
