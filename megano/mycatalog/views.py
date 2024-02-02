@@ -2,7 +2,7 @@ import random
 from typing import Any, List, Dict
 from drf_spectacular.openapi import OpenApiTypes, OpenApiParameter
 from drf_spectacular.utils import extend_schema_view, extend_schema, OpenApiParameter
-from .tasks import count_rating
+from .tasks import count_rating, test_task
 from rest_framework import status
 from rest_framework.views import APIView
 from rest_framework.request import Request
@@ -239,6 +239,7 @@ class ReviewView(APIView):
         if serializer.is_valid():
             serializer.save()
             count_rating.delay(product_id)
+            test_task.delay(product_id)
             return Response({'message': 'Review posted successfully.'}, status=status.HTTP_201_CREATED)
         else:
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)

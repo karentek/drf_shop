@@ -43,6 +43,26 @@ services:
       - db
     env_file:
       - .env.dev
+
+
+  worker2:
+    build:
+      context: .
+      dockerfile: ./megano/Dockerfile
+    hostname: worker2
+    entrypoint: celery
+    command: -A celery_app worker --loglevel=info -P eventlet
+    volumes:
+      - ./megano/:/usr/src/diploma/megano
+    links:
+      - redis
+    depends_on:
+      - redis
+      - db
+    env_file:
+      - .env.dev
+
+
   beat:
     build:
       context: .

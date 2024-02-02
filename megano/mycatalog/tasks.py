@@ -1,4 +1,5 @@
 from celery import shared_task
+import time
 from celery_singleton import Singleton
 from django.db.models import F
 import celery
@@ -26,10 +27,9 @@ def count_rating(product_id):
 
 
 
-
-
-
-
+@shared_task()
+def test_task(product_id):
+    time.sleep(5)
 
 
 
