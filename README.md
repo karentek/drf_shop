@@ -17,7 +17,7 @@ Welcome to the Megano backend, a Django web application for managing a car deale
 ### Development Version
 
 ***To start the development version <br>
-(app + Postgres + default server + celery + redis):***
+(app + PostgreSQL + default server + Celery + Redis):***
 
 1. First Set up the required environment variables. 
 
@@ -43,8 +43,8 @@ Welcome to the Megano backend, a Django web application for managing a car deale
 
 ### Production Version
 
-***To start the development version <br>
-(app + Postgres + default server + celery + redis):***
+***To start the production version <br>
+(app + Postgresql + Nginx + gunicorn + celery + redis):***
 
 1. First Set up the required environment variables. 
 
