@@ -775,54 +775,6 @@
   },
   {
     "model": "contenttypes.contenttype",
-    "pk": 10,
-    "fields": {
-      "app_label": "mycatalog",
-      "model": "categoryimage"
-    }
-  },
-  {
-    "model": "contenttypes.contenttype",
-    "pk": 11,
-    "fields": {
-      "app_label": "mycatalog",
-      "model": "tag"
-    }
-  },
-  {
-    "model": "contenttypes.contenttype",
-    "pk": 12,
-    "fields": {
-      "app_label": "mycatalog",
-      "model": "specification"
-    }
-  },
-  {
-    "model": "contenttypes.contenttype",
-    "pk": 13,
-    "fields": {
-      "app_label": "mycatalog",
-      "model": "productimage"
-    }
-  },
-  {
-    "model": "contenttypes.contenttype",
-    "pk": 14,
-    "fields": {
-      "app_label": "mycatalog",
-      "model": "product"
-    }
-  },
-  {
-    "model": "contenttypes.contenttype",
-    "pk": 15,
-    "fields": {
-      "app_label": "mycatalog",
-      "model": "review"
-    }
-  },
-  {
-    "model": "contenttypes.contenttype",
     "pk": 16,
     "fields": {
       "app_label": "mycatalog",
@@ -861,26 +813,7 @@
       "expire_date": "2024-02-20T03:07:11.722Z"
     }
   },
-  {
-    "model": "myauth.avatar",
-    "pk": 1,
-    "fields": {
-      "image": "profiles/avatar_karen/Portrait_of_Neytiri.jpg",
-      "profile_rel": 1
-    }
-  },
-  {
-    "model": "myauth.profile",
-    "pk": 1,
-    "fields": {
-      "user": 1,
-      "fullName": "Карен Текнеджян",
-      "phone": "89030203958",
-      "email": "karen.g.tek@gmail.com",
-      "avatar_image": 1
-    }
-  },
-  {
+{
     "model": "mycatalog.categories",
     "pk": 1,
     "fields": {

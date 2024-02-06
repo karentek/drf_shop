@@ -4,13 +4,9 @@ Welcome to the Megano backend, a Django web application for managing a car deale
 
 ## How to Download
 
+Clone the repository. 
 
-1. Clone the repository. 
-    >https://gitlab.skillbox.ru/karen_teknedzhian/python_django_diploma.git
-
-2. Checkout to current version branch
-    
-    >git checkout -b celery_version origin/celery_worker_2
+    > git clone https://gitlab.skillbox.ru/karen_teknedzhian/python_django_diploma.git
 
 ## How to run
 
