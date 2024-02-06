@@ -2,48 +2,81 @@
 
 Welcome to the Megano backend, a Django web application for managing a car dealership store.
 
-## How to Run
+## How to Download
+
+
+1. Clone the repository. 
+    >https://gitlab.skillbox.ru/karen_teknedzhian/python_django_diploma.git
+
+2. Checkout to current version branch
+    
+    >git checkout -b celery_version origin/celery_worker_2
+
+## How to run
 
 ### Development Version
 
-To start the development version (app + Postgres + default server):
+***To start the development version <br>
+(app + Postgres + default server + celery + redis):***
 
-## Getting Started To get started with Megano, follow these steps:
-1. Clone the repository. 
- https://gitlab.skillbox.ru/karen_teknedzhian/python_django_diploma.git
-2. Set up the required environment variables. 
-3. Build and run the Docker containers.
-'docker-compose -f docker-compose.prod.yml up -d --build'
-4. If you are using production version, and it is first build you have to enter in container bash and run 'python manage.py migrate'. After that the data will save in volumes.
-5. You can chak if the app is work by run in container bash:
-'python manage.py test' (there are 15 test include almost all aspects which have to check for correct work)
-6. To load data run:
-'python manage.py loaddata mycatalog/fixtures/custom_data.json'
-7. open http://127.0.0.1:8000/ to use develop version, 
-8. open http://localhost:1337/ to use production version
+1. First Set up the required environment variables. 
+
+2. Build and up container with docker-compose file
+     > docker-compose -f docker-compose.yml up --build
+
+3. Open a new window of terminal and then go to container bash
+
+     > docker-compose exec web /bin/sh
+
+4. And then enter the command to the bash to load data from fixtures
+
+     > python manage.py loaddata mycatalog/fixtures/custom_data.json
+
+5. Now you can run auto tests
+     
+     > python manage.py test
+
+6. If there isn`t any error you can open a page at:
+
+     > http://127.0.0.1:8000/
 
 
+### Production Version
 
-## Docker Compose 
+***To start the development version <br>
+(app + Postgres + default server + celery + redis):***
 
-Two Docker Compose files are provided: 
-- `docker-compose.yml`: For development.
-- `docker-compose.prod.yml`: For production. 
+1. First Set up the required environment variables. 
 
-## Frontend App
-The frontend app is located in the `megano` directory. 
+2. Build and up container with docker-compose file
+     > docker-compose -f docker-compose.prod.yml up -d --build
 
-It includes the main Django application along with necessary configuration files.
+3. Go to container bash
+
+     > docker-compose exec web /bin/bash
+
+4. If it is first start you have to run migrate:
+   
+     > python manage.py migrate
+
+4. And then enter the command to the bash to load data from fixtures
+
+     > python manage.py loaddata mycatalog/fixtures/custom_data.json
+
+5. Now you can run auto tests
+     
+     > python manage.py test
+
+6. If there isn`t any error you can open a page at:
+
+     > http://localhost:1337/
+
 
 Megano consists of several backend apps: 
 - 
 - **MyAuth**: Handles user authentication. 
 - **MyCatalog**: Manages the catalog of cars, jeeps, and trucks. 
 - **MyOrders**: Manages customer orders.
-
-## Nginx Configuration 
-
-The `nginx` directory contains the Nginx Dockerfile and configuration file. 
 
 ## Requirements 
 
