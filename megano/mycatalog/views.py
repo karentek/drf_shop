@@ -1,4 +1,5 @@
 import random
+from django.core.cache import cache
 from typing import Any, List, Dict
 from drf_spectacular.openapi import OpenApiTypes, OpenApiParameter
 from drf_spectacular.utils import extend_schema_view, extend_schema, OpenApiParameter
@@ -38,7 +39,13 @@ class CategoriesView(APIView):
     """Вью для отображения категорий"""
 
     def get(self, request):
-        categories = Categories.objects.filter(parent_category=None)
+        categories_cache_name = 'categories_cache'
+        categories_cache = cache.get(categories_cache_name)
+        if categories_cache:
+            categories = categories_cache
+        else:
+            categories = Categories.objects.filter(parent_category=None)
+            cache.set(categories_cache_name, categories, 20)
         serializer = CategoriesSerializer(instance=categories, many=True)
         return Response(data=serializer.data, status=status.HTTP_200_OK)
 
@@ -69,7 +76,13 @@ class CatalogView(APIView):
     """Вью для отображения каталога и фильтрации продуктов"""
 
     def get(self, request: Request) -> Response:
-        queryset = Product.objects.all()
+        catalog_cache_name = 'catalog_cache'
+        catalog_cache = cache.get(catalog_cache_name)
+        if catalog_cache:
+            queryset = catalog_cache
+        else:
+            queryset = Product.objects.all()
+            cache.set(catalog_cache_name, queryset, 20)
         data_filter_object = DataFilter(self.request.query_params)
         filtered_products = data_filter_object.apply_filters_to_products(queryset)
         query = data_filter_object.filtered_dict
@@ -95,7 +108,13 @@ class ProductsPopularView(APIView):
     """Вью для отображения популярных продуктов"""
 
     def get(self, request):
-        product = Product.objects.all()
+        products_cache_name = 'catalog_cache'
+        product_popular_cache = cache.get(products_cache_name)
+        if product_popular_cache:
+            product = product_popular_cache
+        else:
+            product = Product.objects.all()
+            cache.set(products_cache_name, product, 20)
         product = product.annotate(
             rating_coalesced=Coalesce('rating', -1, output_field=DecimalField())
         ).order_by('-rating_coalesced')
@@ -120,7 +139,13 @@ class ProductsLimitedView(APIView):
     """Вью для отображения лимитированных продуктов"""
 
     def get(self, request) -> Response:
-        product = Product.objects.exclude(count__isnull=True).exclude(count=0)
+        products_limited_name = 'product_limited_cache'
+        product_limited_cache = cache.get(products_limited_name)
+        if product_limited_cache:
+            product = product_limited_cache
+        else:
+            product = Product.objects.exclude(count__isnull=True).exclude(count=0)
+            cache.set(products_limited_name, product, 20)
         product = product.annotate(
             product_count_coalesced=Coalesce('count', -1, output_field=IntegerField())
         ).order_by('product_count_coalesced')
@@ -175,7 +200,13 @@ class BannersView(APIView):
     def get(self, request: Request) -> Response:
         all_ids = Product.objects.filter(count__gt=0).values_list('pk', flat=True)
         random_ids = random.sample(list(all_ids), 4)
-        random_instances = Product.objects.filter(pk__in=random_ids)
+        random_inst_cach_name = 'random_inst_cach_name'
+        random_inst_cach = cache.get(random_inst_cach_name)
+        if random_inst_cach:
+            random_instances = random_inst_cach
+        else:
+            random_instances = Product.objects.filter(pk__in=random_ids)
+            cache.set(random_inst_cach_name, random_instances, 3)
         serializer = ProductSerializer(instance=random_instances, many=True)
         serialized_data: List[Dict[str, Any]] = serializer.data
         return Response(data=serialized_data, status=status.HTTP_200_OK)
@@ -197,7 +228,13 @@ class ProductView(APIView):
     """Вью для отображения детальной информации о продуктах"""
 
     def get(self, request: Request, **kwargs: Any) -> Response:
-        product = Product.objects.get(id=self.kwargs.get("id"))
+        product_cache_id_name = 'product_cache_id'
+        product_cache_id = cache.get(product_cache_id_name)
+        if product_cache_id:
+            product = product_cache_id
+        else:
+            product = Product.objects.get(id=self.kwargs.get("id"))
+            cache.set(product_cache_id_name, product, 3)
         serializer = ProductIDSerializer(instance=product)
         return Response(data=serializer.data, status=status.HTTP_200_OK)
 
@@ -239,7 +276,7 @@ class ReviewView(APIView):
         if serializer.is_valid():
             serializer.save()
             count_rating.delay(product_id)
-            test_task.delay(product_id)
+            # test_task.delay(product_id)
             return Response({'message': 'Review posted successfully.'}, status=status.HTTP_201_CREATED)
         else:
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
@@ -260,6 +297,12 @@ class TagsView(APIView):
     """Вью для отображения тэгов"""
 
     def get(self, request: Request, **kwargs: Any) -> Response:
-        tags = Tag.objects.all()
+        tags_cache_name = 'tags_cache'
+        tags_cache = cache.get(tags_cache_name)
+        if tags_cache:
+            tags = tags_cache
+        else:
+            tags = Tag.objects.all()
+            cache.set(tags_cache_name, tags, 3)
         serializer = TagsSerializer(instance=tags, many=True)
         return Response(data=serializer.data, status=status.HTTP_200_OK)

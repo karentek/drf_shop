@@ -1,5 +1,6 @@
 import json
 from rest_framework import status
+from django.core.cache import cache
 from rest_framework import generics
 from .models import Profile, Avatar
 from rest_framework.views import APIView
@@ -135,17 +136,25 @@ class ProfileUpdateView(APIView):
     def post(self, request: Request) -> Response:
         data = request.data
         user = request.user
+
         profile = get_object_or_404(Profile, user=user)
         serializer = ProfileGetPostSerializer(data=data, instance=profile)
         if serializer.is_valid():
             serializer.save()
+            cache.set('profile_cache', profile, 20)
             return Response(data=serializer.data, status=status.HTTP_200_OK)
         else:
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
     def get(self, request):
         user = request.user
-        profile = get_object_or_404(Profile, user=user)
+        profile_cache_name = 'profile_cache'
+        profile_cache = cache.get(profile_cache_name)
+        if profile_cache:
+            profile = profile_cache
+        else:
+            profile = get_object_or_404(Profile, user=user)
+            cache.set(profile_cache_name, profile, 20)
         serializer = ProfileGetPostSerializer(instance=profile)
         return Response(data=serializer.data, status=status.HTTP_200_OK)
 
@@ -200,6 +209,7 @@ class PostAvatarView(APIView):
         avatar.profile_rel = profile
         avatar.save()
         profile.save()
+        cache.set('profile_cache', profile, 20)
         response_data = {
             'src': avatar.image.url,
             'alt': 'Image alt string',

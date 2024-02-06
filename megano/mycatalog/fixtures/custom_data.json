@@ -1,5 +1,886 @@
 [
   {
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+      "name": "Can add log entry",
+      "content_type": 1,
+      "codename": "add_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+      "name": "Can change log entry",
+      "content_type": 1,
+      "codename": "change_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+      "name": "Can delete log entry",
+      "content_type": 1,
+      "codename": "delete_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+      "name": "Can view log entry",
+      "content_type": 1,
+      "codename": "view_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+      "name": "Can add permission",
+      "content_type": 2,
+      "codename": "add_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+      "name": "Can change permission",
+      "content_type": 2,
+      "codename": "change_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+      "name": "Can delete permission",
+      "content_type": 2,
+      "codename": "delete_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+      "name": "Can view permission",
+      "content_type": 2,
+      "codename": "view_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+      "name": "Can add group",
+      "content_type": 3,
+      "codename": "add_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+      "name": "Can change group",
+      "content_type": 3,
+      "codename": "change_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+      "name": "Can delete group",
+      "content_type": 3,
+      "codename": "delete_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+      "name": "Can view group",
+      "content_type": 3,
+      "codename": "view_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+      "name": "Can add user",
+      "content_type": 4,
+      "codename": "add_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+      "name": "Can change user",
+      "content_type": 4,
+      "codename": "change_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+      "name": "Can delete user",
+      "content_type": 4,
+      "codename": "delete_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+      "name": "Can view user",
+      "content_type": 4,
+      "codename": "view_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+      "name": "Can add content type",
+      "content_type": 5,
+      "codename": "add_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+      "name": "Can change content type",
+      "content_type": 5,
+      "codename": "change_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+      "name": "Can delete content type",
+      "content_type": 5,
+      "codename": "delete_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+      "name": "Can view content type",
+      "content_type": 5,
+      "codename": "view_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+      "name": "Can add session",
+      "content_type": 6,
+      "codename": "add_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+      "name": "Can change session",
+      "content_type": 6,
+      "codename": "change_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+      "name": "Can delete session",
+      "content_type": 6,
+      "codename": "delete_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+      "name": "Can view session",
+      "content_type": 6,
+      "codename": "view_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+      "name": "Can add avatar",
+      "content_type": 7,
+      "codename": "add_avatar"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+      "name": "Can change avatar",
+      "content_type": 7,
+      "codename": "change_avatar"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+      "name": "Can delete avatar",
+      "content_type": 7,
+      "codename": "delete_avatar"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+      "name": "Can view avatar",
+      "content_type": 7,
+      "codename": "view_avatar"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+      "name": "Can add profile",
+      "content_type": 8,
+      "codename": "add_profile"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+      "name": "Can change profile",
+      "content_type": 8,
+      "codename": "change_profile"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+      "name": "Can delete profile",
+      "content_type": 8,
+      "codename": "delete_profile"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+      "name": "Can view profile",
+      "content_type": 8,
+      "codename": "view_profile"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+      "name": "Can add categories",
+      "content_type": 9,
+      "codename": "add_categories"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+      "name": "Can change categories",
+      "content_type": 9,
+      "codename": "change_categories"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+      "name": "Can delete categories",
+      "content_type": 9,
+      "codename": "delete_categories"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+      "name": "Can view categories",
+      "content_type": 9,
+      "codename": "view_categories"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 37,
+    "fields": {
+      "name": "Can add category image",
+      "content_type": 10,
+      "codename": "add_categoryimage"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 38,
+    "fields": {
+      "name": "Can change category image",
+      "content_type": 10,
+      "codename": "change_categoryimage"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 39,
+    "fields": {
+      "name": "Can delete category image",
+      "content_type": 10,
+      "codename": "delete_categoryimage"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 40,
+    "fields": {
+      "name": "Can view category image",
+      "content_type": 10,
+      "codename": "view_categoryimage"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 41,
+    "fields": {
+      "name": "Can add tag",
+      "content_type": 11,
+      "codename": "add_tag"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 42,
+    "fields": {
+      "name": "Can change tag",
+      "content_type": 11,
+      "codename": "change_tag"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 43,
+    "fields": {
+      "name": "Can delete tag",
+      "content_type": 11,
+      "codename": "delete_tag"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 44,
+    "fields": {
+      "name": "Can view tag",
+      "content_type": 11,
+      "codename": "view_tag"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 45,
+    "fields": {
+      "name": "Can add specification",
+      "content_type": 12,
+      "codename": "add_specification"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 46,
+    "fields": {
+      "name": "Can change specification",
+      "content_type": 12,
+      "codename": "change_specification"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 47,
+    "fields": {
+      "name": "Can delete specification",
+      "content_type": 12,
+      "codename": "delete_specification"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 48,
+    "fields": {
+      "name": "Can view specification",
+      "content_type": 12,
+      "codename": "view_specification"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 49,
+    "fields": {
+      "name": "Can add product image",
+      "content_type": 13,
+      "codename": "add_productimage"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 50,
+    "fields": {
+      "name": "Can change product image",
+      "content_type": 13,
+      "codename": "change_productimage"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 51,
+    "fields": {
+      "name": "Can delete product image",
+      "content_type": 13,
+      "codename": "delete_productimage"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 52,
+    "fields": {
+      "name": "Can view product image",
+      "content_type": 13,
+      "codename": "view_productimage"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 53,
+    "fields": {
+      "name": "Can add product",
+      "content_type": 14,
+      "codename": "add_product"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 54,
+    "fields": {
+      "name": "Can change product",
+      "content_type": 14,
+      "codename": "change_product"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 55,
+    "fields": {
+      "name": "Can delete product",
+      "content_type": 14,
+      "codename": "delete_product"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 56,
+    "fields": {
+      "name": "Can view product",
+      "content_type": 14,
+      "codename": "view_product"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 57,
+    "fields": {
+      "name": "Can add review",
+      "content_type": 15,
+      "codename": "add_review"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 58,
+    "fields": {
+      "name": "Can change review",
+      "content_type": 15,
+      "codename": "change_review"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 59,
+    "fields": {
+      "name": "Can delete review",
+      "content_type": 15,
+      "codename": "delete_review"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 60,
+    "fields": {
+      "name": "Can view review",
+      "content_type": 15,
+      "codename": "view_review"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 61,
+    "fields": {
+      "name": "Can add sale date",
+      "content_type": 16,
+      "codename": "add_saledate"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 62,
+    "fields": {
+      "name": "Can change sale date",
+      "content_type": 16,
+      "codename": "change_saledate"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 63,
+    "fields": {
+      "name": "Can delete sale date",
+      "content_type": 16,
+      "codename": "delete_saledate"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 64,
+    "fields": {
+      "name": "Can view sale date",
+      "content_type": 16,
+      "codename": "view_saledate"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 65,
+    "fields": {
+      "name": "Can add order",
+      "content_type": 17,
+      "codename": "add_order"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 66,
+    "fields": {
+      "name": "Can change order",
+      "content_type": 17,
+      "codename": "change_order"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 67,
+    "fields": {
+      "name": "Can delete order",
+      "content_type": 17,
+      "codename": "delete_order"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 68,
+    "fields": {
+      "name": "Can view order",
+      "content_type": 17,
+      "codename": "view_order"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 69,
+    "fields": {
+      "name": "Can add order item",
+      "content_type": 18,
+      "codename": "add_orderitem"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 70,
+    "fields": {
+      "name": "Can change order item",
+      "content_type": 18,
+      "codename": "change_orderitem"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 71,
+    "fields": {
+      "name": "Can delete order item",
+      "content_type": 18,
+      "codename": "delete_orderitem"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 72,
+    "fields": {
+      "name": "Can view order item",
+      "content_type": 18,
+      "codename": "view_orderitem"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 73,
+    "fields": {
+      "name": "Can add payment",
+      "content_type": 19,
+      "codename": "add_payment"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 74,
+    "fields": {
+      "name": "Can change payment",
+      "content_type": 19,
+      "codename": "change_payment"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 75,
+    "fields": {
+      "name": "Can delete payment",
+      "content_type": 19,
+      "codename": "delete_payment"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 76,
+    "fields": {
+      "name": "Can view payment",
+      "content_type": 19,
+      "codename": "view_payment"
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$da5Cyawxbl9N8YZG3Ojlyp$YgQpITcFzTKbX5vmXHna30asH4QWPcUyvZoXxLqt7n0=",
+      "last_login": "2024-02-06T02:55:49.759Z",
+      "is_superuser": true,
+      "username": "karen",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2024-01-13T05:26:45.286Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": {
+      "app_label": "admin",
+      "model": "logentry"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": {
+      "app_label": "auth",
+      "model": "permission"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": {
+      "app_label": "auth",
+      "model": "group"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": {
+      "app_label": "auth",
+      "model": "user"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": {
+      "app_label": "contenttypes",
+      "model": "contenttype"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": {
+      "app_label": "sessions",
+      "model": "session"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": {
+      "app_label": "myauth",
+      "model": "avatar"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 8,
+    "fields": {
+      "app_label": "myauth",
+      "model": "profile"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 9,
+    "fields": {
+      "app_label": "mycatalog",
+      "model": "categories"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 10,
+    "fields": {
+      "app_label": "mycatalog",
+      "model": "categoryimage"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 11,
+    "fields": {
+      "app_label": "mycatalog",
+      "model": "tag"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 12,
+    "fields": {
+      "app_label": "mycatalog",
+      "model": "specification"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 13,
+    "fields": {
+      "app_label": "mycatalog",
+      "model": "productimage"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 14,
+    "fields": {
+      "app_label": "mycatalog",
+      "model": "product"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 15,
+    "fields": {
+      "app_label": "mycatalog",
+      "model": "review"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 16,
+    "fields": {
+      "app_label": "mycatalog",
+      "model": "saledate"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 17,
+    "fields": {
+      "app_label": "myorders",
+      "model": "order"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 18,
+    "fields": {
+      "app_label": "myorders",
+      "model": "orderitem"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 19,
+    "fields": {
+      "app_label": "myorders",
+      "model": "payment"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "7koukz8fphhkcqm6jhko7g4oikw72q6z",
+    "fields": {
+      "session_data": ".eJxVjDsOgzAQBe-ydWQZ_02ZPmdA6_USEyKQMFSIuydINLRvZt4OCevIK7T78YAOt7V0W-WlGzK00MBtS0gjTyfIH5zes6B5WpchiVMRF63iNWf-Pi_3dlCwln9N3imjPLFmy8mRyo3tFUqKvQyNTigdk1ZBkaWkrfTeBx2iMyZwH4OB4we74jts:1rXBnj:vN02F60F0fSdg1RLhHjpLGppTiCa95LheY1Y2skFWU8",
+      "expire_date": "2024-02-20T03:07:11.722Z"
+    }
+  },
+  {
+    "model": "myauth.avatar",
+    "pk": 1,
+    "fields": {
+      "image": "profiles/avatar_karen/Portrait_of_Neytiri.jpg",
+      "profile_rel": 1
+    }
+  },
+  {
+    "model": "myauth.profile",
+    "pk": 1,
+    "fields": {
+      "user": 1,
+      "fullName": "Карен Текнеджян",
+      "phone": "89030203958",
+      "email": "karen.g.tek@gmail.com",
+      "avatar_image": 1
+    }
+  },
+  {
     "model": "mycatalog.categories",
     "pk": 1,
     "fields": {
@@ -172,24 +1053,6 @@
     }
   },
   {
-    "model": "auth.user",
-    "pk": 1,
-    "fields": {
-      "password": "pbkdf2_sha256$600000$da5Cyawxbl9N8YZG3Ojlyp$YgQpITcFzTKbX5vmXHna30asH4QWPcUyvZoXxLqt7n0=",
-      "last_login": "2024-01-14T14:17:53.277Z",
-      "is_superuser": true,
-      "username": "karen",
-      "first_name": "",
-      "last_name": "",
-      "email": "",
-      "is_staff": true,
-      "is_active": true,
-      "date_joined": "2024-01-13T05:26:45.286Z",
-      "groups": [],
-      "user_permissions": []
-    }
-  },
-  {
     "model": "mycatalog.specification",
     "pk": 1,
     "fields": {
@@ -222,14 +1085,269 @@
     }
   },
   {
-    "model": "myauth.avatar",
+    "model": "mycatalog.productimage",
     "pk": 1,
     "fields": {
-      "image": "profiles/avatar_karen/Portrait_of_Neytiri.jpg",
-      "profile_rel": 1
+      "image": "products_images/product_Jeep Grand Cherokee Laredo/2024-grandcherokee-winter-bento_605f7_vORNiQi.jpg",
+      "images_product": 1
     }
   },
-
+  {
+    "model": "mycatalog.productimage",
+    "pk": 2,
+    "fields": {
+      "image": "products_images/product_Jeep Wrangler/images.jpeg",
+      "images_product": 2
+    }
+  },
+  {
+    "model": "mycatalog.productimage",
+    "pk": 3,
+    "fields": {
+      "image": "products_images/product_Toyota Land Cruiser 300/toyota-lc-300-uae-40l-v6.jpg",
+      "images_product": 3
+    }
+  },
+  {
+    "model": "mycatalog.productimage",
+    "pk": 4,
+    "fields": {
+      "image": "products_images/product_Ford F-Series/Ford-F-150_Raptor-2019-768x576.jpg",
+      "images_product": 4
+    }
+  },
+  {
+    "model": "mycatalog.productimage",
+    "pk": 5,
+    "fields": {
+      "image": "products_images/product_Toyota Tundra/review-the-best-hybrid.jpg",
+      "images_product": 5
+    }
+  },
+  {
+    "model": "mycatalog.productimage",
+    "pk": 6,
+    "fields": {
+      "image": "products_images/product_Mitsubishi Pajero Sport 2023/1.jpg",
+      "images_product": 7
+    }
+  },
+  {
+    "model": "mycatalog.productimage",
+    "pk": 7,
+    "fields": {
+      "image": "products_images/product_Tesla Cybertruck/bf41259d490653a38c105048a34cca33.jpg",
+      "images_product": 8
+    }
+  },
+  {
+    "model": "mycatalog.productimage",
+    "pk": 10,
+    "fields": {
+      "image": "products_images/product_Dacia Duster Desert Drive/Dacia_Duster_Desert_Drive_-_Morocco_-__001fXIH.jpg",
+      "images_product": 11
+    }
+  },
+  {
+    "model": "mycatalog.productimage",
+    "pk": 11,
+    "fields": {
+      "image": "products_images/product_PORSCHE/porsche-taycan-turbo-cross-turismo-2022-1280-04-1621628673.jpg",
+      "images_product": 12
+    }
+  },
+  {
+    "model": "mycatalog.productimage",
+    "pk": 12,
+    "fields": {
+      "image": "products_images/product_Hyundai Ioniq 6/large-54223-2023ioniq6limited-6429e0d4e62f3.jpg",
+      "images_product": 13
+    }
+  },
+  {
+    "model": "mycatalog.productimage",
+    "pk": 13,
+    "fields": {
+      "image": "products_images/product_Kia EV6/dw-burnett-kia-ev6-2718-1649951955.jpg",
+      "images_product": 15
+    }
+  },
+  {
+    "model": "mycatalog.productimage",
+    "pk": 14,
+    "fields": {
+      "image": "products_images/product_Polestar 2/663194-20230124-polestar-2-my24-1674572564.jpg",
+      "images_product": 16
+    }
+  },
+  {
+    "model": "mycatalog.productimage",
+    "pk": 15,
+    "fields": {
+      "image": "products_images/product_Lucid Air/2022-lucid-air-03-1658154257.jpg",
+      "images_product": 17
+    }
+  },
+  {
+    "model": "mycatalog.productimage",
+    "pk": 16,
+    "fields": {
+      "image": "products_images/product_Audi e-tron GT/large-8456-2022audirse-trongteuropeanmodelshown-1_bLRciV5.jpg",
+      "images_product": 18
+    }
+  },
+  {
+    "model": "mycatalog.productimage",
+    "pk": 17,
+    "fields": {
+      "image": "products_images/product_Mercedes-Benz S-Class/2022-mercedes-benz-s500-4matic-109-1642184016.jpg",
+      "images_product": 19
+    }
+  },
+  {
+    "model": "mycatalog.productimage",
+    "pk": 18,
+    "fields": {
+      "image": "products_images/product_Genesis G90/2023-genesis-g90-3-5t-e-sc-5748-1671564719.jpg",
+      "images_product": 20
+    }
+  },
+  {
+    "model": "mycatalog.productimage",
+    "pk": 19,
+    "fields": {
+      "image": "products_images/product_Mercedes-AMG S63/22c0377-013-1670273650.jpg",
+      "images_product": 21
+    }
+  },
+  {
+    "model": "mycatalog.productimage",
+    "pk": 20,
+    "fields": {
+      "image": "products_images/product_BMW 7-Series/p90486089-2023-bmw-760i-xdr-1667835057_1.jpg",
+      "images_product": 22
+    }
+  },
+  {
+    "model": "mycatalog.productimage",
+    "pk": 21,
+    "fields": {
+      "image": "products_images/product_Rolls-Royce Spectre/running-64a621b8879c1.jpg",
+      "images_product": 23
+    }
+  },
+  {
+    "model": "mycatalog.productimage",
+    "pk": 22,
+    "fields": {
+      "image": "products_images/product_Pininfarina Battista/battista-road-dynamic-8-m-1630438654.jpg",
+      "images_product": 24
+    }
+  },
+  {
+    "model": "mycatalog.productimage",
+    "pk": 23,
+    "fields": {
+      "image": "products_images/product_Volvo FH16/volvo-fh16-2020-orders-s.jpg",
+      "images_product": 25
+    }
+  },
+  {
+    "model": "mycatalog.productimage",
+    "pk": 24,
+    "fields": {
+      "image": "products_images/product_Shockwave/scale_1200.jpeg",
+      "images_product": 26
+    }
+  },
+  {
+    "model": "mycatalog.productimage",
+    "pk": 25,
+    "fields": {
+      "image": "products_images/product_Truck tomas/nxmoeu97RK-NH1UZiZ2ri29yRrE-1920.jpg",
+      "images_product": 27
+    }
+  },
+  {
+    "model": "mycatalog.productimage",
+    "pk": 26,
+    "fields": {
+      "image": "products_images/product_SHACMAN SX42584V324/tyagach_shacman_sx42584v324.jpg",
+      "images_product": 28
+    }
+  },
+  {
+    "model": "mycatalog.productimage",
+    "pk": 27,
+    "fields": {
+      "image": "products_images/product_truck/long.jpeg",
+      "images_product": 29
+    }
+  },
+  {
+    "model": "mycatalog.productimage",
+    "pk": 28,
+    "fields": {
+      "image": "products_images/product_Mercedes-Benz Axor based cement mixer truck/production.jpeg",
+      "images_product": 30
+    }
+  },
+  {
+    "model": "mycatalog.productimage",
+    "pk": 29,
+    "fields": {
+      "image": "products_images/product_Fendt Trisix/fendt-trisix-tractor-1.jpg",
+      "images_product": 31
+    }
+  },
+  {
+    "model": "mycatalog.productimage",
+    "pk": 30,
+    "fields": {
+      "image": "products_images/product_Kulan tractor/utility vehicle/poly-lab-net-kulan-ev.jpg",
+      "images_product": 32
+    }
+  },
+  {
+    "model": "mycatalog.productimage",
+    "pk": 31,
+    "fields": {
+      "image": "products_images/product_Case IH autonomous tractor/case-ih-concept-vehicle-2-b2mo.jpg",
+      "images_product": 33
+    }
+  },
+  {
+    "model": "mycatalog.productimage",
+    "pk": 32,
+    "fields": {
+      "image": "products_images/product_Kubota Dream tractor/kubota_x_tractor-gmt3.jpg",
+      "images_product": 34
+    }
+  },
+  {
+    "model": "mycatalog.productimage",
+    "pk": 33,
+    "fields": {
+      "image": "products_images/product_Hyundai Ioniq 5/large-50929-2023ioniq5-1668714468.jpg",
+      "images_product": 14
+    }
+  },
+  {
+    "model": "mycatalog.productimage",
+    "pk": 34,
+    "fields": {
+      "image": "products_images/product_llklklklk/2022-gmc-hummer-ev-front-three-quarters-1603222943.jpg",
+      "images_product": 35
+    }
+  },
+  {
+    "model": "mycatalog.productimage",
+    "pk": 35,
+    "fields": {
+      "image": "products_images/product_silverado ford/Chevrolet-Silverado-Premium-depan.jpg",
+      "images_product": 36
+    }
+  },
   {
     "model": "mycatalog.product",
     "pk": 1,
@@ -306,7 +1424,7 @@
       "description": "The best-selling model ranking was lead again by the Ford F-Series, which hit the milestone of 1 million sales in the 2017 and has now improved with global sales at 1.08 units (+0.5%). US and Canada represent 98% of total sales.",
       "freeDelivery": false,
       "category": 7,
-      "rating": 0.0,
+      "rating": 3.25,
       "tags": [
         1
       ],
@@ -327,7 +1445,7 @@
       "description": "The Tundra's 2022 redesign modernized the aging truck in many ways and introduced the all-new i-Force Max hybrid engine.",
       "freeDelivery": false,
       "category": 7,
-      "rating": 0.0,
+      "rating": 4.0,
       "tags": [
         1
       ],
@@ -369,7 +1487,7 @@
       "description": "Tesla начала продажи электропикапа Cybertruck по цене на 50% выше запланированной — в базовой комплектации он стоит $60 990 и будет доступен покупателю в 2025 году.",
       "freeDelivery": false,
       "category": 7,
-      "rating": 0.0,
+      "rating": 3.6,
       "tags": [
         1
       ],
@@ -892,7 +2010,7 @@
       "description": "l;kjl;kjlklkj",
       "freeDelivery": false,
       "category": 7,
-      "rating": 0.0,
+      "rating": 5.0,
       "tags": [
         1
       ],
@@ -913,7 +2031,7 @@
       "description": "silverado fordsilverado ford",
       "freeDelivery": false,
       "category": 7,
-      "rating": 0.0,
+      "rating": 4.0,
       "tags": [
         3
       ],
@@ -967,278 +2085,157 @@
     }
   },
   {
-    "model": "mycatalog.productimage",
-    "pk": 1,
-    "fields": {
-      "image": "products_images/product_Jeep Grand Cherokee Laredo/2024-grandcherokee-winter-bento_605f7_vORNiQi.jpg",
-      "images_product": 1
-    }
-  },
-  {
-    "model": "mycatalog.productimage",
-    "pk": 2,
-    "fields": {
-      "image": "products_images/product_Jeep Wrangler/images.jpeg",
-      "images_product": 2
-    }
-  },
-  {
-    "model": "mycatalog.productimage",
-    "pk": 3,
-    "fields": {
-      "image": "products_images/product_Toyota Land Cruiser 300/toyota-lc-300-uae-40l-v6.jpg",
-      "images_product": 3
-    }
-  },
-  {
-    "model": "mycatalog.productimage",
-    "pk": 4,
-    "fields": {
-      "image": "products_images/product_Ford F-Series/Ford-F-150_Raptor-2019-768x576.jpg",
-      "images_product": 4
-    }
-  },
-  {
-    "model": "mycatalog.productimage",
+    "model": "mycatalog.review",
     "pk": 5,
     "fields": {
-      "image": "products_images/product_Toyota Tundra/review-the-best-hybrid.jpg",
-      "images_product": 5
+      "author": 1,
+      "product": 5,
+      "text": "Пикап очень крутой, но название странное",
+      "rate": 4,
+      "date": "2024-02-06T02:57:15.965Z"
     }
   },
   {
-    "model": "mycatalog.productimage",
+    "model": "mycatalog.review",
     "pk": 6,
     "fields": {
-      "image": "products_images/product_Mitsubishi Pajero Sport 2023/1.jpg",
-      "images_product": 7
+      "author": 1,
+      "product": 5,
+      "text": "Недавно преобрел себе такой, просто супер",
+      "rate": 5,
+      "date": "2024-02-06T02:58:05.696Z"
     }
   },
   {
-    "model": "mycatalog.productimage",
+    "model": "mycatalog.review",
     "pk": 7,
     "fields": {
-      "image": "products_images/product_Tesla Cybertruck/bf41259d490653a38c105048a34cca33.jpg",
-      "images_product": 8
+      "author": 1,
+      "product": 5,
+      "text": "Машина откровенно не понравилась",
+      "rate": 3,
+      "date": "2024-02-06T02:58:48.828Z"
     }
   },
   {
-    "model": "mycatalog.productimage",
+    "model": "mycatalog.review",
+    "pk": 8,
+    "fields": {
+      "author": 1,
+      "product": 8,
+      "text": "Дизайн просто космос",
+      "rate": 5,
+      "date": "2024-02-06T02:59:28.520Z"
+    }
+  },
+  {
+    "model": "mycatalog.review",
+    "pk": 9,
+    "fields": {
+      "author": 1,
+      "product": 8,
+      "text": "Авто оставляет желать лучшего",
+      "rate": 2,
+      "date": "2024-02-06T02:59:58.239Z"
+    }
+  },
+  {
+    "model": "mycatalog.review",
     "pk": 10,
     "fields": {
-      "image": "products_images/product_Dacia Duster Desert Drive/Dacia_Duster_Desert_Drive_-_Morocco_-__001fXIH.jpg",
-      "images_product": 11
+      "author": 1,
+      "product": 8,
+      "text": "это шедевр",
+      "rate": 5,
+      "date": "2024-02-06T03:00:19.548Z"
     }
   },
   {
-    "model": "mycatalog.productimage",
+    "model": "mycatalog.review",
     "pk": 11,
     "fields": {
-      "image": "products_images/product_PORSCHE/porsche-taycan-turbo-cross-turismo-2022-1280-04-1621628673.jpg",
-      "images_product": 12
+      "author": 1,
+      "product": 8,
+      "text": "полный бред, глючит оборудование",
+      "rate": 1,
+      "date": "2024-02-06T03:00:48.936Z"
     }
   },
   {
-    "model": "mycatalog.productimage",
+    "model": "mycatalog.review",
     "pk": 12,
     "fields": {
-      "image": "products_images/product_Hyundai Ioniq 6/large-54223-2023ioniq6limited-6429e0d4e62f3.jpg",
-      "images_product": 13
+      "author": 1,
+      "product": 8,
+      "text": "очень оригинальный автомобиль не похожий на другие",
+      "rate": 5,
+      "date": "2024-02-06T03:01:37.068Z"
     }
   },
   {
-    "model": "mycatalog.productimage",
+    "model": "mycatalog.review",
     "pk": 13,
     "fields": {
-      "image": "products_images/product_Kia EV6/dw-burnett-kia-ev6-2718-1649951955.jpg",
-      "images_product": 15
+      "author": 1,
+      "product": 4,
+      "text": "очень брутальная тачка",
+      "rate": 5,
+      "date": "2024-02-06T03:02:12.728Z"
     }
   },
   {
-    "model": "mycatalog.productimage",
+    "model": "mycatalog.review",
     "pk": 14,
     "fields": {
-      "image": "products_images/product_Polestar 2/663194-20230124-polestar-2-my24-1674572564.jpg",
-      "images_product": 16
+      "author": 1,
+      "product": 4,
+      "text": "супер",
+      "rate": 5,
+      "date": "2024-02-06T03:02:29.008Z"
     }
   },
   {
-    "model": "mycatalog.productimage",
+    "model": "mycatalog.review",
     "pk": 15,
     "fields": {
-      "image": "products_images/product_Lucid Air/2022-lucid-air-03-1658154257.jpg",
-      "images_product": 17
+      "author": 1,
+      "product": 4,
+      "text": "мне не понравилось",
+      "rate": 2,
+      "date": "2024-02-06T03:02:45.723Z"
     }
   },
   {
-    "model": "mycatalog.productimage",
+    "model": "mycatalog.review",
     "pk": 16,
     "fields": {
-      "image": "products_images/product_Audi e-tron GT/large-8456-2022audirse-trongteuropeanmodelshown-1_bLRciV5.jpg",
-      "images_product": 18
+      "author": 1,
+      "product": 4,
+      "text": "обслуживание отстой",
+      "rate": 1,
+      "date": "2024-02-06T03:03:05.195Z"
     }
   },
   {
-    "model": "mycatalog.productimage",
+    "model": "mycatalog.review",
     "pk": 17,
     "fields": {
-      "image": "products_images/product_Mercedes-Benz S-Class/2022-mercedes-benz-s500-4matic-109-1642184016.jpg",
-      "images_product": 19
+      "author": 1,
+      "product": 35,
+      "text": "супер",
+      "rate": 5,
+      "date": "2024-02-06T03:06:07.750Z"
     }
   },
   {
-    "model": "mycatalog.productimage",
+    "model": "mycatalog.review",
     "pk": 18,
     "fields": {
-      "image": "products_images/product_Genesis G90/2023-genesis-g90-3-5t-e-sc-5748-1671564719.jpg",
-      "images_product": 20
-    }
-  },
-  {
-    "model": "mycatalog.productimage",
-    "pk": 19,
-    "fields": {
-      "image": "products_images/product_Mercedes-AMG S63/22c0377-013-1670273650.jpg",
-      "images_product": 21
-    }
-  },
-  {
-    "model": "mycatalog.productimage",
-    "pk": 20,
-    "fields": {
-      "image": "products_images/product_BMW 7-Series/p90486089-2023-bmw-760i-xdr-1667835057_1.jpg",
-      "images_product": 22
-    }
-  },
-  {
-    "model": "mycatalog.productimage",
-    "pk": 21,
-    "fields": {
-      "image": "products_images/product_Rolls-Royce Spectre/running-64a621b8879c1.jpg",
-      "images_product": 23
-    }
-  },
-  {
-    "model": "mycatalog.productimage",
-    "pk": 22,
-    "fields": {
-      "image": "products_images/product_Pininfarina Battista/battista-road-dynamic-8-m-1630438654.jpg",
-      "images_product": 24
-    }
-  },
-  {
-    "model": "mycatalog.productimage",
-    "pk": 23,
-    "fields": {
-      "image": "products_images/product_Volvo FH16/volvo-fh16-2020-orders-s.jpg",
-      "images_product": 25
-    }
-  },
-  {
-    "model": "mycatalog.productimage",
-    "pk": 24,
-    "fields": {
-      "image": "products_images/product_Shockwave/scale_1200.jpeg",
-      "images_product": 26
-    }
-  },
-  {
-    "model": "mycatalog.productimage",
-    "pk": 25,
-    "fields": {
-      "image": "products_images/product_Truck tomas/nxmoeu97RK-NH1UZiZ2ri29yRrE-1920.jpg",
-      "images_product": 27
-    }
-  },
-  {
-    "model": "mycatalog.productimage",
-    "pk": 26,
-    "fields": {
-      "image": "products_images/product_SHACMAN SX42584V324/tyagach_shacman_sx42584v324.jpg",
-      "images_product": 28
-    }
-  },
-  {
-    "model": "mycatalog.productimage",
-    "pk": 27,
-    "fields": {
-      "image": "products_images/product_truck/long.jpeg",
-      "images_product": 29
-    }
-  },
-  {
-    "model": "mycatalog.productimage",
-    "pk": 28,
-    "fields": {
-      "image": "products_images/product_Mercedes-Benz Axor based cement mixer truck/production.jpeg",
-      "images_product": 30
-    }
-  },
-  {
-    "model": "mycatalog.productimage",
-    "pk": 29,
-    "fields": {
-      "image": "products_images/product_Fendt Trisix/fendt-trisix-tractor-1.jpg",
-      "images_product": 31
-    }
-  },
-  {
-    "model": "mycatalog.productimage",
-    "pk": 30,
-    "fields": {
-      "image": "products_images/product_Kulan tractor/utility vehicle/poly-lab-net-kulan-ev.jpg",
-      "images_product": 32
-    }
-  },
-  {
-    "model": "mycatalog.productimage",
-    "pk": 31,
-    "fields": {
-      "image": "products_images/product_Case IH autonomous tractor/case-ih-concept-vehicle-2-b2mo.jpg",
-      "images_product": 33
-    }
-  },
-  {
-    "model": "mycatalog.productimage",
-    "pk": 32,
-    "fields": {
-      "image": "products_images/product_Kubota Dream tractor/kubota_x_tractor-gmt3.jpg",
-      "images_product": 34
-    }
-  },
-  {
-    "model": "mycatalog.productimage",
-    "pk": 33,
-    "fields": {
-      "image": "products_images/product_Hyundai Ioniq 5/large-50929-2023ioniq5-1668714468.jpg",
-      "images_product": 14
-    }
-  },
-  {
-    "model": "mycatalog.productimage",
-    "pk": 34,
-    "fields": {
-      "image": "products_images/product_llklklklk/2022-gmc-hummer-ev-front-three-quarters-1603222943.jpg",
-      "images_product": 35
-    }
-  },
-  {
-    "model": "mycatalog.productimage",
-    "pk": 35,
-    "fields": {
-      "image": "products_images/product_silverado ford/Chevrolet-Silverado-Premium-depan.jpg",
-      "images_product": 36
-    }
-  },
-  {
-    "model": "myauth.profile",
-    "pk": 1,
-    "fields": {
-      "user": 1,
-      "fullName": "Карен Текнеджян",
-      "phone": "89030203958",
-      "email": "karen.g.tek@gmail.com",
-      "avatar_image": 1
+      "author": 1,
+      "product": 36,
+      "text": "супер",
+      "rate": 4,
+      "date": "2024-02-06T03:07:01.093Z"
     }
   }
 ]

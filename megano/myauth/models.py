@@ -29,7 +29,7 @@ class Profile(models.Model):
     """
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     fullName = models.CharField(max_length=150, null=True, blank=True, )
-    phone = models.CharField(max_length=11, null=True, blank=True)
+    phone = models.CharField(max_length=13, null=True, blank=True)
     email = models.EmailField(null=True, blank=True)
     avatar_image = models.OneToOneField(Avatar, on_delete=models.CASCADE, null=True, blank=True)
 

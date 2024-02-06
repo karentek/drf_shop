@@ -72,7 +72,7 @@ class DataFilter:
         sort = filter_criteria.get('sort')
         sort_type = filter_criteria.get('sortType')
         tags = filter_criteria.get('tags[]')
-        print(name)
+        print(max_price, min_price, "max" * 10)
         if category:
             filtered_products = filtered_products.filter(category=category)
         if tags and type(tags) == list:

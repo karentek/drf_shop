@@ -28,9 +28,6 @@ from .serializers import (
         responses={
             status.HTTP_200_OK: ProductSw(),
         },
-
-
-
     ),
     post=extend_schema(
         summary="Метод для добавления товара в корзину",
