@@ -1,0 +1,50 @@
+[
+  {
+    "model": "mycatalog.categories",
+    "pk": 1,
+    "fields": {
+      "title": "category1",
+      "parent_category": null
+    }
+  },
+  {
+    "model": "mycatalog.categories",
+    "pk": 2,
+    "fields": {
+      "title": "category2",
+      "parent_category": null
+    }
+  },
+  {
+    "model": "mycatalog.categories",
+    "pk": 3,
+    "fields": {
+      "title": "category3",
+      "parent_category": null
+    }
+  },
+  {
+    "model": "mycatalog.categories",
+    "pk": 4,
+    "fields": {
+      "title": "category4",
+      "parent_category": 1
+    }
+  },
+  {
+    "model": "mycatalog.categories",
+    "pk": 6,
+    "fields": {
+      "title": "category6",
+      "parent_category": 2
+    }
+  },
+  {
+    "model": "mycatalog.categories",
+    "pk": 8,
+    "fields": {
+      "title": "category6",
+      "parent_category": 2
+    }
+  }
+]

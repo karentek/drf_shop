@@ -1,0 +1,86 @@
+###########
+# BUILDER #
+###########
+
+# pull official base image
+FROM python:3.11.4-slim-buster as builder
+
+# set work directory
+WORKDIR /usr/src/diploma
+
+# set environment variables
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
+
+# install system dependencies
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends gcc
+
+# lint
+RUN pip install --upgrade pip
+#RUN pip install flake8==6.0.0
+COPY . .
+#RUN flake8 --ignore=E501,F401 .
+
+# install python dependencies
+COPY ./megano/requirements.txt .
+RUN pip wheel --no-cache-dir --no-deps --wheel-dir /usr/src/diploma/wheels -r requirements.txt
+
+
+#########
+# FINAL #
+#########
+
+# pull official base image
+FROM python:3.11.4-slim-buster
+
+# create directory for the app user
+RUN mkdir -p /home/megano_app
+
+# create the app user with specific UID and GID
+#RUN addgroup --system megano_user && adduser --system --group megano_user
+
+# create the appropriate directories
+ENV HOME=/home/megano_app
+ENV APP_HOME=/home/megano_app/web
+RUN mkdir $APP_HOME
+RUN mkdir $APP_HOME/staticfiles
+#RUN mkdir $APP_HOME/megano/uploads
+WORKDIR $APP_HOME
+
+# install dependencies
+RUN apt-get update && apt-get install -y --no-install-recommends netcat
+COPY --from=builder /usr/src/diploma/wheels /wheels
+COPY --from=builder /usr/src/diploma/requirements.txt .
+RUN pip install --upgrade pip
+RUN pip install --no-cache /wheels/*
+RUN pip install eventlet
+
+
+# copy entrypoint.prod.sh
+COPY ./megano/entrypoint.prod.sh .
+RUN sed -i 's/\r$//g'  $APP_HOME/entrypoint.prod.sh
+RUN chmod +x  $APP_HOME/entrypoint.prod.sh
+
+# copy project
+COPY . $APP_HOME
+
+# chown all the files to the app user
+#RUN chown -R megano_user:megano_user $APP_HOME
+
+# change to the app user
+#USER megano_user
+
+
+#install frontend
+WORKDIR  $APP_HOME/megano/diploma-frontend
+RUN python setup.py sdist
+RUN pip install dist/diploma-frontend-0.6.tar.gz
+
+WORKDIR  $APP_HOME/megano
+
+# run entrypoint.prod.sh
+ENTRYPOINT ["/home/megano_app/web/entrypoint.prod.sh"]
+
+#collect static
+RUN python manage.py collectstatic --noinput

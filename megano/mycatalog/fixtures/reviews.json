@@ -1,0 +1,266 @@
+[
+  {
+    "model": "mycatalog.review",
+    "pk": 3,
+    "fields": {
+      "author": 2,
+      "product": 1,
+      "text": "good better the best",
+      "rate": 5,
+      "date": "2023-11-30T13:20:46.543Z"
+    }
+  },
+  {
+    "model": "mycatalog.review",
+    "pk": 4,
+    "fields": {
+      "author": 2,
+      "product": 3,
+      "text": "mdmdmdmdmd",
+      "rate": 4,
+      "date": "2023-11-30T13:21:19.374Z"
+    }
+  },
+  {
+    "model": "mycatalog.review",
+    "pk": 5,
+    "fields": {
+      "author": 2,
+      "product": 5,
+      "text": "kkkk",
+      "rate": 6,
+      "date": "2023-11-30T13:55:45.473Z"
+    }
+  },
+  {
+    "model": "mycatalog.review",
+    "pk": 6,
+    "fields": {
+      "author": 2,
+      "product": 6,
+      "text": "review for car",
+      "rate": 10,
+      "date": "2023-11-30T14:08:52.478Z"
+    }
+  },
+  {
+    "model": "mycatalog.review",
+    "pk": 7,
+    "fields": {
+      "author": 2,
+      "product": 6,
+      "text": "review 2 for car",
+      "rate": 9,
+      "date": "2023-11-30T14:09:13.842Z"
+    }
+  },
+  {
+    "model": "mycatalog.review",
+    "pk": 8,
+    "fields": {
+      "author": 2,
+      "product": 2,
+      "text": "kdkdkdk",
+      "rate": 8,
+      "date": "2023-11-30T16:33:30.922Z"
+    }
+  },
+  {
+    "model": "mycatalog.review",
+    "pk": 9,
+    "fields": {
+      "author": 2,
+      "product": 8,
+      "text": "mlmlml",
+      "rate": 4,
+      "date": "2023-12-01T02:39:42.499Z"
+    }
+  },
+  {
+    "model": "mycatalog.review",
+    "pk": 10,
+    "fields": {
+      "author": 2,
+      "product": 8,
+      "text": ",m,m,,,,m,m",
+      "rate": 3,
+      "date": "2023-12-01T02:57:48.663Z"
+    }
+  },
+  {
+    "model": "mycatalog.review",
+    "pk": 11,
+    "fields": {
+      "author": 2,
+      "product": 8,
+      "text": "ll,lll",
+      "rate": 7,
+      "date": "2023-12-01T02:58:05.919Z"
+    }
+  },
+  {
+    "model": "mycatalog.review",
+    "pk": 12,
+    "fields": {
+      "author": 2,
+      "product": 7,
+      "text": "p",
+      "rate": 1,
+      "date": "2023-12-01T03:17:15.904Z"
+    }
+  },
+  {
+    "model": "mycatalog.review",
+    "pk": 15,
+    "fields": {
+      "author": 2,
+      "product": 1,
+      "text": ",,,",
+      "rate": 5,
+      "date": "2023-12-01T03:19:35.942Z"
+    }
+  },
+  {
+    "model": "mycatalog.review",
+    "pk": 16,
+    "fields": {
+      "author": 2,
+      "product": 1,
+      "text": "lkokok",
+      "rate": 4,
+      "date": "2023-12-01T03:19:35.943Z"
+    }
+  },
+  {
+    "model": "mycatalog.review",
+    "pk": 18,
+    "fields": {
+      "author": 2,
+      "product": 1,
+      "text": "kh;jlkjlkj",
+      "rate": 3,
+      "date": "2023-12-01T16:56:25.609Z"
+    }
+  },
+  {
+    "model": "mycatalog.review",
+    "pk": 19,
+    "fields": {
+      "author": 2,
+      "product": 3,
+      "text": "lklk",
+      "rate": 5,
+      "date": "2023-12-02T09:52:21.287Z"
+    }
+  },
+  {
+    "model": "mycatalog.review",
+    "pk": 20,
+    "fields": {
+      "author": 2,
+      "product": 3,
+      "text": "opa opa opa opa",
+      "rate": 3,
+      "date": "2023-12-02T09:53:24.192Z"
+    }
+  },
+  {
+    "model": "mycatalog.review",
+    "pk": 21,
+    "fields": {
+      "author": 2,
+      "product": 3,
+      "text": "dkkdkdkd",
+      "rate": 5,
+      "date": "2023-12-02T12:56:17.684Z"
+    }
+  },
+  {
+    "model": "mycatalog.review",
+    "pk": 22,
+    "fields": {
+      "author": 2,
+      "product": 3,
+      "text": "hi jack",
+      "rate": 5,
+      "date": "2023-12-02T12:56:50.826Z"
+    }
+  },
+  {
+    "model": "mycatalog.review",
+    "pk": 23,
+    "fields": {
+      "author": 2,
+      "product": 3,
+      "text": "kdkddkkdkdkd",
+      "rate": 5,
+      "date": "2023-12-02T12:57:46.650Z"
+    }
+  },
+  {
+    "model": "mycatalog.review",
+    "pk": 24,
+    "fields": {
+      "author": 2,
+      "product": 6,
+      "text": "hikdkdkdk",
+      "rate": 5,
+      "date": "2023-12-02T13:01:06.583Z"
+    }
+  },
+  {
+    "model": "mycatalog.review",
+    "pk": 25,
+    "fields": {
+      "author": 2,
+      "product": 5,
+      "text": "dfdfdf",
+      "rate": 5,
+      "date": "2023-12-11T15:02:11.078Z"
+    }
+  },
+  {
+    "model": "mycatalog.review",
+    "pk": 26,
+    "fields": {
+      "author": 6,
+      "product": 2,
+      "text": "lklkl",
+      "rate": 5,
+      "date": "2023-12-13T16:25:06.908Z"
+    }
+  },
+  {
+    "model": "mycatalog.review",
+    "pk": 27,
+    "fields": {
+      "author": 6,
+      "product": 2,
+      "text": "dfdfd",
+      "rate": 5,
+      "date": "2023-12-13T19:42:42.857Z"
+    }
+  },
+  {
+    "model": "mycatalog.review",
+    "pk": 28,
+    "fields": {
+      "author": 6,
+      "product": 2,
+      "text": "iiiiiiiiiiiiiiiiiiiiiiiiiiiii",
+      "rate": 5,
+      "date": "2023-12-14T09:55:58.839Z"
+    }
+  },
+  {
+    "model": "mycatalog.review",
+    "pk": 29,
+    "fields": {
+      "author": 6,
+      "product": 2,
+      "text": "kkk",
+      "rate": 5,
+      "date": "2023-12-14T09:58:11.473Z"
+    }
+  }
+]

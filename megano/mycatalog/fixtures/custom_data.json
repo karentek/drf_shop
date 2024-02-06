@@ -1,0 +1,2241 @@
+[
+  {
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+      "name": "Can add log entry",
+      "content_type": 1,
+      "codename": "add_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+      "name": "Can change log entry",
+      "content_type": 1,
+      "codename": "change_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+      "name": "Can delete log entry",
+      "content_type": 1,
+      "codename": "delete_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+      "name": "Can view log entry",
+      "content_type": 1,
+      "codename": "view_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+      "name": "Can add permission",
+      "content_type": 2,
+      "codename": "add_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+      "name": "Can change permission",
+      "content_type": 2,
+      "codename": "change_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+      "name": "Can delete permission",
+      "content_type": 2,
+      "codename": "delete_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+      "name": "Can view permission",
+      "content_type": 2,
+      "codename": "view_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+      "name": "Can add group",
+      "content_type": 3,
+      "codename": "add_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+      "name": "Can change group",
+      "content_type": 3,
+      "codename": "change_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+      "name": "Can delete group",
+      "content_type": 3,
+      "codename": "delete_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+      "name": "Can view group",
+      "content_type": 3,
+      "codename": "view_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+      "name": "Can add user",
+      "content_type": 4,
+      "codename": "add_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+      "name": "Can change user",
+      "content_type": 4,
+      "codename": "change_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+      "name": "Can delete user",
+      "content_type": 4,
+      "codename": "delete_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+      "name": "Can view user",
+      "content_type": 4,
+      "codename": "view_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+      "name": "Can add content type",
+      "content_type": 5,
+      "codename": "add_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+      "name": "Can change content type",
+      "content_type": 5,
+      "codename": "change_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+      "name": "Can delete content type",
+      "content_type": 5,
+      "codename": "delete_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+      "name": "Can view content type",
+      "content_type": 5,
+      "codename": "view_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+      "name": "Can add session",
+      "content_type": 6,
+      "codename": "add_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+      "name": "Can change session",
+      "content_type": 6,
+      "codename": "change_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+      "name": "Can delete session",
+      "content_type": 6,
+      "codename": "delete_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+      "name": "Can view session",
+      "content_type": 6,
+      "codename": "view_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+      "name": "Can add avatar",
+      "content_type": 7,
+      "codename": "add_avatar"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+      "name": "Can change avatar",
+      "content_type": 7,
+      "codename": "change_avatar"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+      "name": "Can delete avatar",
+      "content_type": 7,
+      "codename": "delete_avatar"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+      "name": "Can view avatar",
+      "content_type": 7,
+      "codename": "view_avatar"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+      "name": "Can add profile",
+      "content_type": 8,
+      "codename": "add_profile"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+      "name": "Can change profile",
+      "content_type": 8,
+      "codename": "change_profile"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+      "name": "Can delete profile",
+      "content_type": 8,
+      "codename": "delete_profile"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+      "name": "Can view profile",
+      "content_type": 8,
+      "codename": "view_profile"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+      "name": "Can add categories",
+      "content_type": 9,
+      "codename": "add_categories"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+      "name": "Can change categories",
+      "content_type": 9,
+      "codename": "change_categories"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+      "name": "Can delete categories",
+      "content_type": 9,
+      "codename": "delete_categories"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+      "name": "Can view categories",
+      "content_type": 9,
+      "codename": "view_categories"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 37,
+    "fields": {
+      "name": "Can add category image",
+      "content_type": 10,
+      "codename": "add_categoryimage"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 38,
+    "fields": {
+      "name": "Can change category image",
+      "content_type": 10,
+      "codename": "change_categoryimage"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 39,
+    "fields": {
+      "name": "Can delete category image",
+      "content_type": 10,
+      "codename": "delete_categoryimage"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 40,
+    "fields": {
+      "name": "Can view category image",
+      "content_type": 10,
+      "codename": "view_categoryimage"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 41,
+    "fields": {
+      "name": "Can add tag",
+      "content_type": 11,
+      "codename": "add_tag"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 42,
+    "fields": {
+      "name": "Can change tag",
+      "content_type": 11,
+      "codename": "change_tag"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 43,
+    "fields": {
+      "name": "Can delete tag",
+      "content_type": 11,
+      "codename": "delete_tag"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 44,
+    "fields": {
+      "name": "Can view tag",
+      "content_type": 11,
+      "codename": "view_tag"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 45,
+    "fields": {
+      "name": "Can add specification",
+      "content_type": 12,
+      "codename": "add_specification"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 46,
+    "fields": {
+      "name": "Can change specification",
+      "content_type": 12,
+      "codename": "change_specification"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 47,
+    "fields": {
+      "name": "Can delete specification",
+      "content_type": 12,
+      "codename": "delete_specification"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 48,
+    "fields": {
+      "name": "Can view specification",
+      "content_type": 12,
+      "codename": "view_specification"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 49,
+    "fields": {
+      "name": "Can add product image",
+      "content_type": 13,
+      "codename": "add_productimage"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 50,
+    "fields": {
+      "name": "Can change product image",
+      "content_type": 13,
+      "codename": "change_productimage"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 51,
+    "fields": {
+      "name": "Can delete product image",
+      "content_type": 13,
+      "codename": "delete_productimage"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 52,
+    "fields": {
+      "name": "Can view product image",
+      "content_type": 13,
+      "codename": "view_productimage"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 53,
+    "fields": {
+      "name": "Can add product",
+      "content_type": 14,
+      "codename": "add_product"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 54,
+    "fields": {
+      "name": "Can change product",
+      "content_type": 14,
+      "codename": "change_product"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 55,
+    "fields": {
+      "name": "Can delete product",
+      "content_type": 14,
+      "codename": "delete_product"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 56,
+    "fields": {
+      "name": "Can view product",
+      "content_type": 14,
+      "codename": "view_product"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 57,
+    "fields": {
+      "name": "Can add review",
+      "content_type": 15,
+      "codename": "add_review"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 58,
+    "fields": {
+      "name": "Can change review",
+      "content_type": 15,
+      "codename": "change_review"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 59,
+    "fields": {
+      "name": "Can delete review",
+      "content_type": 15,
+      "codename": "delete_review"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 60,
+    "fields": {
+      "name": "Can view review",
+      "content_type": 15,
+      "codename": "view_review"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 61,
+    "fields": {
+      "name": "Can add sale date",
+      "content_type": 16,
+      "codename": "add_saledate"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 62,
+    "fields": {
+      "name": "Can change sale date",
+      "content_type": 16,
+      "codename": "change_saledate"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 63,
+    "fields": {
+      "name": "Can delete sale date",
+      "content_type": 16,
+      "codename": "delete_saledate"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 64,
+    "fields": {
+      "name": "Can view sale date",
+      "content_type": 16,
+      "codename": "view_saledate"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 65,
+    "fields": {
+      "name": "Can add order",
+      "content_type": 17,
+      "codename": "add_order"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 66,
+    "fields": {
+      "name": "Can change order",
+      "content_type": 17,
+      "codename": "change_order"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 67,
+    "fields": {
+      "name": "Can delete order",
+      "content_type": 17,
+      "codename": "delete_order"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 68,
+    "fields": {
+      "name": "Can view order",
+      "content_type": 17,
+      "codename": "view_order"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 69,
+    "fields": {
+      "name": "Can add order item",
+      "content_type": 18,
+      "codename": "add_orderitem"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 70,
+    "fields": {
+      "name": "Can change order item",
+      "content_type": 18,
+      "codename": "change_orderitem"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 71,
+    "fields": {
+      "name": "Can delete order item",
+      "content_type": 18,
+      "codename": "delete_orderitem"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 72,
+    "fields": {
+      "name": "Can view order item",
+      "content_type": 18,
+      "codename": "view_orderitem"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 73,
+    "fields": {
+      "name": "Can add payment",
+      "content_type": 19,
+      "codename": "add_payment"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 74,
+    "fields": {
+      "name": "Can change payment",
+      "content_type": 19,
+      "codename": "change_payment"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 75,
+    "fields": {
+      "name": "Can delete payment",
+      "content_type": 19,
+      "codename": "delete_payment"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 76,
+    "fields": {
+      "name": "Can view payment",
+      "content_type": 19,
+      "codename": "view_payment"
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$da5Cyawxbl9N8YZG3Ojlyp$YgQpITcFzTKbX5vmXHna30asH4QWPcUyvZoXxLqt7n0=",
+      "last_login": "2024-02-06T02:55:49.759Z",
+      "is_superuser": true,
+      "username": "karen",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2024-01-13T05:26:45.286Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": {
+      "app_label": "admin",
+      "model": "logentry"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": {
+      "app_label": "auth",
+      "model": "permission"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": {
+      "app_label": "auth",
+      "model": "group"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": {
+      "app_label": "auth",
+      "model": "user"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": {
+      "app_label": "contenttypes",
+      "model": "contenttype"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": {
+      "app_label": "sessions",
+      "model": "session"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": {
+      "app_label": "myauth",
+      "model": "avatar"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 8,
+    "fields": {
+      "app_label": "myauth",
+      "model": "profile"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 9,
+    "fields": {
+      "app_label": "mycatalog",
+      "model": "categories"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 10,
+    "fields": {
+      "app_label": "mycatalog",
+      "model": "categoryimage"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 11,
+    "fields": {
+      "app_label": "mycatalog",
+      "model": "tag"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 12,
+    "fields": {
+      "app_label": "mycatalog",
+      "model": "specification"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 13,
+    "fields": {
+      "app_label": "mycatalog",
+      "model": "productimage"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 14,
+    "fields": {
+      "app_label": "mycatalog",
+      "model": "product"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 15,
+    "fields": {
+      "app_label": "mycatalog",
+      "model": "review"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 16,
+    "fields": {
+      "app_label": "mycatalog",
+      "model": "saledate"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 17,
+    "fields": {
+      "app_label": "myorders",
+      "model": "order"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 18,
+    "fields": {
+      "app_label": "myorders",
+      "model": "orderitem"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 19,
+    "fields": {
+      "app_label": "myorders",
+      "model": "payment"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "7koukz8fphhkcqm6jhko7g4oikw72q6z",
+    "fields": {
+      "session_data": ".eJxVjDsOgzAQBe-ydWQZ_02ZPmdA6_USEyKQMFSIuydINLRvZt4OCevIK7T78YAOt7V0W-WlGzK00MBtS0gjTyfIH5zes6B5WpchiVMRF63iNWf-Pi_3dlCwln9N3imjPLFmy8mRyo3tFUqKvQyNTigdk1ZBkaWkrfTeBx2iMyZwH4OB4we74jts:1rXBnj:vN02F60F0fSdg1RLhHjpLGppTiCa95LheY1Y2skFWU8",
+      "expire_date": "2024-02-20T03:07:11.722Z"
+    }
+  },
+  {
+    "model": "myauth.avatar",
+    "pk": 1,
+    "fields": {
+      "image": "profiles/avatar_karen/Portrait_of_Neytiri.jpg",
+      "profile_rel": 1
+    }
+  },
+  {
+    "model": "myauth.profile",
+    "pk": 1,
+    "fields": {
+      "user": 1,
+      "fullName": "Карен Текнеджян",
+      "phone": "89030203958",
+      "email": "karen.g.tek@gmail.com",
+      "avatar_image": 1
+    }
+  },
+  {
+    "model": "mycatalog.categories",
+    "pk": 1,
+    "fields": {
+      "title": "trucks",
+      "parent_category": null
+    }
+  },
+  {
+    "model": "mycatalog.categories",
+    "pk": 2,
+    "fields": {
+      "title": "cars",
+      "parent_category": null
+    }
+  },
+  {
+    "model": "mycatalog.categories",
+    "pk": 3,
+    "fields": {
+      "title": "off road",
+      "parent_category": null
+    }
+  },
+  {
+    "model": "mycatalog.categories",
+    "pk": 4,
+    "fields": {
+      "title": "electric-cars",
+      "parent_category": 2
+    }
+  },
+  {
+    "model": "mycatalog.categories",
+    "pk": 5,
+    "fields": {
+      "title": "premium",
+      "parent_category": 2
+    }
+  },
+  {
+    "model": "mycatalog.categories",
+    "pk": 7,
+    "fields": {
+      "title": "picups",
+      "parent_category": 3
+    }
+  },
+  {
+    "model": "mycatalog.categories",
+    "pk": 8,
+    "fields": {
+      "title": "jeeps",
+      "parent_category": 3
+    }
+  },
+  {
+    "model": "mycatalog.categories",
+    "pk": 9,
+    "fields": {
+      "title": "long vehical",
+      "parent_category": 1
+    }
+  },
+  {
+    "model": "mycatalog.categories",
+    "pk": 10,
+    "fields": {
+      "title": "production",
+      "parent_category": 1
+    }
+  },
+  {
+    "model": "mycatalog.categoryimage",
+    "pk": 1,
+    "fields": {
+      "image": "category_images/category_trucks/truck.jpg",
+      "category": 1
+    }
+  },
+  {
+    "model": "mycatalog.categoryimage",
+    "pk": 2,
+    "fields": {
+      "image": "category_images/category_cars/6_0.jpg",
+      "category": 2
+    }
+  },
+  {
+    "model": "mycatalog.categoryimage",
+    "pk": 3,
+    "fields": {
+      "image": "category_images/category_4*4/wrangler-rubicon-4xe-1663855058.jpg",
+      "category": 3
+    }
+  },
+  {
+    "model": "mycatalog.categoryimage",
+    "pk": 4,
+    "fields": {
+      "image": "category_images/category_sport cars/download.jpeg",
+      "category": 4
+    }
+  },
+  {
+    "model": "mycatalog.categoryimage",
+    "pk": 5,
+    "fields": {
+      "image": "category_images/category_premium/download_1.jpeg",
+      "category": 5
+    }
+  },
+  {
+    "model": "mycatalog.categoryimage",
+    "pk": 7,
+    "fields": {
+      "image": "category_images/category_pic ups/FDB-pickup-back-1.jpg",
+      "category": 7
+    }
+  },
+  {
+    "model": "mycatalog.categoryimage",
+    "pk": 8,
+    "fields": {
+      "image": "category_images/category_jeeps/used-cars-colorado-0401.jpg",
+      "category": 8
+    }
+  },
+  {
+    "model": "mycatalog.categoryimage",
+    "pk": 9,
+    "fields": {
+      "image": "category_images/category_long vehical/long.jpeg",
+      "category": 9
+    }
+  },
+  {
+    "model": "mycatalog.categoryimage",
+    "pk": 10,
+    "fields": {
+      "image": "category_images/category_production/production.jpeg",
+      "category": 10
+    }
+  },
+  {
+    "model": "mycatalog.tag",
+    "pk": 1,
+    "fields": {
+      "name": "jeep"
+    }
+  },
+  {
+    "model": "mycatalog.tag",
+    "pk": 2,
+    "fields": {
+      "name": "sport cars"
+    }
+  },
+  {
+    "model": "mycatalog.tag",
+    "pk": 3,
+    "fields": {
+      "name": "premium class"
+    }
+  },
+  {
+    "model": "mycatalog.tag",
+    "pk": 4,
+    "fields": {
+      "name": "long vehical"
+    }
+  },
+  {
+    "model": "mycatalog.specification",
+    "pk": 1,
+    "fields": {
+      "name": "transmission",
+      "value": "auto"
+    }
+  },
+  {
+    "model": "mycatalog.specification",
+    "pk": 2,
+    "fields": {
+      "name": "motor",
+      "value": "disel"
+    }
+  },
+  {
+    "model": "mycatalog.specification",
+    "pk": 3,
+    "fields": {
+      "name": "passengers",
+      "value": "5"
+    }
+  },
+  {
+    "model": "mycatalog.specification",
+    "pk": 4,
+    "fields": {
+      "name": "max speed",
+      "value": "220km/h"
+    }
+  },
+  {
+    "model": "mycatalog.productimage",
+    "pk": 1,
+    "fields": {
+      "image": "products_images/product_Jeep Grand Cherokee Laredo/2024-grandcherokee-winter-bento_605f7_vORNiQi.jpg",
+      "images_product": 1
+    }
+  },
+  {
+    "model": "mycatalog.productimage",
+    "pk": 2,
+    "fields": {
+      "image": "products_images/product_Jeep Wrangler/images.jpeg",
+      "images_product": 2
+    }
+  },
+  {
+    "model": "mycatalog.productimage",
+    "pk": 3,
+    "fields": {
+      "image": "products_images/product_Toyota Land Cruiser 300/toyota-lc-300-uae-40l-v6.jpg",
+      "images_product": 3
+    }
+  },
+  {
+    "model": "mycatalog.productimage",
+    "pk": 4,
+    "fields": {
+      "image": "products_images/product_Ford F-Series/Ford-F-150_Raptor-2019-768x576.jpg",
+      "images_product": 4
+    }
+  },
+  {
+    "model": "mycatalog.productimage",
+    "pk": 5,
+    "fields": {
+      "image": "products_images/product_Toyota Tundra/review-the-best-hybrid.jpg",
+      "images_product": 5
+    }
+  },
+  {
+    "model": "mycatalog.productimage",
+    "pk": 6,
+    "fields": {
+      "image": "products_images/product_Mitsubishi Pajero Sport 2023/1.jpg",
+      "images_product": 7
+    }
+  },
+  {
+    "model": "mycatalog.productimage",
+    "pk": 7,
+    "fields": {
+      "image": "products_images/product_Tesla Cybertruck/bf41259d490653a38c105048a34cca33.jpg",
+      "images_product": 8
+    }
+  },
+  {
+    "model": "mycatalog.productimage",
+    "pk": 10,
+    "fields": {
+      "image": "products_images/product_Dacia Duster Desert Drive/Dacia_Duster_Desert_Drive_-_Morocco_-__001fXIH.jpg",
+      "images_product": 11
+    }
+  },
+  {
+    "model": "mycatalog.productimage",
+    "pk": 11,
+    "fields": {
+      "image": "products_images/product_PORSCHE/porsche-taycan-turbo-cross-turismo-2022-1280-04-1621628673.jpg",
+      "images_product": 12
+    }
+  },
+  {
+    "model": "mycatalog.productimage",
+    "pk": 12,
+    "fields": {
+      "image": "products_images/product_Hyundai Ioniq 6/large-54223-2023ioniq6limited-6429e0d4e62f3.jpg",
+      "images_product": 13
+    }
+  },
+  {
+    "model": "mycatalog.productimage",
+    "pk": 13,
+    "fields": {
+      "image": "products_images/product_Kia EV6/dw-burnett-kia-ev6-2718-1649951955.jpg",
+      "images_product": 15
+    }
+  },
+  {
+    "model": "mycatalog.productimage",
+    "pk": 14,
+    "fields": {
+      "image": "products_images/product_Polestar 2/663194-20230124-polestar-2-my24-1674572564.jpg",
+      "images_product": 16
+    }
+  },
+  {
+    "model": "mycatalog.productimage",
+    "pk": 15,
+    "fields": {
+      "image": "products_images/product_Lucid Air/2022-lucid-air-03-1658154257.jpg",
+      "images_product": 17
+    }
+  },
+  {
+    "model": "mycatalog.productimage",
+    "pk": 16,
+    "fields": {
+      "image": "products_images/product_Audi e-tron GT/large-8456-2022audirse-trongteuropeanmodelshown-1_bLRciV5.jpg",
+      "images_product": 18
+    }
+  },
+  {
+    "model": "mycatalog.productimage",
+    "pk": 17,
+    "fields": {
+      "image": "products_images/product_Mercedes-Benz S-Class/2022-mercedes-benz-s500-4matic-109-1642184016.jpg",
+      "images_product": 19
+    }
+  },
+  {
+    "model": "mycatalog.productimage",
+    "pk": 18,
+    "fields": {
+      "image": "products_images/product_Genesis G90/2023-genesis-g90-3-5t-e-sc-5748-1671564719.jpg",
+      "images_product": 20
+    }
+  },
+  {
+    "model": "mycatalog.productimage",
+    "pk": 19,
+    "fields": {
+      "image": "products_images/product_Mercedes-AMG S63/22c0377-013-1670273650.jpg",
+      "images_product": 21
+    }
+  },
+  {
+    "model": "mycatalog.productimage",
+    "pk": 20,
+    "fields": {
+      "image": "products_images/product_BMW 7-Series/p90486089-2023-bmw-760i-xdr-1667835057_1.jpg",
+      "images_product": 22
+    }
+  },
+  {
+    "model": "mycatalog.productimage",
+    "pk": 21,
+    "fields": {
+      "image": "products_images/product_Rolls-Royce Spectre/running-64a621b8879c1.jpg",
+      "images_product": 23
+    }
+  },
+  {
+    "model": "mycatalog.productimage",
+    "pk": 22,
+    "fields": {
+      "image": "products_images/product_Pininfarina Battista/battista-road-dynamic-8-m-1630438654.jpg",
+      "images_product": 24
+    }
+  },
+  {
+    "model": "mycatalog.productimage",
+    "pk": 23,
+    "fields": {
+      "image": "products_images/product_Volvo FH16/volvo-fh16-2020-orders-s.jpg",
+      "images_product": 25
+    }
+  },
+  {
+    "model": "mycatalog.productimage",
+    "pk": 24,
+    "fields": {
+      "image": "products_images/product_Shockwave/scale_1200.jpeg",
+      "images_product": 26
+    }
+  },
+  {
+    "model": "mycatalog.productimage",
+    "pk": 25,
+    "fields": {
+      "image": "products_images/product_Truck tomas/nxmoeu97RK-NH1UZiZ2ri29yRrE-1920.jpg",
+      "images_product": 27
+    }
+  },
+  {
+    "model": "mycatalog.productimage",
+    "pk": 26,
+    "fields": {
+      "image": "products_images/product_SHACMAN SX42584V324/tyagach_shacman_sx42584v324.jpg",
+      "images_product": 28
+    }
+  },
+  {
+    "model": "mycatalog.productimage",
+    "pk": 27,
+    "fields": {
+      "image": "products_images/product_truck/long.jpeg",
+      "images_product": 29
+    }
+  },
+  {
+    "model": "mycatalog.productimage",
+    "pk": 28,
+    "fields": {
+      "image": "products_images/product_Mercedes-Benz Axor based cement mixer truck/production.jpeg",
+      "images_product": 30
+    }
+  },
+  {
+    "model": "mycatalog.productimage",
+    "pk": 29,
+    "fields": {
+      "image": "products_images/product_Fendt Trisix/fendt-trisix-tractor-1.jpg",
+      "images_product": 31
+    }
+  },
+  {
+    "model": "mycatalog.productimage",
+    "pk": 30,
+    "fields": {
+      "image": "products_images/product_Kulan tractor/utility vehicle/poly-lab-net-kulan-ev.jpg",
+      "images_product": 32
+    }
+  },
+  {
+    "model": "mycatalog.productimage",
+    "pk": 31,
+    "fields": {
+      "image": "products_images/product_Case IH autonomous tractor/case-ih-concept-vehicle-2-b2mo.jpg",
+      "images_product": 33
+    }
+  },
+  {
+    "model": "mycatalog.productimage",
+    "pk": 32,
+    "fields": {
+      "image": "products_images/product_Kubota Dream tractor/kubota_x_tractor-gmt3.jpg",
+      "images_product": 34
+    }
+  },
+  {
+    "model": "mycatalog.productimage",
+    "pk": 33,
+    "fields": {
+      "image": "products_images/product_Hyundai Ioniq 5/large-50929-2023ioniq5-1668714468.jpg",
+      "images_product": 14
+    }
+  },
+  {
+    "model": "mycatalog.productimage",
+    "pk": 34,
+    "fields": {
+      "image": "products_images/product_llklklklk/2022-gmc-hummer-ev-front-three-quarters-1603222943.jpg",
+      "images_product": 35
+    }
+  },
+  {
+    "model": "mycatalog.productimage",
+    "pk": 35,
+    "fields": {
+      "image": "products_images/product_silverado ford/Chevrolet-Silverado-Premium-depan.jpg",
+      "images_product": 36
+    }
+  },
+  {
+    "model": "mycatalog.product",
+    "pk": 1,
+    "fields": {
+      "price": "150000.00",
+      "count": 5,
+      "date": "2024-01-13T06:16:35.488Z",
+      "title": "Jeep Grand Cherokee Laredo",
+      "fullDescription": "Jeep Grand Cherokee Laredo 2023 3.6 V6 VVT DOHC Pentastar® Бензин Автоматическая, 8 ст. ZF 8HP50 Полный\r\nВы можете заказать в автомобильной\r\nкомпании MEGANO\r\nуже сегодня!",
+      "description": "Jeep Grand Cherokee Laredo 2023 3.6 V6 VVT DOHC Pentastar® Бензин Автоматическая, 8 ст. ZF 8HP50 Полный\r\nВы можете заказать в автомобильной\r\nкомпании MEGANO\r\nуже сегодня!",
+      "freeDelivery": false,
+      "category": 8,
+      "rating": 0.0,
+      "tags": [
+        1
+      ],
+      "specifications": [
+        2
+      ]
+    }
+  },
+  {
+    "model": "mycatalog.product",
+    "pk": 2,
+    "fields": {
+      "price": "25000.00",
+      "count": 4,
+      "date": "2024-01-13T06:21:55.096Z",
+      "title": "Jeep Wrangler",
+      "fullDescription": "Jeep has gone through four generations in 38 years of the Wrangler nameplate. The inaugural YJ (square headlights) replaced the CJ line, then morphed into the TJ (correct headlights) that introduced coil springs, then the JK and its four-door Unlimited model, and finally to today's JL that has been on sale since 2018. Each time, Jeep engineers were tasked with two disparate goals: make the Wrangler more capable and also more comfortable. The 2024 Jeep Wrangler (2024 below right in blue) is a heavily revised version of the JL (2023 below left in silver).",
+      "description": "Jeep has gone through four generations in 38 years of the Wrangler nameplate. The inaugural YJ (square headlights) replaced the CJ line, then morphed into the TJ (correct headlights) that introduced coil springs, then the JK and its four-door Unlimited model, and finally to today's JL that has been",
+      "freeDelivery": false,
+      "category": 8,
+      "rating": 5.0,
+      "tags": [
+        1
+      ],
+      "specifications": [
+        2
+      ]
+    }
+  },
+  {
+    "model": "mycatalog.product",
+    "pk": 3,
+    "fields": {
+      "price": "45000.00",
+      "count": 5,
+      "date": "2024-01-13T09:12:21.509Z",
+      "title": "Toyota Land Cruiser 300",
+      "fullDescription": "Помимо новых турбированных двигателей, на некоторых рынках новый «крузак» предложат и со старым атмосферным 4-литровым V6, известным по Land Cruiser Prado.\r\nОчевидно, что прежние V8 от Toyota уже с трудом вписываются в современные экологические требования, они вызывающе неэкономичны и при этом не так уж и мощны. Поэтому замена прежних V8 на турбо-V6 это вполне прогнозируемый шаг. Однако есть в мире еще места где экология и расход топлива не столь важны.",
+      "description": "Помимо новых турбированных двигателей, на некоторых рынках новый «крузак» предложат и со старым атмосферным 4-литровым V6, известным по Land Cruiser Prado.",
+      "freeDelivery": false,
+      "category": 8,
+      "rating": 0.0,
+      "tags": [
+        1
+      ],
+      "specifications": [
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "model": "mycatalog.product",
+    "pk": 4,
+    "fields": {
+      "price": "56000.00",
+      "count": 5,
+      "date": "2024-01-13T09:16:58.728Z",
+      "title": "Ford F-Series",
+      "fullDescription": "The best-selling model ranking was lead again by the Ford F-Series, which hit the milestone of 1 million sales in the 2017 and has now improved with global sales at 1.08 units (+0.5%). US and Canada represent 98% of total sales.",
+      "description": "The best-selling model ranking was lead again by the Ford F-Series, which hit the milestone of 1 million sales in the 2017 and has now improved with global sales at 1.08 units (+0.5%). US and Canada represent 98% of total sales.",
+      "freeDelivery": false,
+      "category": 7,
+      "rating": 3.25,
+      "tags": [
+        1
+      ],
+      "specifications": [
+        2
+      ]
+    }
+  },
+  {
+    "model": "mycatalog.product",
+    "pk": 5,
+    "fields": {
+      "price": "36999.00",
+      "count": 4,
+      "date": "2024-01-13T09:19:47.749Z",
+      "title": "Toyota Tundra",
+      "fullDescription": "The Tundra's 2022 redesign modernized the aging truck in many ways and introduced the all-new i-Force Max hybrid engine. It's the most powerful hybrid truck on this list, boasting 437 horsepower and 583 lb-ft, but it's a little less efficient than the F-150 PowerBoost. The hybrid powertrain is also only 1-2 mpg more efficient than the Tundra's regular engine.",
+      "description": "The Tundra's 2022 redesign modernized the aging truck in many ways and introduced the all-new i-Force Max hybrid engine.",
+      "freeDelivery": false,
+      "category": 7,
+      "rating": 4.0,
+      "tags": [
+        1
+      ],
+      "specifications": [
+        2
+      ]
+    }
+  },
+  {
+    "model": "mycatalog.product",
+    "pk": 7,
+    "fields": {
+      "price": "48999.00",
+      "count": 5,
+      "date": "2024-01-14T06:46:58.668Z",
+      "title": "Mitsubishi Pajero Sport 2023",
+      "fullDescription": "Mitsubishi Pajero Sport – мощный и динамичный внедорожник с рамной конструкцией кузова, обеспечивающей повышенную надежность и выносливость в любых условиях эксплуатации.\r\nАвтомобиль с полноприводной трансмиссией Super Select II, несмотря на внушительные размеры, отличается превосходной маневренностью и одинаково уверенно себя чувствует как на широких трассах, так и на узких городских улочках.",
+      "description": "Mitsubishi Pajero Sport – мощный и динамичный внедорожник с рамной конструкцией кузова, обеспечивающей повышенную надежность и выносливость в любых условиях эксплуатации.",
+      "freeDelivery": false,
+      "category": 8,
+      "rating": 0.0,
+      "tags": [
+        1
+      ],
+      "specifications": [
+        2
+      ]
+    }
+  },
+  {
+    "model": "mycatalog.product",
+    "pk": 8,
+    "fields": {
+      "price": "45999.00",
+      "count": 5,
+      "date": "2024-01-14T07:00:46.406Z",
+      "title": "Tesla Cybertruck",
+      "fullDescription": "Tesla начала продажи электропикапа Cybertruck по цене на 50% выше запланированной — в базовой комплектации он стоит $60 990 и будет доступен покупателю в 2025 году. Миллиардер Илон Маск четыре года назад обещал, что Cybertruck поступит в продажу в 2021 году по цене в $39 900",
+      "description": "Tesla начала продажи электропикапа Cybertruck по цене на 50% выше запланированной — в базовой комплектации он стоит $60 990 и будет доступен покупателю в 2025 году.",
+      "freeDelivery": false,
+      "category": 7,
+      "rating": 3.6,
+      "tags": [
+        1
+      ],
+      "specifications": [
+        2
+      ]
+    }
+  },
+  {
+    "model": "mycatalog.product",
+    "pk": 11,
+    "fields": {
+      "price": "15879.00",
+      "count": 5,
+      "date": "2024-01-14T07:17:34.360Z",
+      "title": "Dacia Duster Desert Drive",
+      "fullDescription": "The Dacia Duster SUV produced in Mioveni, Romania, has been included by British auto magazine Autocar in a ranking of the best 4x4 and off-road vehicles of 2023. The low price and offroad capabilities make the Duster the tenth-best 4x4 and off-road car of the year.",
+      "description": "The Dacia Duster SUV produced in Mioveni, Romania, has been included by British auto magazine Autocar in a ranking of the best 4x4 and off-road vehicles of 2023.",
+      "freeDelivery": false,
+      "category": 8,
+      "rating": 0.0,
+      "tags": [
+        1
+      ],
+      "specifications": [
+        2
+      ]
+    }
+  },
+  {
+    "model": "mycatalog.product",
+    "pk": 12,
+    "fields": {
+      "price": "68265.00",
+      "count": 5,
+      "date": "2024-01-14T08:07:38.978Z",
+      "title": "PORSCHE",
+      "fullDescription": "Just because a car is electric doesn't mean it's boring. There are plenty of exciting electric cars on the market right now that we love. Sure, they don't have the same sounds as our favorite gas-powered cars, but they still provide excitement in their own ways. These are the best electric cars you can buy in 2024.",
+      "description": "Just because a car is electric doesn't mean it's boring.",
+      "freeDelivery": false,
+      "category": 4,
+      "rating": 0.0,
+      "tags": [
+        2
+      ],
+      "specifications": [
+        1
+      ]
+    }
+  },
+  {
+    "model": "mycatalog.product",
+    "pk": 13,
+    "fields": {
+      "price": "48569.00",
+      "count": 5,
+      "date": "2024-01-14T08:09:39.031Z",
+      "title": "Hyundai Ioniq 6",
+      "fullDescription": "If you're not a fan of the boxy hatchback Ioniq 5, Hyundai also makes a slick electric sedan called the Ioniq 6. The unique styling and nice interior are coupled to a pleasant chassis and a drivetrain that can deliver some seriously impressive range figures, depending on configuration.\r\nIf range is your priority, go for the SE Long Range trim. It pairs the big battery to the single rear-drive motor setup, maximizing the Ioniq 6's excellent aerodynamics for over 360 miles of range between charges.",
+      "description": "If you're not a fan of the boxy hatchback Ioniq 5, Hyundai also makes a slick electric sedan called the Ioniq 6. The unique styling and nice interior are coupled to a pleasant chassis and a drivetrain that can deliver some seriously impressive range figures, depending on configuration.",
+      "freeDelivery": false,
+      "category": 4,
+      "rating": 0.0,
+      "tags": [
+        2
+      ],
+      "specifications": [
+        1
+      ]
+    }
+  },
+  {
+    "model": "mycatalog.product",
+    "pk": 14,
+    "fields": {
+      "price": "43125.00",
+      "count": 5,
+      "date": "2024-01-14T08:12:18.447Z",
+      "title": "Hyundai Ioniq 5",
+      "fullDescription": "The Ioniq 5 might be the coolest affordable electric car on the market right now. In addition to looking awesome, it drives well and delivers more than enough range for the average driver.\r\nWe're particularly fond of the high-performance, 641-hp Ioniq 5 N, which uses new battery tech, specific suspension changes, bigger brakes, stickier tires, and a host of other upgrades to deliver one of the best all-electric driving experiences on the market right now.",
+      "description": "The Ioniq 5 might be the coolest affordable electric car on the market right now. In addition to looking awesome, it drives well and delivers more than enough range for the average driver.",
+      "freeDelivery": false,
+      "category": 4,
+      "rating": 0.0,
+      "tags": [
+        2
+      ],
+      "specifications": [
+        1
+      ]
+    }
+  },
+  {
+    "model": "mycatalog.product",
+    "pk": 15,
+    "fields": {
+      "price": "43925.00",
+      "count": 5,
+      "date": "2024-01-14T08:13:52.380Z",
+      "title": "Kia EV6",
+      "fullDescription": "If you're looking for something like the Ioniq but want a car with less retro Eighties vibes, the Kia EV6 is the EV for you. The rear-wheel-drive model is one of the best-driving electric cars we've tested, delivering 225 hp and 258 lb-ft of torque in a slick, compelling package.\r\nWe suspect the new GT model will be even better. It makes 576 hp, allowing for a claimed 0-60 time of 3.4 seconds and a top speed of 161 hp. There's even a drift mode.",
+      "description": "If you're looking for something like the Ioniq but want a car with less retro Eighties vibes, the Kia EV6 is the EV for you.",
+      "freeDelivery": false,
+      "category": 4,
+      "rating": 0.0,
+      "tags": [
+        2
+      ],
+      "specifications": [
+        1
+      ]
+    }
+  },
+  {
+    "model": "mycatalog.product",
+    "pk": 16,
+    "fields": {
+      "price": "51258.00",
+      "count": 5,
+      "date": "2024-01-14T08:16:12.013Z",
+      "title": "Polestar 2",
+      "fullDescription": "The Polestar 2 is the perfect EV for flying under the radar. It's not as flashy as a Tesla, using clean and subdued styling cues to blend into traffic, all without looking boring.\r\nBig surprise: Our favorite trim is the dual-motor version with the optional Performance Pack. It delivers 455 hp and 546 lb-ft of torque, meaning a 0-60 time of just 4.5 seconds. If range is a bigger priority, the entry-level rear-drive model can deliver well over 300 miles between charges.",
+      "description": "The Polestar 2 is the perfect EV for flying under the radar. It's not as flashy as a Tesla, using clean and subdued styling cues to blend into traffic, all without looking boring.",
+      "freeDelivery": false,
+      "category": 4,
+      "rating": 0.0,
+      "tags": [
+        2
+      ],
+      "specifications": [
+        1
+      ]
+    }
+  },
+  {
+    "model": "mycatalog.product",
+    "pk": 17,
+    "fields": {
+      "price": "78965.00",
+      "count": 5,
+      "date": "2024-01-14T08:24:17.903Z",
+      "title": "Lucid Air",
+      "fullDescription": "Prefer your California-based EV startup without constant headline-grabbing drama? Instead of a Model S, consider the Lucid Air. It's a supremely comfortable, insanely fast electric sedan with four-figure horsepower numbers and a whole bunch of range.\r\nOur favorite version has to be the Sapphire. It makes a grand total of 1234 hp and 1430 lb-ft of torque thanks to three electric motors, resulting in a mind-blowing claimed 0-60 time of 1.89 seconds and a top speed of 205 mph.",
+      "description": "Prefer your California-based EV startup without constant headline-grabbing drama? Instead of a Model S, consider the Lucid Air. It's a supremely comfortable, insanely fast electric sedan with four-figure horsepower numbers and a whole bunch of range.",
+      "freeDelivery": false,
+      "category": 4,
+      "rating": 5.0,
+      "tags": [
+        2
+      ],
+      "specifications": [
+        1
+      ]
+    }
+  },
+  {
+    "model": "mycatalog.product",
+    "pk": 18,
+    "fields": {
+      "price": "105780.00",
+      "count": 5,
+      "date": "2024-01-14T08:27:20.375Z",
+      "title": "Audi e-tron GT",
+      "fullDescription": "The e-tron GT uses much of the Taycan's architecture, but eschews the Porsche-specific bodywork in favor of Audi's own styling. It's just as fun on the road, and some might say it looks even better than the car it's based on.\r\nThe base e-tron GT comes with 522 hp, which should be plenty for most people. Speed freaks will be happiest with the more expensive RS version, which delivers a maximum of 637 horses for a 0-60 time of just 2.9 seconds.",
+      "description": "The e-tron GT uses much of the Taycan's architecture, but eschews the Porsche-specific bodywork in favor of Audi's own styling. It's just as fun on the road, and some might say it looks even better than the car it's based on.",
+      "freeDelivery": false,
+      "category": 4,
+      "rating": 0.0,
+      "tags": [
+        2
+      ],
+      "specifications": [
+        1
+      ]
+    }
+  },
+  {
+    "model": "mycatalog.product",
+    "pk": 19,
+    "fields": {
+      "price": "118452.00",
+      "count": 5,
+      "date": "2024-01-14T08:42:54.750Z",
+      "title": "Mercedes-Benz S-Class",
+      "fullDescription": "Without question, if we close our eyes and envision the quintessential luxury sedan, it’s the Mercedes-Benz S-class that comes to mind. Not only has it been the brand’s flagship for decades, but it has continuously delivered cutting-edge tech and first-class comfort. Whether relaxing in the Sonderklasse's roomy rear seat or guiding the tastefully styled land yacht down the street, passengers are treated to a leather-lined interior with many large screens—and too many touch controls. Despite some overly complicated features, the S-class packs a trio of unique all-wheel-drive powertrains. The S5",
+      "description": "Without question, if we close our eyes and envision the quintessential luxury sedan, it’s the Mercedes-Benz S-class that comes to mind.",
+      "freeDelivery": false,
+      "category": 5,
+      "rating": 0.0,
+      "tags": [
+        3
+      ],
+      "specifications": [
+        3
+      ]
+    }
+  },
+  {
+    "model": "mycatalog.product",
+    "pk": 20,
+    "fields": {
+      "price": "94562.00",
+      "count": 4,
+      "date": "2024-01-14T08:44:22.807Z",
+      "title": "Genesis G90",
+      "fullDescription": "Redesigned for 2023, the 2024 Genesis G90 continues in its role as the automaker's flagship and most luxurious sedan. The styling bears a familial resemblance to the G80 sedan and GV80 SUV, primarily in its stacked gun-slit headlamps and modified pentagonal grille, but the G90 retains a few unique identifiers to signal its status. Power is provided by a 375-hp twin-turbo 3.5-liter V-6, but a high-output 409-hp version fitted with an electric supercharger in addition to the turbos is available for buyers looking for maximum thrust. Both provide the type of smooth, velvety power required to comp",
+      "description": "Redesigned for 2023, the 2024 Genesis G90 continues in its role as the automaker's flagship and most luxurious sedan.",
+      "freeDelivery": false,
+      "category": 5,
+      "rating": 5.0,
+      "tags": [
+        3
+      ],
+      "specifications": [
+        3
+      ]
+    }
+  },
+  {
+    "model": "mycatalog.product",
+    "pk": 21,
+    "fields": {
+      "price": "190210.00",
+      "count": 5,
+      "date": "2024-01-14T08:56:46.633Z",
+      "title": "Mercedes-AMG S63",
+      "fullDescription": "It missed a year of production, but the AMG S63 supersedan is back in a major way. Making use of the Mercedes-Benz S-class’s seventh-generation architecture, the S63 brings the glitz with more go than ever thanks to a new plug-in hybrid powertrain. Mercedes has dropped the previously offered coupe and convertible body styles and will offer the S63 as a sedan only, at least for now.",
+      "description": "It missed a year of production, but the AMG S63 supersedan is back in a major way.",
+      "freeDelivery": false,
+      "category": 5,
+      "rating": 0.0,
+      "tags": [
+        3
+      ],
+      "specifications": [
+        3
+      ]
+    }
+  },
+  {
+    "model": "mycatalog.product",
+    "pk": 22,
+    "fields": {
+      "price": "97521.00",
+      "count": 5,
+      "date": "2024-01-14T09:00:22.430Z",
+      "title": "BMW 7-Series",
+      "fullDescription": "Radical exterior styling aside, the 2024 BMW 7-series follows the same successful formula it has for several generations, marrying big power, a comfort-first driving demeanor, and a spacious cabin with loads of features. You can get it with a turbocharged inline-six, a plug-in hybrid, or a twin-turbo V-8, but no matter which engine is under the hood, the 7-series delivers a glassy-smooth ride and a hushed interior perfect for long-distance treks.",
+      "description": "Radical exterior styling aside, the 2024 BMW 7-series follows the same successful formula it has for several generations, marrying big power, a comfort-first driving demeanor, and a spacious cabin with loads of features.",
+      "freeDelivery": false,
+      "category": 5,
+      "rating": 0.0,
+      "tags": [
+        3
+      ],
+      "specifications": [
+        3
+      ]
+    }
+  },
+  {
+    "model": "mycatalog.product",
+    "pk": 23,
+    "fields": {
+      "price": "418120.00",
+      "count": 5,
+      "date": "2024-01-14T09:03:21.184Z",
+      "title": "Rolls-Royce Spectre",
+      "fullDescription": "If any car should have a drivetrain that makes absolutely no noise, it's a Rolls-Royce. An electric drivetrain is the only logical choice for a vehicle that prioritizes serenity and comfort above all else.\r\nThe Spectre is the first EV from Rolls-Royce, and delivers on the promise of being the most quiet car from the brand ever. It's also supremely quick, with 577 hp and 664 lb-ft of torque on tap from two electric motors. Even with 6559 pounds to lug around, it can get to 60 mph in just 4.2 seconds.",
+      "description": "If any car should have a drivetrain that makes absolutely no noise, it's a Rolls-Royce. An electric drivetrain is the only logical choice for a vehicle that prioritizes serenity and comfort above all else.",
+      "freeDelivery": false,
+      "category": 5,
+      "rating": 0.0,
+      "tags": [
+        3
+      ],
+      "specifications": [
+        3
+      ]
+    }
+  },
+  {
+    "model": "mycatalog.product",
+    "pk": 24,
+    "fields": {
+      "price": "499999.00",
+      "count": 5,
+      "date": "2024-01-14T09:05:57.067Z",
+      "title": "Pininfarina Battista",
+      "fullDescription": "The Rimac Nevera has no engine, but make no mistake, it's an honest-to-goodness hypercar. It's the quickest-accelerating production vehicle ever, with a 0-60 sprint of 1.79 seconds. It's also the fastest EV ever, with a top speed of 258 mph.\r\nThose aren't the only records the Nevera holds. In fact, the car currently holds a total of 23 acceleration and braking records for production cars. In less than 30 seconds, it can go from 0, to 248 mph, and back to 0. That's nuts.",
+      "description": "The Rimac Nevera has no engine, but make no mistake, it's an honest-to-goodness hypercar. It's the quickest-accelerating production vehicle ever, with a 0-60 sprint of 1.79 seconds. It's also the fastest EV ever, with a top speed of 258 mph.",
+      "freeDelivery": false,
+      "category": 5,
+      "rating": 0.0,
+      "tags": [
+        3
+      ],
+      "specifications": [
+        3
+      ]
+    }
+  },
+  {
+    "model": "mycatalog.product",
+    "pk": 25,
+    "fields": {
+      "price": "300000.00",
+      "count": 4,
+      "date": "2024-01-14T09:27:40.348Z",
+      "title": "Volvo FH16",
+      "fullDescription": "Этот не особо бросающийся в глаза грузовик можно запросто встретить в дорожном потоке. Или встать с ним на одном светофоре. Сразу и не поймёшь, что это — самый мощный в мире серийный магистральный тягач, допущенный на дороги общего пользо­вания. Только шильдик с мощностью выдаёт флагманскую версию Volvo FH16, текущее поколение которого выпускается с 2012 года, а в этом году пережило плановое обновление.",
+      "description": "Этот не особо бросающийся в глаза грузовик можно запросто встретить в дорожном потоке. Или встать с ним на одном светофоре. Сразу и не поймёшь, что это — самый мощный в мире серийный магистральный тягач",
+      "freeDelivery": false,
+      "category": 9,
+      "rating": 0.0,
+      "tags": [],
+      "specifications": [
+        2
+      ]
+    }
+  },
+  {
+    "model": "mycatalog.product",
+    "pk": 26,
+    "fields": {
+      "price": "498888.00",
+      "count": 4,
+      "date": "2024-01-14T09:31:51.614Z",
+      "title": "Shockwave",
+      "fullDescription": "Поршневые ДВС в какой-то момент уже не давали радикально поднимать планку скорости. И энтузиасты скорости пришли к логичному решению: хочешь быстрее — ставь реактивный двигатель! 35 лет назад по этому пути двинулся американский гонщик Лес Шокли. Взял обычный седельный тягач Peterbilt 379 и приделал к нему три реактивных двигателя Pratt&Whitney суммарной мощностью 36 000 л.с. и общей тягой 8,6 тонны. Получившееся чудище назвали Shockwave.",
+      "description": "Поршневые ДВС в какой-то момент уже не давали радикально поднимать планку скорости. И энтузиасты скорости пришли к логичному решению: хочешь быстрее — ставь реактивный двигатель!",
+      "freeDelivery": false,
+      "category": 9,
+      "rating": 0.0,
+      "tags": [
+        4
+      ],
+      "specifications": [
+        2
+      ]
+    }
+  },
+  {
+    "model": "mycatalog.product",
+    "pk": 27,
+    "fields": {
+      "price": "75865.00",
+      "count": 4,
+      "date": "2024-01-14T09:35:13.453Z",
+      "title": "Truck tomas",
+      "fullDescription": "Длина пятиосного Tractomas — 12,6 метра, ширина — почти 3,5 метра, а в высоту он достигает 4,5 метра. За кабиной стоит 27-литровый турбодизельный V12 компании Caterpillar на 912 л.с. и 3460 Нм крутящего момента. Коробка передач — восьмидиапазонный автомат фирмы Dana Clark Spicer.",
+      "description": "Длина пятиосного Tractomas — 12,6 метра, ширина — почти 3,5 метра, а в высоту он достигает 4,5 метра. За кабиной стоит 27-литровый турбодизельный V12 компании Caterpillar на 912 л.с. и 3460 Нм крутящего момента. Коробка передач — восьмидиапазонный автомат фирмы Dana Clark Spicer.",
+      "freeDelivery": false,
+      "category": 9,
+      "rating": 0.0,
+      "tags": [
+        4
+      ],
+      "specifications": [
+        2
+      ]
+    }
+  },
+  {
+    "model": "mycatalog.product",
+    "pk": 28,
+    "fields": {
+      "price": "98521.00",
+      "count": 5,
+      "date": "2024-01-14T13:48:29.215Z",
+      "title": "SHACMAN SX42584V324",
+      "fullDescription": "Тягач седельный SX42584V324. Колесная формула 6х4, цвет красный, кабина X3000, двигатель WP12.430E50 (430 л.с.) Евро 5, КПП 12JSD200TA, шины 1315/80 R22.5 (бескамерные), передняя ось 7.5T MAN, задний мост 16T MAN, передаточные числа 4.769, седло JOST 50, рулевое управление (пр-во Китая), кондиционер, пневматическая подвеска кабины, электрическое зеркало заднего вида с подогревом, электрический подъемник стекол, алюминиевый топливный бак: 700л., рессорная подвеска, WABCO ABS с 6 каналами, противооткатное устройство.",
+      "description": "Тягач седельный SX42584V324. Колесная формула 6х4, цвет красный, кабина X3000, двигатель WP12.430E50 (430 л.с.) Евро 5, КПП 12JSD200TA, шины 1315/80 R22.5 (бескамерные), передняя ось 7.5T MAN, задний мост 16T MAN",
+      "freeDelivery": false,
+      "category": 9,
+      "rating": 0.0,
+      "tags": [
+        4
+      ],
+      "specifications": [
+        4
+      ]
+    }
+  },
+  {
+    "model": "mycatalog.product",
+    "pk": 29,
+    "fields": {
+      "price": "245250.00",
+      "count": 5,
+      "date": "2024-01-14T13:53:00.162Z",
+      "title": "truck",
+      "fullDescription": "laksdfj;alsdkjf;asjfkas;ldkfj;asldkfj;asldkjfa;sldkfj;asldkf;lsdkf;lasdkjf",
+      "description": "asdfasdfasdfa",
+      "freeDelivery": false,
+      "category": 9,
+      "rating": 0.0,
+      "tags": [
+        4
+      ],
+      "specifications": [
+        1
+      ]
+    }
+  },
+  {
+    "model": "mycatalog.product",
+    "pk": 30,
+    "fields": {
+      "price": "87520.00",
+      "count": 5,
+      "date": "2024-01-14T13:59:19.470Z",
+      "title": "Mercedes-Benz Axor based cement mixer truck",
+      "fullDescription": "Mercedes-Benz Axor based cement mixer truckMercedes-Benz Axor based cement mixer truckMercedes-Benz Axor based cement mixer truckMercedes-Benz Axor based cement mixer truckMercedes-Benz Axor based cement mixer truckMercedes-Benz Axor based cement mixer truckMercedes-Benz Axor based cement mixer truckMercedes-Benz Axor based cement mixer truck",
+      "description": "Mercedes-Benz Axor based cement mixer truckMercedes-Benz Axor based cement mixer truckMercedes-Benz Axor based cement mixer truck",
+      "freeDelivery": false,
+      "category": 10,
+      "rating": 0.0,
+      "tags": [
+        4
+      ],
+      "specifications": [
+        1
+      ]
+    }
+  },
+  {
+    "model": "mycatalog.product",
+    "pk": 31,
+    "fields": {
+      "price": "289635.00",
+      "count": 5,
+      "date": "2024-01-14T14:08:05.805Z",
+      "title": "Fendt Trisix",
+      "fullDescription": "Fendt is one such ag equipment company that likes to toy around with ambitious concepts and beat others to the post in terms of innovation and automation. It was one of the first companies to float concepts of electric tractors and swarm farms where farmers work with robots to run their operations.\r\nThe Fendt Trisix made an appearance at the Agritechnica 2007 trade show in Germany and was hugely impressive and futuristic for its time.",
+      "description": "Fendt is one such ag equipment company that likes to toy around with ambitious concepts and beat others to the post in terms of innovation and automation. It was one of the first companies to float concepts of electric tractors and swarm farms where farmers work with robots to run their operations.",
+      "freeDelivery": false,
+      "category": 10,
+      "rating": 0.0,
+      "tags": [
+        4
+      ],
+      "specifications": [
+        4
+      ]
+    }
+  },
+  {
+    "model": "mycatalog.product",
+    "pk": 32,
+    "fields": {
+      "price": "25680.00",
+      "count": 5,
+      "date": "2024-01-14T14:10:08.245Z",
+      "title": "Kulan tractor/utility vehicle",
+      "fullDescription": "It won’t be quite accurate to brand the Kulan a tractor. It’s more a utility vehicle and tractor hybrid that has been designed for farm work, and is the brainchild of a team of researchers in Germany.\r\nNamed after a species of donkey native to central Asia, the Kulan is an electric vehicle with a very futuristic, minimalistic design.\r\nAccording to a report by the BBC, the Kulan is powered by a pair of 2kW electric motors, which are in turn powered by 16 lithium-ion batteries located beneath the Kulan’s cargo platform.",
+      "description": "It won’t be quite accurate to brand the Kulan a tractor. It’s more a utility vehicle and tractor hybrid that has been designed for farm work, and is the brainchild of a team of researchers in Germany.",
+      "freeDelivery": false,
+      "category": 10,
+      "rating": 0.0,
+      "tags": [
+        4
+      ],
+      "specifications": [
+        4
+      ]
+    }
+  },
+  {
+    "model": "mycatalog.product",
+    "pk": 33,
+    "fields": {
+      "price": "256987.00",
+      "count": 5,
+      "date": "2024-01-14T14:11:26.584Z",
+      "title": "Case IH autonomous tractor",
+      "fullDescription": "Perhaps one of the most impressive concepts of recent times is Case IH’s cabless and autonomous tractor concept released in 2017 to much fanfare.\r\n\r\nIt even made its way Down Under and turned just about any head that walked past the impressive looking machine at Case IH’s stand at the AgQuip field days.",
+      "description": "Perhaps one of the most impressive concepts of recent times is Case IH’s cabless and autonomous tractor concept released in 2017 to much fanfare.",
+      "freeDelivery": false,
+      "category": 10,
+      "rating": 0.0,
+      "tags": [
+        4
+      ],
+      "specifications": [
+        4
+      ]
+    }
+  },
+  {
+    "model": "mycatalog.product",
+    "pk": 34,
+    "fields": {
+      "price": "124587.00",
+      "count": 5,
+      "date": "2024-01-14T14:12:43.883Z",
+      "title": "Kubota Dream tractor",
+      "fullDescription": "Much like Case IH’s autonomous concept tractor, Kubota’s “X tractor - cross tractor -” concept has no cab, but Kubota took its prototype one step further by adding four tracks to it and making it not just completely autonomous but electric powered as well.\r\nIt first surfaced in January 2020 at an exhibition in Kyoto, Japan. It features a streamlined, aerodynamic design with futuristic lights and panels complete with Kubota’s signature orange paint job. At a glance, it almost looks like an oversized mechanical farm dog.",
+      "description": "Much like Case IH’s autonomous concept tractor, Kubota’s “X tractor - cross tractor -” concept has no cab, but Kubota took its prototype one step further by adding four tracks to it and making it not just completely autonomous but electric powered as well.",
+      "freeDelivery": false,
+      "category": 10,
+      "rating": 0.0,
+      "tags": [
+        3
+      ],
+      "specifications": [
+        4
+      ]
+    }
+  },
+  {
+    "model": "mycatalog.product",
+    "pk": 35,
+    "fields": {
+      "price": "125550.00",
+      "count": 5,
+      "date": "2024-01-14T14:27:36.425Z",
+      "title": "llklklklk",
+      "fullDescription": ".kllklkm;lkm;lkm",
+      "description": "l;kjl;kjlklkj",
+      "freeDelivery": false,
+      "category": 7,
+      "rating": 5.0,
+      "tags": [
+        1
+      ],
+      "specifications": [
+        3
+      ]
+    }
+  },
+  {
+    "model": "mycatalog.product",
+    "pk": 36,
+    "fields": {
+      "price": "254778.00",
+      "count": 5,
+      "date": "2024-01-14T14:28:47.912Z",
+      "title": "silverado ford",
+      "fullDescription": "silverado fordsilverado fordsilverado fordsilverado fordsilverado ford",
+      "description": "silverado fordsilverado ford",
+      "freeDelivery": false,
+      "category": 7,
+      "rating": 4.0,
+      "tags": [
+        3
+      ],
+      "specifications": [
+        3
+      ]
+    }
+  },
+  {
+    "model": "mycatalog.review",
+    "pk": 1,
+    "fields": {
+      "author": 1,
+      "product": 2,
+      "text": "very nice jeep.it is the best SUV in my opinion",
+      "rate": 5,
+      "date": "2024-01-14T14:58:26.642Z"
+    }
+  },
+  {
+    "model": "mycatalog.review",
+    "pk": 2,
+    "fields": {
+      "author": 1,
+      "product": 17,
+      "text": "my dreem car",
+      "rate": 5,
+      "date": "2024-01-14T14:59:15.303Z"
+    }
+  },
+  {
+    "model": "mycatalog.review",
+    "pk": 3,
+    "fields": {
+      "author": 1,
+      "product": 20,
+      "text": "this car is the best",
+      "rate": 5,
+      "date": "2024-01-14T15:00:56.502Z"
+    }
+  },
+  {
+    "model": "mycatalog.review",
+    "pk": 4,
+    "fields": {
+      "author": 1,
+      "product": 17,
+      "text": ";lkjlk",
+      "rate": 5,
+      "date": "2024-01-14T15:06:32.605Z"
+    }
+  },
+  {
+    "model": "mycatalog.review",
+    "pk": 5,
+    "fields": {
+      "author": 1,
+      "product": 5,
+      "text": "Пикап очень крутой, но название странное",
+      "rate": 4,
+      "date": "2024-02-06T02:57:15.965Z"
+    }
+  },
+  {
+    "model": "mycatalog.review",
+    "pk": 6,
+    "fields": {
+      "author": 1,
+      "product": 5,
+      "text": "Недавно преобрел себе такой, просто супер",
+      "rate": 5,
+      "date": "2024-02-06T02:58:05.696Z"
+    }
+  },
+  {
+    "model": "mycatalog.review",
+    "pk": 7,
+    "fields": {
+      "author": 1,
+      "product": 5,
+      "text": "Машина откровенно не понравилась",
+      "rate": 3,
+      "date": "2024-02-06T02:58:48.828Z"
+    }
+  },
+  {
+    "model": "mycatalog.review",
+    "pk": 8,
+    "fields": {
+      "author": 1,
+      "product": 8,
+      "text": "Дизайн просто космос",
+      "rate": 5,
+      "date": "2024-02-06T02:59:28.520Z"
+    }
+  },
+  {
+    "model": "mycatalog.review",
+    "pk": 9,
+    "fields": {
+      "author": 1,
+      "product": 8,
+      "text": "Авто оставляет желать лучшего",
+      "rate": 2,
+      "date": "2024-02-06T02:59:58.239Z"
+    }
+  },
+  {
+    "model": "mycatalog.review",
+    "pk": 10,
+    "fields": {
+      "author": 1,
+      "product": 8,
+      "text": "это шедевр",
+      "rate": 5,
+      "date": "2024-02-06T03:00:19.548Z"
+    }
+  },
+  {
+    "model": "mycatalog.review",
+    "pk": 11,
+    "fields": {
+      "author": 1,
+      "product": 8,
+      "text": "полный бред, глючит оборудование",
+      "rate": 1,
+      "date": "2024-02-06T03:00:48.936Z"
+    }
+  },
+  {
+    "model": "mycatalog.review",
+    "pk": 12,
+    "fields": {
+      "author": 1,
+      "product": 8,
+      "text": "очень оригинальный автомобиль не похожий на другие",
+      "rate": 5,
+      "date": "2024-02-06T03:01:37.068Z"
+    }
+  },
+  {
+    "model": "mycatalog.review",
+    "pk": 13,
+    "fields": {
+      "author": 1,
+      "product": 4,
+      "text": "очень брутальная тачка",
+      "rate": 5,
+      "date": "2024-02-06T03:02:12.728Z"
+    }
+  },
+  {
+    "model": "mycatalog.review",
+    "pk": 14,
+    "fields": {
+      "author": 1,
+      "product": 4,
+      "text": "супер",
+      "rate": 5,
+      "date": "2024-02-06T03:02:29.008Z"
+    }
+  },
+  {
+    "model": "mycatalog.review",
+    "pk": 15,
+    "fields": {
+      "author": 1,
+      "product": 4,
+      "text": "мне не понравилось",
+      "rate": 2,
+      "date": "2024-02-06T03:02:45.723Z"
+    }
+  },
+  {
+    "model": "mycatalog.review",
+    "pk": 16,
+    "fields": {
+      "author": 1,
+      "product": 4,
+      "text": "обслуживание отстой",
+      "rate": 1,
+      "date": "2024-02-06T03:03:05.195Z"
+    }
+  },
+  {
+    "model": "mycatalog.review",
+    "pk": 17,
+    "fields": {
+      "author": 1,
+      "product": 35,
+      "text": "супер",
+      "rate": 5,
+      "date": "2024-02-06T03:06:07.750Z"
+    }
+  },
+  {
+    "model": "mycatalog.review",
+    "pk": 18,
+    "fields": {
+      "author": 1,
+      "product": 36,
+      "text": "супер",
+      "rate": 4,
+      "date": "2024-02-06T03:07:01.093Z"
+    }
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "model": "mycatalog.specification",
+    "pk": 1,
+    "fields": {
+      "name": "size",
+      "value": "1"
+    }
+  },
+  {
+    "model": "mycatalog.specification",
+    "pk": 2,
+    "fields": {
+      "name": "size",
+      "value": "2"
+    }
+  }
+]

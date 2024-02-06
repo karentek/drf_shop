@@ -1,0 +1,23 @@
+[
+  {
+    "model": "mycatalog.tag",
+    "pk": 1,
+    "fields": {
+      "name": "big"
+    }
+  },
+  {
+    "model": "mycatalog.tag",
+    "pk": 2,
+    "fields": {
+      "name": "small"
+    }
+  },
+  {
+    "model": "mycatalog.tag",
+    "pk": 3,
+    "fields": {
+      "name": "blue"
+    }
+  }
+]

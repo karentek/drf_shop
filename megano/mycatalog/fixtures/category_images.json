@@ -1,0 +1,50 @@
+[
+  {
+    "model": "mycatalog.categoryimage",
+    "pk": 1,
+    "fields": {
+      "image": "category_images/category_category1/icon-256x256.png",
+      "category": 1
+    }
+  },
+  {
+    "model": "mycatalog.categoryimage",
+    "pk": 2,
+    "fields": {
+      "image": "category_images/category_category2/icon-256x256_2.png",
+      "category": 2
+    }
+  },
+  {
+    "model": "mycatalog.categoryimage",
+    "pk": 3,
+    "fields": {
+      "image": "category_images/category_category3/icon-256x256.png",
+      "category": 3
+    }
+  },
+  {
+    "model": "mycatalog.categoryimage",
+    "pk": 4,
+    "fields": {
+      "image": "category_images/category_category4/icon-256x256.png",
+      "category": 4
+    }
+  },
+  {
+    "model": "mycatalog.categoryimage",
+    "pk": 6,
+    "fields": {
+      "image": "category_images/category_category6/icon-256x256_1.png",
+      "category": 6
+    }
+  },
+  {
+    "model": "mycatalog.categoryimage",
+    "pk": 8,
+    "fields": {
+      "image": "category_images/category_category6/480x496_0xac120003_4430520541578509619.jpg",
+      "category": 8
+    }
+  }
+]
