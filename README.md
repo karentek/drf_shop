@@ -77,3 +77,13 @@ Megano consists of several backend apps:
 ## Requirements 
 
 The project dependencies are listed in the `requirements.txt` file.
+
+## To look at swagger and api docs you have to go to
+
+   > http://127.0.0.1:8000/api/schema/swagger-ui/ <br>
+   > http://127.0.0.1:8000/api/schema/redoc/ 
+   
+or if you are use production version
+
+   > http://localhost:1337/api/schema/swagger-ui/ <br>
+   > http://localhost:1337/api/schema/redoc/
